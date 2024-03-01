@@ -5,7 +5,7 @@ https://docs.github.com/en/repositories/working-with-files/managing-large-files/
 
 ## 2. Create a fork of this repository
 
-## 3. Follow Conventional Commits guidelines when writing commits.
+## 3. Follow Conventional Commits guidelines when writing commits
 Structure:
 ```
 <type>[optional scope]: <description>
@@ -14,7 +14,8 @@ Structure:
 
 [optional footer(s)]
 ```
-## Commit types
+
+Commit types:
 
 | Commit Type | Title                    | Description                                                                                                 
 | ----------- | ------------------------ | ----------------------------------------------------------------------------------------------------------- 
