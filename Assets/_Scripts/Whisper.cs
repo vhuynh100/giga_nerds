@@ -70,10 +70,19 @@ namespace Samples.Whisper
                 Model = "whisper-1",
                 Language = "en"
             };
-            var res = await openai.CreateAudioTranscription(req);
+            var resEnglish = await openai.CreateAudioTranscription(req);
+
+            var reqSpanish = new CreateAudioTranscriptionsRequest
+            {
+                FileData = new FileData() { Data = data, Name = "audio.wav" },
+                Model = "whisper-1",
+                Language = "es" // Set the language to Spanish
+            };
+            var resSpanish = await openai.CreateAudioTranscription(reqSpanish);
 
             progressBar.fillAmount = 0;
-            message.text = res.Text;
+            // message.text = res.Text;
+            message.text = $"English: {resEnglish.Text}\nSpanish: {resSpanish.Text}";
             recordButton.enabled = true;
         }
 
