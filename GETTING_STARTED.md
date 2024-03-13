@@ -13,7 +13,7 @@ npm install
 ### Create a fork of the `develop` branch
 
 ### Follow [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) guidelines when writing commits and pull requests
-Structure:
+#### Structure:
 
 ```
 <type>[optional scope]: <description>
@@ -24,7 +24,7 @@ Structure:
 
 ```
 
-Commit types:
+#### Commit types:
 
 | Commit Type | Title | Description
 
@@ -51,5 +51,25 @@ Commit types:
 | `chore` | Chores | Other changes that don't modify src or test files
 
 | `revert` | Reverts | Reverts a previous commit
+
+#### Examples:
+Commit message with no body
+```
+docs: correct spelling of CHANGELOG
+```
+Commit message with scope
+```
+feat(lang): add Polish language
+```
+Commit message with multi-paragraph body
+```
+fix: prevent racing of requests
+
+Introduce a request id and a reference to latest request. Dismiss
+incoming responses other than from latest request.
+
+Remove timeouts which were used to mitigate the racing issue but are
+obsolete now.
+```
 
 ### Create pull requests into the `develop` branch (NOT the `main` branch)
