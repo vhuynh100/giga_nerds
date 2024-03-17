@@ -1,0 +1,20 @@
+{
+  "name": "giga_nerds",
+  "version": "1.0.0",
+  "description": "Alim (alimvasaya)\\\r Ariana (q-ariana)\\\r Daniel (daniellonda)\\\r Drew (Hia-SuS)\\\r Hillary (Hillary30)\\\r John (jjgsif)\\\r Patricia (Acerbase12)\\\r Roman (RomanGuerra)\\\r Vanessa (vhuynh100)",
+  "main": "index.js",
+  "devDependencies": {
+    "@commitlint/cli": "^19.1.0",
+    "@commitlint/config-conventional": "^19.1.0",
+    "husky": "^9.0.11"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky",
+    "commitlint": "commitlint --edit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}
