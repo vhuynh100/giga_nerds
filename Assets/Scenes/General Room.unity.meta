@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scenes/General Room.unity.meta
 guid: 4d0b0ada50811004abccdfc0078490c7
+========
+guid: d8287741512161845a30808588523c93
+>>>>>>>> e38e490cb6df5fa8216e8bd87a7b19a953417f20:Assets/Scenes/Classroom.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
