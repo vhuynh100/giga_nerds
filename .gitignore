@@ -25,6 +25,11 @@
 
 # Visual Studio cache directory
 .vs/
+.vsconfig
+.vscode
+
+# JetBrains cache directory
+.idea/
 
 # Gradle cache directory
 .gradle/
@@ -70,3 +75,7 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# NodeJS and npm
+node_modules/
+package-lock.json
