@@ -6966,6 +6966,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1406247426}
   - component: {fileID: 1406247425}
+  - component: {fileID: 1406247428}
+  - component: {fileID: 1406247427}
   m_Layer: 0
   m_Name: Whisper
   m_TagString: Untagged
@@ -6993,6 +6995,8 @@ MonoBehaviour:
   message: {fileID: 1593428716}
   dropdown: {fileID: 806708132}
   activeButtonColor: {r: 0.98039216, g: 0.6392157, b: 0, a: 1}
+  _translationString: 
+  _previousTranslationString: 
 --- !u!4 &1406247426
 Transform:
   m_ObjectHideFlags: 0
@@ -7008,6 +7012,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1406247427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406247424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb3a344e3637da94fb21b862fd33e63a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1406247428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406247424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -363599832, guid: ebae63e7edba59945a994528ada1f7a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _realtime: {fileID: 1921094931}
+  _sceneViewUUID: 
+  _viewUUID: 54001b1e-ef8e-4c5c-b0db-c688426723e6
+  _sceneViewPreventOwnershipTakeover: 0
+  _sceneViewDestroyWhenOwnerOrLastClientLeaves: 1
+  _sceneViewDestroyWhenOwnerOrLastClientLeavesMigrated: 1
+  _sceneViewDestroyWhenLastClientLeaves: 1
+  _components:
+  - componentID: 1
+    component: {fileID: 1406247427}
+  _childViews: []
 --- !u!1 &1421269840
 GameObject:
   m_ObjectHideFlags: 0
@@ -9352,6 +9391,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1921094931 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114501696213753918, guid: fca9d4afb3743274e8f7da14019d7e0b,
+    type: 3}
+  m_PrefabInstance: {fileID: 102038548}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1424795628, guid: ebae63e7edba59945a994528ada1f7a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1935619784
 GameObject:
   m_ObjectHideFlags: 0

@@ -16,6 +16,13 @@ namespace Samples.Whisper
 
         [SerializeField] private Color activeButtonColor = new Color(0.5f, 0.5f, 0.5f); // Define the color for active buttons
 
+        [SerializeField] private string _translationString = default;
+        [SerializeField] private string _previousTranslationString = default;
+
+        private RequestSync _requestSync;
+
+        private string messageString;
+
         private readonly string fileName = "output.wav";
         private readonly int duration = 5;
 
@@ -44,6 +51,11 @@ namespace Samples.Whisper
             var index = PlayerPrefs.GetInt("user-mic-device-index");
             dropdown.SetValueWithoutNotify(index);
 #endif
+        }
+
+        private void Awake()
+        {
+            _requestSync = GetComponent<RequestSync>();
         }
 
         private void ChangeMicrophone(int index)
@@ -109,12 +121,29 @@ namespace Samples.Whisper
             progressBar.fillAmount = 0;
 
             // Display API text to UI
-            message.text = $"{targetLanguage.ToUpper()}: {res.Text}";
+            _translationString = $"{targetLanguage.ToUpper()}: {res.Text}";
+            _requestSync.SetTranslation(_translationString);
+
             recordButton.enabled = true;
         }
 
         private void Update()
         {
+
+            if (_translationString != _requestSync.GetTranslation()) // starting: translation string is empty (no client side transcription made), but realtime model has been updated
+            {                                                       // updates client side display to match realtime model
+                _translationString = _requestSync.GetTranslation();
+                message.text = _translationString;
+            }
+
+            if (_requestSync.GetTranslation() != _previousTranslationString)  // this will need work (another headset made a request to yours)
+            {
+                message.text = _requestSync.GetTranslation();
+                _translationString = _requestSync.GetTranslation();
+                _previousTranslationString = _translationString;
+            }
+
+
             if (isRecording)
             {
                 time += Time.deltaTime;
