@@ -8,9 +8,7 @@ using Normal.Realtime.Serialization;
 [RealtimeModel]
 public partial class RequestSyncModel
 {
-    [RealtimeProperty(1, true, true)]
-    private string _translation;
+    [RealtimeProperty(1, true, true)] private string _translation;
 
-    [RealtimeProperty(2, true, true)]
-    private bool _requested;
+    [RealtimeProperty(2, true, true)] private bool _requested;
 }

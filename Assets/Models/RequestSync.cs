@@ -5,30 +5,33 @@ using UnityEngine;
 
 public class RequestSync : RealtimeComponent<RequestSyncModel>
 {
-    //private RequestSyncModel _requestSyncModel;// here
     private string _translation;
+    private bool _requested;
 
     private void Awake()
     {
         //_translation = GetComponent<string>();
+        _requested = false;
     }
-
-
 
     protected override void OnRealtimeModelReplaced(RequestSyncModel previousModel, RequestSyncModel currentModel)
     {
         if (previousModel != null)
         {
             previousModel.translationDidChange -= TranslationStringDidChange;
+            previousModel.requestedDidChange -= RequestedDidChange;
         }
         if (currentModel.isFreshModel)
-        { // probably change this maybe perhaps possibly
+        {
             currentModel.translation = _translation;
+            currentModel.requested = _requested;
         }
 
         UpdateTranslationString();
+        UpdateRequested();
 
         currentModel.translationDidChange += TranslationStringDidChange;
+        currentModel.requestedDidChange += RequestedDidChange;
     }
 
     private void TranslationStringDidChange(RequestSyncModel model, string translationString)
@@ -36,11 +39,19 @@ public class RequestSync : RealtimeComponent<RequestSyncModel>
         UpdateTranslationString();
     }
 
+    private void RequestedDidChange(RequestSyncModel model, bool requested)
+    {
+        UpdateTranslationString();
+    }
+
     private void UpdateTranslationString()
     {
-
         _translation = model.translation;
-        //model.translation = translationString.text; // this may be wrong
+    }
+
+    private void UpdateRequested()
+    {
+        _requested = model.requested;
     }
 
     public void SetTranslation(string translation)
@@ -53,6 +64,14 @@ public class RequestSync : RealtimeComponent<RequestSyncModel>
         return model.translation;
     }
 
+    public void SetRequested(bool requested)
+    {
+        model.requested = requested;
+    }
 
+    public bool GetRequested()
+    {
+        return model.requested;
+    }
 
 }
