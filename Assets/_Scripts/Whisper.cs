@@ -21,11 +21,14 @@ namespace Samples.Whisper
         [SerializeField] private bool _requested = default;
 
         private RequestSync _requestSync;
+        //private int starting = 0;
 
         private string messageString;
 
         private readonly string fileName = "output.wav";
         private readonly int duration = 5;
+
+
 
         private AudioClip clip;
         private bool isRecording;
@@ -39,7 +42,12 @@ namespace Samples.Whisper
         {
 #if UNITY_WEBGL && !UNITY_EDITOR
             dropdown.options.Add(new Dropdown.OptionData("Microphone not supported on WebGL"));
+
 #else
+
+
+            
+
             foreach (var device in Microphone.devices)
             {
                 dropdown.options.Add(new Dropdown.OptionData(device));
@@ -57,6 +65,8 @@ namespace Samples.Whisper
 
             var index = PlayerPrefs.GetInt("user-mic-device-index");
             dropdown.SetValueWithoutNotify(index);
+
+            
 #endif
         }
 
@@ -149,7 +159,19 @@ namespace Samples.Whisper
         private void Update()
         {
 
-            if(!isRecording && _requestSync.GetRequested() == true && madeRequest == false)  // translation request was recieved, starts recording
+            print("====================================================================================================================================== Made Request: " + madeRequest);
+            print("======================================================================================================================================= Request Sync Request: " + _requestSync.GetRequested());
+            print("====================================================================================================================================== Request Sync translation: " + _requestSync.GetTranslation());
+            print("======================================================================================================================================== translationString: " + _translationString);
+            //starting = starting + 1;
+            //if( starting == 100)
+            //{
+                //print("-------------------------------------------------------- request automatically sent");
+                //MakeRequest();
+
+            //}
+
+            if (!isRecording && _requestSync.GetRequested() == true && madeRequest == false)  // translation request was recieved, starts recording
             {
                 print("============================================================================================================= Recording was requested");
                 StartRecording();
