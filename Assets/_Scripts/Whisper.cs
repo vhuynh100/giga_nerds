@@ -21,7 +21,7 @@ namespace Samples.Whisper
         [SerializeField] private bool _requested = default;
 
         private RequestSync _requestSync;
-        //private int starting = 0;
+        private int starting = 0;
 
         private string messageString;
 
@@ -60,7 +60,7 @@ namespace Samples.Whisper
             frenchButton.onClick.AddListener(() => SetTargetLanguage("fr"));
             germanButton.onClick.AddListener(() => SetTargetLanguage("de"));
                 
-            //SetTargetLanguage("es");                                                                                                  // these 2 lines can be uncommented for use of testing on meta simulator
+            //SetTargetLanguage("de");                                                                                                  // these 2 lines can be uncommented for use of testing on meta simulator
             //PlayerPrefs.SetInt("user-mic-device-index", 1);
 
             var index = PlayerPrefs.GetInt("user-mic-device-index");
@@ -156,6 +156,23 @@ namespace Samples.Whisper
             recordButton.enabled = true;
         }
 
+        private bool EmptyTranslation(string translationString)
+        {
+            string advertisement = "Amara.org";
+
+            if (translationString.Contains(advertisement))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+
+
+
+
+
         private void Update()
         {
 
@@ -166,7 +183,7 @@ namespace Samples.Whisper
             //starting = starting + 1;
             //if( starting == 100)
             //{
-                //print("-------------------------------------------------------- request automatically sent");
+               // print("-------------------------------------------------------- request automatically sent");
                 //MakeRequest();
 
             //}
@@ -178,9 +195,17 @@ namespace Samples.Whisper
             }
 
 
-            if(madeRequest == true && recievedRequest == true && message.text != _requestSync.GetTranslation()) // translation requested and recieved, displays new translation and sets shared request status to false.
+            if(madeRequest == true && recievedRequest == true && _translationString != _requestSync.GetTranslation()) // translation requested and recieved, displays new translation and sets shared request status to false.
             {
-                message.text = _requestSync.GetTranslation();
+                if (!EmptyTranslation(_requestSync.GetTranslation()))
+                {
+                    message.text = _requestSync.GetTranslation();
+                }
+                else
+                {
+                    message.text = "No translation recorded";
+                }
+                
                 _requestSync.SetRequested(false);
                 recievedRequest = false;
                 madeRequest = false;
@@ -194,7 +219,14 @@ namespace Samples.Whisper
 
             if (madeRequest == true && _requestSync.GetTranslation() != _translationString)  // you requested a translation and it was recieved.
             {
-                message.text = _requestSync.GetTranslation();
+                if (!EmptyTranslation(_requestSync.GetTranslation()))
+                {
+                    message.text = _requestSync.GetTranslation();
+                }
+                else
+                {
+                    message.text = "No translation recorded";
+                }
                 _translationString = _requestSync.GetTranslation();
                 _previousTranslationString = _translationString;
                 _requestSync.SetRequested(false);
