@@ -656,6 +656,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114501696213753918, guid: fca9d4afb3743274e8f7da14019d7e0b,
         type: 3}
+      propertyPath: _roomToJoinOnStart
+      value: Whisper Room
+      objectReference: {fileID: 0}
+    - target: {fileID: 114501696213753918, guid: fca9d4afb3743274e8f7da14019d7e0b,
+        type: 3}
       propertyPath: _normcoreAppSettings
       value: 
       objectReference: {fileID: 11400000, guid: 38d7280c06586c342a08b4817704819d,
@@ -7743,9 +7748,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   recordButton: {fileID: 127668736}
+  spanishButton: {fileID: 0}
+  frenchButton: {fileID: 0}
+  germanButton: {fileID: 0}
   progressBar: {fileID: 1736223105}
   message: {fileID: 1593428716}
   dropdown: {fileID: 806708132}
+  activeButtonColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  _translationString: 
+  _previousTranslationString: 
+  _requested: 0
 --- !u!4 &1406247426
 Transform:
   m_ObjectHideFlags: 0
