@@ -5,6 +5,7 @@ public class Timer : MonoBehaviour
 {
     public Text timerText;
     private float startTime;
+    private float countdownDuration = 300; // Default duration (e.g., 300 for 5 minutes)
     private bool isTimerRunning = false;
 
     void Start()
@@ -16,10 +17,15 @@ public class Timer : MonoBehaviour
     {
         if (isTimerRunning)
         {
-            float timeElapsed = Time.time - startTime;
-            int minutes = Mathf.FloorToInt(timeElapsed / 60);
-            int seconds = Mathf.FloorToInt(timeElapsed % 60);
-            int milliseconds = Mathf.FloorToInt((timeElapsed * 1000) % 1000);
+            float timeRemaining = countdownDuration - (Time.time - startTime);
+            if (timeRemaining <= 0)
+            {
+                isTimerRunning = false;
+                timeRemaining = 0;
+            }
+            int minutes = Mathf.FloorToInt(timeRemaining / 60);
+            int seconds = Mathf.FloorToInt(timeRemaining % 60);
+            int milliseconds = Mathf.FloorToInt((timeRemaining * 1000) % 1000);
             timerText.text = string.Format("{0:00}:{1:00}:{2:000}", minutes, seconds, milliseconds);
         }
     }
@@ -34,5 +40,13 @@ public class Timer : MonoBehaviour
     {
         isTimerRunning = false;
     }
+
+    public void SetDuration(float durationInSeconds)
+    {
+        countdownDuration = durationInSeconds;
+    }
 }
+
+
+
 
