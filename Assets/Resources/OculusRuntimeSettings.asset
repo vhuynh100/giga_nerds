@@ -19,5 +19,5 @@ MonoBehaviour:
   hasSetTelemetryEnabled: 0
   telemetryEnabled: 0
   telemetryProjectGuid: 43a4eb73-ff7c-4d68-a37b-7667be507b5a
-  bodyTrackingFidelity: 1
-  bodyTrackingJointSet: 0
+  bodyTrackingFidelity: 2
+  bodyTrackingJointSet: 1
