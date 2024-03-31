@@ -1,37 +1,49 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.ProBuilder.Shapes;
 using UnityEngine.UI;
 
 public class ButtonManager : MonoBehaviour
 {
-    [SerializeField] private GameObject translationMenu;
+    // Canvas
+    [SerializeField] private GameObject translationMenu; 
     [SerializeField] private GameObject settingsMenu;
-    [SerializeField] private Button exitButton;
     [SerializeField] private GameObject timerMenu;
-    [SerializeField] private Button microphoneButton;
+
+    // Circle UI Buttons
     [SerializeField] private Button lingoLinkButton;
     [SerializeField] private Button translationMenuButton;
     [SerializeField] private Button settingsButton;
+    [SerializeField] private Button exitButton;
     [SerializeField] private Button timerButton;
+    [SerializeField] private Button microphoneButton;
+
+    // Center Text Field
+    [SerializeField] private TMP_Text message;
+
+    // Icons
+    [SerializeField] private GameObject unmutedIcon;
+    [SerializeField] private GameObject mutedIcon;
 
     private bool microphoneMuted = false;
 
     private void Start()
     {
         // Add listeners to buttons
-        exitButton.onClick.AddListener(ExitSession);
-        microphoneButton.onClick.AddListener(ToggleMicrophone);
         lingoLinkButton.onClick.AddListener(LingoLinkButtonClicked);
         translationMenuButton.onClick.AddListener(TranslationMenuButtonClicked);
         settingsButton.onClick.AddListener(SettingsButtonClicked);
+        exitButton.onClick.AddListener(ExitSession);
         timerButton.onClick.AddListener(TimerButtonClicked);
+        microphoneButton.onClick.AddListener(ToggleMicrophone);
     }
 
     private void ExitSession()
     {
         // Quit the application
-        Debug.Log("Exit Button Clicked");
         Application.Quit();
 
         #if UNITY_EDITOR
@@ -43,48 +55,46 @@ public class ButtonManager : MonoBehaviour
 
     private void ToggleMicrophone()
     {
-        // Mute or unmute the microphone
-        microphoneMuted = !microphoneMuted;
-        // Code to mute/unmute microphone based on microphoneMuted variable
-        if (microphoneMuted)
-            Debug.Log("Microphone Muted");
-        else
-            Debug.Log("Microphone Unmuted");
+        // Update icon visibility based on microphone state
+        unmutedIcon.SetActive(false);
+        mutedIcon.SetActive(true);
     }
 
     // Method for Lingo Link Button
     public void LingoLinkButtonClicked()
     {
-        // Your functionality here
-        Debug.Log("Lingo Link Button Clicked");
-    }
+        message.text = "Lingo Link";
+        
+        // Remove the line comments once we are ready to tie into timerMenu, and settingsMenu
+        // timerMenu.SetActive(false);
+        // settingsMenu.SetActive(false);
+        translationMenu.SetActive(false);
 
+        unmutedIcon.SetActive(true);
+        mutedIcon.SetActive(false);
+    }
+    
     // Method for Translation Menu Button
     public void TranslationMenuButtonClicked()
     {
-        // Toggle the translation menu
-        bool menuActive = translationMenu.activeSelf;
-        translationMenu.SetActive(!menuActive);
+        // Toggle the Translation Menu
+        translationMenu.SetActive(true);
 
-        if (!menuActive)
-            Debug.Log("Translation Menu Shown");
-        else
-            Debug.Log("Translation Menu Hidden");
+        // Update UI message
+        message.text = "Translate / Transcribe UI";
     }
 
     // Method for Settings Button
     public void SettingsButtonClicked()
     {
         // Toggle the settings menu
-        settingsMenu.SetActive(!settingsMenu.activeSelf);
-        Debug.Log("Settings Button Clicked");
+        settingsMenu.SetActive(true);
     }
 
     // Method for Timer Button
     public void TimerButtonClicked()
     {
         // Toggle the timer menu
-        timerMenu.SetActive(!timerMenu.activeSelf);
-        Debug.Log("Timer Button Clicked");
+        timerMenu.SetActive(true);
     }
 }
