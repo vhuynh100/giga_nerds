@@ -9,13 +9,6 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
-/[Aa]ssets/Firebase
-/[Aa]ssets/SHarmid
-/[Aa]ssets/ExternalDependencyManager
-/[Aa]ssets/Plugins/iOS
-/[Aa]ssets/Plugins/tvOS
-/[Aa]ssets/Plugins/iOS.meta
-/[Aa]ssets/Plugins/tvOS.meta
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
