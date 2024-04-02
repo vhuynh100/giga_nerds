@@ -10,20 +10,15 @@
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
 /[Aa]ssets/Firebase
-<<<<<<< Updated upstream
 /[Aa]ssets/SHarmid
-=======
 /[Aa]ssets/Charmed
->>>>>>> Stashed changes
 /[Aa]ssets/ExternalDependencyManager
 /[Aa]ssets/Plugins/iOS
 /[Aa]ssets/Plugins/tvOS
 /[Aa]ssets/Plugins/iOS.meta
 /[Aa]ssets/Plugins/tvOS.meta
-<<<<<<< Updated upstream
-=======
 /[Aa]ssets/Editor Default Resources/Firebase/
->>>>>>> Stashed changes
+
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
