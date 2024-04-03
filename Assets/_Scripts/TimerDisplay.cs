@@ -5,11 +5,13 @@ public class Timer : MonoBehaviour
 {
     public Text timerText;
     private float startTime;
-    private float countdownDuration = 300; // Default duration (e.g., 300 for 5 minutes)
+    private float countdownDuration = 300; // Default duration
     private bool isTimerRunning = false;
 
     void Start()
     {
+        // You can call SetDuration here if you want to start with a specific duration
+        // For example: SetDuration(120) for a 2-minute countdown
         StartTimer();
     }
 
@@ -44,9 +46,9 @@ public class Timer : MonoBehaviour
     public void SetDuration(float durationInSeconds)
     {
         countdownDuration = durationInSeconds;
+        if (isTimerRunning)
+        {
+            StartTimer();
+        }
     }
 }
-
-
-
-
