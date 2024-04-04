@@ -10,12 +10,13 @@
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
 /[Aa]ssets/Firebase
-/[Aa]ssets/SHarmid
+/[Aa]ssets/Charmed
 /[Aa]ssets/ExternalDependencyManager
 /[Aa]ssets/Plugins/iOS
 /[Aa]ssets/Plugins/tvOS
 /[Aa]ssets/Plugins/iOS.meta
 /[Aa]ssets/Plugins/tvOS.meta
+/[Aa]ssets/Editor Default Resources/Firebase/
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
@@ -86,50 +87,3 @@ crashlytics-build.properties
 # NodeJS and npm
 node_modules/
 package-lock.json
-Assets/Editor Default Resources/Firebase/fb_analytics.png
-Assets/Editor Default Resources/Firebase.meta
-Assets/Editor Default Resources/Firebase/fb_analytics.png.meta
-Assets/Editor Default Resources/Firebase/fb_analytics_dark.png
-Assets/Editor Default Resources/Firebase/fb_analytics_dark.png.meta
-Assets/Editor Default Resources/Firebase/fb_auth.png
-Assets/Editor Default Resources/Firebase/fb_auth.png.meta
-Assets/Editor Default Resources/Firebase/fb_auth_dark.png
-Assets/Editor Default Resources/Firebase/fb_auth_dark.png.meta
-Assets/Editor Default Resources/Firebase/fb_cloud_messaging.png
-Assets/Editor Default Resources/Firebase/fb_cloud_messaging.png.meta
-Assets/Editor Default Resources/Firebase/fb_cloud_messaging_dark.png
-Assets/Editor Default Resources/Firebase/fb_cloud_messaging_dark.png.meta
-Assets/Editor Default Resources/Firebase/fb_config.png
-Assets/Editor Default Resources/Firebase/fb_config.png.meta
-Assets/Editor Default Resources/Firebase/fb_config_dark.png
-Assets/Editor Default Resources/Firebase/fb_config_dark.png.meta
-Assets/Editor Default Resources/Firebase/fb_crashlytics.png
-Assets/Editor Default Resources/Firebase/fb_crashlytics.png.meta
-Assets/Editor Default Resources/Firebase/fb_crashlytics_dark.png
-Assets/Editor Default Resources/Firebase/fb_crashlytics_dark.png.meta
-Assets/Editor Default Resources/Firebase/fb_database.png
-Assets/Editor Default Resources/Firebase/fb_database.png.meta
-Assets/Editor Default Resources/Firebase/fb_database_dark.png
-Assets/Editor Default Resources/Firebase/fb_database_dark.png.meta
-Assets/Editor Default Resources/Firebase/fb_dynamic_links.png
-Assets/Editor Default Resources/Firebase/fb_dynamic_links.png.meta
-Assets/Editor Default Resources/Firebase/fb_dynamic_links_dark.png
-Assets/Editor Default Resources/Firebase/fb_dynamic_links_dark.png.meta
-Assets/Editor Default Resources/Firebase/fb_functions.png
-Assets/Editor Default Resources/Firebase/fb_functions.png.meta
-Assets/Editor Default Resources/Firebase/fb_functions_dark.png
-Assets/Editor Default Resources/Firebase/fb_functions_dark.png.meta
-Assets/Editor Default Resources/Firebase/fb_invites.png
-Assets/Editor Default Resources.meta
-Assets/Editor Default Resources/Firebase/fb_invites.png.meta
-Assets/Editor Default Resources/Firebase/fb_invites_dark.png
-Assets/Editor Default Resources/Firebase/fb_invites_dark.png.meta
-Assets/Editor Default Resources/Firebase/fb_storage.png
-Assets/Editor Default Resources/Firebase/fb_storage.png.meta
-Assets/Editor Default Resources/Firebase/fb_storage_dark.png
-Assets/Editor Default Resources/Firebase/fb_storage_dark.png.meta
-Assets/Editor Default Resources/Firebase/firebase_lockup.png
-Assets/Editor Default Resources/Firebase/firebase_lockup.png.meta
-Assets/Editor Default Resources/Firebase/firebase_lockup_dark.png
-Assets/Editor Default Resources/Firebase/firebase_lockup_dark.png.meta
-Assets/Normal/Internal/Resources/InternalSettings.asset
