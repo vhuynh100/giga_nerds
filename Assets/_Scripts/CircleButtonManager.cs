@@ -14,12 +14,13 @@ public class ButtonManager : MonoBehaviour
     [SerializeField] private GameObject timerMenu;
 
     // Circle UI Buttons
-    [SerializeField] private Button lingoLinkButton;
-    [SerializeField] private Button translationMenuButton;
-    [SerializeField] private Button settingsButton;
-    [SerializeField] private Button exitButton;
-    [SerializeField] private Button timerButton;
-    [SerializeField] private Button microphoneButton;
+    //[SerializeField] private Button lingoLinkButton;
+    //[SerializeField] private Button translationMenuButton;
+    //[SerializeField] private Button settingsButton;
+    //[SerializeField] private Button exitButton;
+    //[SerializeField] private Button timerButton;
+    //[SerializeField] private Button microphoneButton;
+
 
     // Center Text Field
     [SerializeField] private TMP_Text message;
@@ -33,12 +34,12 @@ public class ButtonManager : MonoBehaviour
     private void Start()
     {
         // Add listeners to buttons
-        lingoLinkButton.onClick.AddListener(LingoLinkButtonClicked);
-        translationMenuButton.onClick.AddListener(TranslationMenuButtonClicked);
-        settingsButton.onClick.AddListener(SettingsButtonClicked);
-        exitButton.onClick.AddListener(ExitSession);
-        timerButton.onClick.AddListener(TimerButtonClicked);
-        microphoneButton.onClick.AddListener(ToggleMicrophone);
+        //lingoLinkButton.onClick.AddListener(LingoLinkButtonClicked);
+        //translationMenuButton.onClick.AddListener(TranslationMenuButtonClicked);
+        //settingsButton.onClick.AddListener(SettingsButtonClicked);
+        //exitButton.onClick.AddListener(ExitSession);
+        //timerButton.onClick.AddListener(TimerButtonClicked);
+        //microphoneButton.onClick.AddListener(ToggleMicrophone);
     }
 
     private void ExitSession()
@@ -96,5 +97,20 @@ public class ButtonManager : MonoBehaviour
     {
         // Toggle the timer menu
         timerMenu.SetActive(true);
+    }
+
+    public void muteMic()
+    {
+        if (microphoneMuted)
+        {
+            microphoneMuted = true;
+            mutedIcon.SetActive(true);
+            unmutedIcon.SetActive(false);
+            return;
+        }
+        microphoneMuted = !true;
+        mutedIcon.SetActive(!true);
+        unmutedIcon.SetActive(!false);
+
     }
 }
