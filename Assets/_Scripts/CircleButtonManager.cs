@@ -64,7 +64,7 @@ public class ButtonManager : MonoBehaviour
     // Method for Lingo Link Button
     public void LingoLinkButtonClicked()
     {
-        message.text = "Lingo Link";
+        message.text = "LINGO LINK";
         
         // Remove the line comments once we are ready to tie into timerMenu, and settingsMenu
         // timerMenu.SetActive(false);
@@ -82,7 +82,7 @@ public class ButtonManager : MonoBehaviour
         translationMenu.SetActive(true);
 
         // Update UI message
-        message.text = "Translate / Transcribe UI";
+        message.text = "TRANSLATE";
     }
 
     // Method for Settings Button
