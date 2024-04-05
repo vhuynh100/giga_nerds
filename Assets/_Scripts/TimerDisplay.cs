@@ -1,54 +1,40 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
-public class Timer : MonoBehaviour
+public class CountdownTimer : MonoBehaviour
 {
     public Text timerText;
-    private float startTime;
-    private float countdownDuration = 300; // Default duration
-    private bool isTimerRunning = false;
-
-    void Start()
-    {
-        // You can call SetDuration here if you want to start with a specific duration
-        // For example: SetDuration(120) for a 2-minute countdown
-        StartTimer();
-    }
+    private float TimerCounting = 500f;
 
     void Update()
     {
-        if (isTimerRunning)
+        if (TimerCounting > 0)
         {
-            float timeRemaining = countdownDuration - (Time.time - startTime);
-            if (timeRemaining <= 0)
-            {
-                isTimerRunning = false;
-                timeRemaining = 0;
-            }
-            int minutes = Mathf.FloorToInt(timeRemaining / 60);
-            int seconds = Mathf.FloorToInt(timeRemaining % 60);
-            int milliseconds = Mathf.FloorToInt((timeRemaining * 1000) % 1000);
-            timerText.text = string.Format("{0:00}:{1:00}:{2:000}", minutes, seconds, milliseconds);
+            TimerCounting -= Time.deltaTime;
+            UpdateTimerText();
         }
     }
 
-    public void StartTimer()
+    public void SetTimer(float minutes)
     {
-        startTime = Time.time;
-        isTimerRunning = true;
+        TimerCounting = minutes * 60; // Convert minutes to seconds
+        UpdateTimerText();
     }
 
-    public void StopTimer()
+    private void UpdateTimerText()
     {
-        isTimerRunning = false;
+        int minutes = Mathf.FloorToInt(TimerCounting / 60);
+        int seconds = Mathf.FloorToInt(TimerCounting % 60);
+        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
-    public void SetDuration(float durationInSeconds)
+    // Methods linked to buttons
+    public void SetFiveMinutes()
     {
-        countdownDuration = durationInSeconds;
-        if (isTimerRunning)
-        {
-            StartTimer();
-        }
+        Debug.Log("button got clickd");
+        SetTimer(5f);
     }
+    public void SetTenMinutes() => SetTimer(10f);
+    public void SetFifteenMinutes() => SetTimer(15f);
 }
