@@ -14,12 +14,13 @@ public class ButtonManager : MonoBehaviour
     [SerializeField] private GameObject timerMenu;
 
     // Circle UI Buttons
-    [SerializeField] private Button lingoLinkButton;
-    [SerializeField] private Button translationMenuButton;
-    [SerializeField] private Button settingsButton;
-    [SerializeField] private Button exitButton;
-    [SerializeField] private Button timerButton;
-    [SerializeField] private Button microphoneButton;
+    //[SerializeField] private Button lingoLinkButton;
+    //[SerializeField] private Button translationMenuButton;
+    //[SerializeField] private Button settingsButton;
+    //[SerializeField] private Button exitButton;
+    //[SerializeField] private Button timerButton;
+    //[SerializeField] private Button microphoneButton;
+
 
     // Center Text Field
     [SerializeField] private TMP_Text message;
@@ -33,12 +34,12 @@ public class ButtonManager : MonoBehaviour
     private void Start()
     {
         // Add listeners to buttons
-        lingoLinkButton.onClick.AddListener(LingoLinkButtonClicked);
-        translationMenuButton.onClick.AddListener(TranslationMenuButtonClicked);
-        settingsButton.onClick.AddListener(SettingsButtonClicked);
-        exitButton.onClick.AddListener(ExitSession);
-        timerButton.onClick.AddListener(TimerButtonClicked);
-        microphoneButton.onClick.AddListener(ToggleMicrophone);
+        //lingoLinkButton.onClick.AddListener(LingoLinkButtonClicked);
+        //translationMenuButton.onClick.AddListener(TranslationMenuButtonClicked);
+        //settingsButton.onClick.AddListener(SettingsButtonClicked);
+        //exitButton.onClick.AddListener(ExitSession);
+        //timerButton.onClick.AddListener(TimerButtonClicked);
+        //microphoneButton.onClick.AddListener(ToggleMicrophone);
     }
 
     private void ExitSession()
@@ -63,7 +64,7 @@ public class ButtonManager : MonoBehaviour
     // Method for Lingo Link Button
     public void LingoLinkButtonClicked()
     {
-        message.text = "Lingo Link";
+        message.text = "LINGO LINK";
         
         // Remove the line comments once we are ready to tie into timerMenu, and settingsMenu
         // timerMenu.SetActive(false);
@@ -81,7 +82,7 @@ public class ButtonManager : MonoBehaviour
         translationMenu.SetActive(true);
 
         // Update UI message
-        message.text = "Translate / Transcribe UI";
+        message.text = "TRANSLATE";
     }
 
     // Method for Settings Button
@@ -96,5 +97,20 @@ public class ButtonManager : MonoBehaviour
     {
         // Toggle the timer menu
         timerMenu.SetActive(true);
+    }
+
+    public void muteMic()
+    {
+        if (microphoneMuted)
+        {
+            microphoneMuted = true;
+            mutedIcon.SetActive(true);
+            unmutedIcon.SetActive(false);
+            return;
+        }
+        microphoneMuted = !true;
+        mutedIcon.SetActive(!true);
+        unmutedIcon.SetActive(!false);
+
     }
 }
