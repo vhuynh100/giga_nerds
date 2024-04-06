@@ -17,15 +17,11 @@ public class MenuPositioner : MonoBehaviour
     void Update()
     {
         Vector3 targetPos = GetTargetPos();
-        Debug.Log("Target Position: " + targetPos);
         transform.position = Vector3.Lerp(transform.position, targetPos, smoothFactor * Time.deltaTime);
 
 
         Quaternion targetRot = GetTargetRot();
-        Debug.Log("Target Rotation: " + targetRot.eulerAngles);
-
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, smoothFactor * Time.deltaTime);
-
     }
     Vector3 GetTargetPos()
     {

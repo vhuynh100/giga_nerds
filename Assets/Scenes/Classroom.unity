@@ -718,6 +718,18 @@ MonoBehaviour:
   - componentID: 1
     component: {fileID: 1406247427}
   _childViews: []
+--- !u!114 &1571072294 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 376208989078436189, guid: 3aad16a7f3b317c4d92fb9511563fb69,
+    type: 3}
+  m_PrefabInstance: {fileID: 1835300135}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 124f4583f657475469a45ab6fca8f921, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1593428716 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3958134615823172442, guid: 963435871795fa14fbc954db3ba399c4,
@@ -800,11 +812,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4025017284828849479, guid: 3aad16a7f3b317c4d92fb9511563fb69,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7991149230813539702, guid: 3aad16a7f3b317c4d92fb9511563fb69,
         type: 3}
       propertyPath: m_Name
       value: General Room 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8812427382876183615, guid: 3aad16a7f3b317c4d92fb9511563fb69,
+        type: 3}
+      propertyPath: _oneGrabTransformer
+      value: 
+      objectReference: {fileID: 1571072294}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
