@@ -268,6 +268,7 @@ GameObject:
   - component: {fileID: 9147051616462143766}
   - component: {fileID: 9211235405141168088}
   - component: {fileID: 4697233656861536029}
+  - component: {fileID: 3335064134966930739}
   m_Layer: 0
   m_Name: '[BuildingBlock] HandGrab'
   m_TagString: Untagged
@@ -320,7 +321,7 @@ MonoBehaviour:
   _transferOnSecondSelection: 1
   _addNewPointsToFront: 0
   _forwardElement: {fileID: 0}
-  _oneGrabTransformer: {fileID: 0}
+  _oneGrabTransformer: {fileID: 3335064134966930739}
   _twoGrabTransformer: {fileID: 0}
   _targetTransform: {fileID: 9105984551103431439}
   _maxGrabPoints: -1
@@ -403,6 +404,38 @@ MonoBehaviour:
   _pointable: {fileID: 1828595278806985645}
   _rigidbody: {fileID: 6122643435441296339}
   _scaleMassWithSize: 1
+--- !u!114 &3335064134966930739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4231920116961371458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9597e632dfbca247bcf65e49c67078e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _constraints:
+    ConstraintsAreRelative: 1
+    MinX:
+      Constrain: 1
+      Value: 0
+    MaxX:
+      Constrain: 1
+      Value: 0
+    MinY:
+      Constrain: 1
+      Value: 0
+    MaxY:
+      Constrain: 1
+      Value: 0
+    MinZ:
+      Constrain: 1
+      Value: 0
+    MaxZ:
+      Constrain: 1
+      Value: 3
 --- !u!1 &4521083358847884769
 GameObject:
   m_ObjectHideFlags: 0
