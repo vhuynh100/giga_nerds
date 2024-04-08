@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1126456363138471907}
   - component: {fileID: 1139657310659639796}
   - component: {fileID: 3421107509644528356}
+  - component: {fileID: 5268619181281459963}
   m_Layer: 0
   m_Name: '[BuildingBlock] HandGrab'
   m_TagString: Untagged
@@ -149,6 +150,38 @@ MonoBehaviour:
   _pointable: {fileID: 7322608287107699508}
   _rigidbody: {fileID: 5682837167175428627}
   _scaleMassWithSize: 1
+--- !u!114 &5268619181281459963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2847874108951529960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9597e632dfbca247bcf65e49c67078e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _constraints:
+    ConstraintsAreRelative: 1
+    MinX:
+      Constrain: 0
+      Value: 0
+    MaxX:
+      Constrain: 1
+      Value: 0
+    MinY:
+      Constrain: 1
+      Value: 0
+    MaxY:
+      Constrain: 1
+      Value: 0
+    MinZ:
+      Constrain: 1
+      Value: -10
+    MaxZ:
+      Constrain: 1
+      Value: 0
 --- !u!1 &4201614591954908957
 GameObject:
   m_ObjectHideFlags: 0
