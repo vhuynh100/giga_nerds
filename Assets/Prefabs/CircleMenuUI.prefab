@@ -1210,7 +1210,6 @@ GameObject:
   - component: {fileID: 6921526716397772610}
   - component: {fileID: 5031631735859138910}
   - component: {fileID: 2447677276744222512}
-  - component: {fileID: 6940332478077497524}
   m_Layer: 5
   m_Name: CircleMenuUI
   m_TagString: Untagged
@@ -1342,20 +1341,6 @@ MonoBehaviour:
   message: {fileID: 6251427926499543898}
   unmutedIcon: {fileID: 6579714836127333582}
   mutedIcon: {fileID: 849131196535476912}
---- !u!114 &6940332478077497524
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2537694942387361394}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f93713cc084c6449a39c2b9c6ecc266, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  circleMenu: {fileID: 2537694942387361394}
-  myHand: {fileID: 0}
 --- !u!1 &3470636917117453983
 GameObject:
   m_ObjectHideFlags: 0
