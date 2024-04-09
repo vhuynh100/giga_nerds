@@ -175,7 +175,7 @@ MonoBehaviour:
       Value: 0
     MaxY:
       Constrain: 1
-      Value: 0.025
+      Value: 0.014
     MinZ:
       Constrain: 1
       Value: 0
