@@ -429,13 +429,13 @@ MonoBehaviour:
       Value: 0
     MaxY:
       Constrain: 1
-      Value: 0
+      Value: 3
     MinZ:
       Constrain: 1
       Value: 0
     MaxZ:
       Constrain: 1
-      Value: 3
+      Value: 0
 --- !u!1 &4521083358847884769
 GameObject:
   m_ObjectHideFlags: 0
