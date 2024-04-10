@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+
 //TODO:
 // connect timer to Duration: XX:XX
-// update Goal text to the selected goal
+// connect session exit button to exitSession()
+
 
 public class PreSession : MonoBehaviour
 {
@@ -68,6 +70,11 @@ public class PreSession : MonoBehaviour
         Menu2.SetActive(false);
         // start timer for session duration
         // Insert scene change code here
+    }
+
+    public void exitSession()
+    {
+        // update session duration and words spoken
         EndMenu.SetActive(true);
     }
 
