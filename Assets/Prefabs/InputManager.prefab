@@ -44,5 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f93713cc084c6449a39c2b9c6ecc266, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  circleMenu: {fileID: 0}
+  circleMenu: {fileID: 2537694942387361394, guid: 79e0d1b9fef9c17468f2d43369663357,
+    type: 3}
   myHand: {fileID: 0}
