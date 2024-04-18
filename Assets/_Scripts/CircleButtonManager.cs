@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Normal.Realtime;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -9,9 +10,10 @@ using UnityEngine.UI;
 public class ButtonManager : MonoBehaviour
 {
     // Canvas
-    [SerializeField] private GameObject translationMenu; 
+    [SerializeField] private GameObject translationMenu;
     [SerializeField] private GameObject settingsMenu;
     [SerializeField] private GameObject timerMenu;
+    [SerializeField] private Realtime room;
 
     // Circle UI Buttons
     //[SerializeField] private Button lingoLinkButton;
@@ -28,6 +30,7 @@ public class ButtonManager : MonoBehaviour
     // Icons
     [SerializeField] private GameObject unmutedIcon;
     [SerializeField] private GameObject mutedIcon;
+    private RealtimeAvatarVoice voice;
 
     private bool microphoneMuted = false;
 
@@ -42,22 +45,30 @@ public class ButtonManager : MonoBehaviour
         //microphoneButton.onClick.AddListener(ToggleMicrophone);
     }
 
+    private void Awake()
+    {
+        voice = GetComponent<RealtimeAvatarVoice>();
+    }
+
     private void ExitSession()
     {
         // Quit the application
         Application.Quit();
 
-        #if UNITY_EDITOR
-                UnityEditor.EditorApplication.isPlaying = false;
-        #else
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
             System.Diagnostics.Process.GetCurrentProcess().Kill();
-        #endif
+#endif
     }
 
     private void ToggleMicrophone()
     {
         // Update icon visibility based on microphone state
         unmutedIcon.SetActive(false);
+
+
+
         mutedIcon.SetActive(true);
     }
 
@@ -65,7 +76,7 @@ public class ButtonManager : MonoBehaviour
     public void LingoLinkButtonClicked()
     {
         message.text = "LINGO LINK";
-        
+
         // Remove the line comments once we are ready to tie into timerMenu, and settingsMenu
         // timerMenu.SetActive(false);
         // settingsMenu.SetActive(false);
@@ -74,7 +85,7 @@ public class ButtonManager : MonoBehaviour
         unmutedIcon.SetActive(true);
         mutedIcon.SetActive(false);
     }
-    
+
     public void TranslationMenuButtonClicked()
     {
         if (translationMenu.activeInHierarchy)
@@ -118,12 +129,20 @@ public class ButtonManager : MonoBehaviour
         if (microphoneMuted)
         {
             microphoneMuted = true;
+            voice.mute = true;
             mutedIcon.SetActive(true);
             unmutedIcon.SetActive(false);
             return;
         }
+        voice.mute = !true;
         microphoneMuted = !true;
         mutedIcon.SetActive(!true);
         unmutedIcon.SetActive(!false);
+    }
+
+    public void goLobby()
+    {
+        room.Disconnect();
+        room.Connect("0");
     }
 }
