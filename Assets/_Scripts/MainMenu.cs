@@ -17,14 +17,22 @@ public class MainMenu : MonoBehaviour
     //Object to instantiate for each language;
 
     //User choice variable
-    string userChoice;
+    //string userChoice;
 
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (PlayerPrefs.HasKey("volume"))
+        {
+            AudioListener.volume = PlayerPrefs.GetFloat("volume");
+        }
+        else
+        {
+            AudioListener.volume = .5f;
+            PlayerPrefs.SetFloat("volume", .5f);
+        }
 
     }
 
