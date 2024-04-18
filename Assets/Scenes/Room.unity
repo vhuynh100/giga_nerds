@@ -207,6 +207,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2447677276744222512, guid: 79e0d1b9fef9c17468f2d43369663357,
         type: 3}
+      propertyPath: teleportMenu
+      value: 
+      objectReference: {fileID: 1968473166}
+    - target: {fileID: 2447677276744222512, guid: 79e0d1b9fef9c17468f2d43369663357,
+        type: 3}
       propertyPath: translationMenu
       value: 
       objectReference: {fileID: 1635954711}
@@ -761,6 +766,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Teleport Room UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 4990948735840065831, guid: e5be9f6567f6a5242b3b3dcbcd5e02e5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5273408517535997940, guid: e5be9f6567f6a5242b3b3dcbcd5e02e5,
         type: 3}
