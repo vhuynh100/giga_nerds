@@ -964,6 +964,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Study
       objectReference: {fileID: 0}
+    - target: {fileID: 399010832256617111, guid: e79ff5253f60e444ea06ca867c170aeb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 537566877181745199, guid: e79ff5253f60e444ea06ca867c170aeb,
         type: 3}
       propertyPath: m_Name
