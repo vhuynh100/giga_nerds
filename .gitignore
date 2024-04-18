@@ -19,7 +19,7 @@
 /[Aa]ssets/Editor Default Resources/Firebase/
 /[Aa]ssets/GeneratedLocalRepo/
 /[Aa]ssets/GeneratedLocalRepo.meta
-/[Aassets/Plugins/Android
+/[Aa]ssets/Plugins/Android
 
 
 # MemoryCaptures can get excessive in size.
@@ -92,4 +92,3 @@ crashlytics-build.properties
 # NodeJS and npm
 node_modules/
 package-lock.json
-/Assets/Plugins/Android
