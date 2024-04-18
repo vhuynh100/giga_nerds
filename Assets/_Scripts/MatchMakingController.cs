@@ -28,7 +28,7 @@ public class MatchMakingController : MonoBehaviour
     void Start()
     {
         playerID = (uint)match.GetUserID();
-        print("---------------------------------------- your player id: " + playerID);
+        //print("---------------------------------------- your player id: " + playerID);
     }
 
     // Update is called once per frame
@@ -36,12 +36,12 @@ public class MatchMakingController : MonoBehaviour
     {
         if (language != "en" && language != "es")
         {
-            print("=== langauge not set");
+            //print("=== langauge not set");
             match.GetUserLanguage();
             
         } else
         {
-            print("=== langauge set");
+            //print("=== langauge set");
         }
 
         wait++;
@@ -58,7 +58,7 @@ public class MatchMakingController : MonoBehaviour
                 if (match.CheckIfEnglishPaired(playerID))
                 {   
                     int lobby = match.GetEnglishLobbyID(playerID);
-                    print("======================================= placed in match, moving to room: " + match.GetEnglishLobbyID(playerID));
+                    //print("======================================= placed in match, moving to room: " + match.GetEnglishLobbyID(playerID));
 
                     if (lobby != -1)
                     {
@@ -81,7 +81,7 @@ public class MatchMakingController : MonoBehaviour
                     
                     if (lobby != -1)
                     {
-                        print("======================================= placed in match, moving to room: " + match.GetSpanishLobbyID(playerID));
+                        //print("======================================= placed in match, moving to room: " + match.GetSpanishLobbyID(playerID));
                         requestedQueue = false;
                         MoveNormcoreRoom(lobby);
                         lobbyRoom.SetActive(false);
@@ -124,7 +124,7 @@ public class MatchMakingController : MonoBehaviour
         realtime = null;
         realtime = FindObjectOfType<Realtime>();
         string lobbyString = lobbyID.ToString();
-        print("=== moving to lobbyID: " + lobbyString);
+        //print("=== moving to lobbyID: " + lobbyString);
         realtime.Connect(lobbyString);
         
     }

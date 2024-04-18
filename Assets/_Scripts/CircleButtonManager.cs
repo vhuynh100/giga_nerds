@@ -75,10 +75,8 @@ public class ButtonManager : MonoBehaviour
         mutedIcon.SetActive(false);
     }
     
-    // Method for Translation Menu Button
     public void TranslationMenuButtonClicked()
     {
-        // Toggle the Translation Menu
         if (translationMenu.activeInHierarchy)
         {
             translationMenu.SetActive(false);
@@ -88,14 +86,11 @@ public class ButtonManager : MonoBehaviour
             translationMenu.SetActive(true);
         }
 
-        // Update UI message
         message.text = "TRANSLATE";
     }
 
-    // Method for Settings Button
     public void SettingsButtonClicked()
     {
-        // Toggle the settings menu
         if (settingsMenu.activeInHierarchy)
         {
             settingsMenu.SetActive(false);
@@ -106,10 +101,8 @@ public class ButtonManager : MonoBehaviour
         }
     }
 
-    // Method for Timer Button
     public void TimerButtonClicked()
     {
-        // Toggle the timer menu
         if (timerMenu.activeInHierarchy)
         {
             timerMenu.SetActive(false);
@@ -132,6 +125,5 @@ public class ButtonManager : MonoBehaviour
         microphoneMuted = !true;
         mutedIcon.SetActive(!true);
         unmutedIcon.SetActive(!false);
-
     }
 }
