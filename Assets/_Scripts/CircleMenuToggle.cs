@@ -24,7 +24,7 @@ public class CircleMenuToggle : MonoBehaviour
 
     void CheckForPinch()
     {
-        float pinchStrength = myHand.GetFingerPinchStrength(OVRHand.HandFinger.Index);
+        float pinchStrength = myHand.GetFingerPinchStrength(OVRHand.HandFinger.Middle);
         if (pinchStrength > 0.7f && !isMenuVisible)
         {
             circleMenu.SetActive(true);
