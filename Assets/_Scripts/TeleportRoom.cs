@@ -1,27 +1,58 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TeleportRoom : MonoBehaviour
 {
     public GameObject TeleportUI;
     //public GameObject prevMenuUI;
-    public void teleportKitchen()
+    public Button restaurantButton;
+    public Button kitchenButton;
+    public Button gymButton;
+
+    public GameObject Restaurant;
+    public GameObject Kitchen;
+    public GameObject Gym;
+
+    private void Start()
     {
-        Debug.Log("Teleport to kitchen");
+        restaurantButton.onClick.AddListener(() => setRestaurantActive());
+        kitchenButton.onClick.AddListener(() => setKitchenActive());
+        gymButton.onClick.AddListener(() => setGymActive());
+
+        Kitchen.SetActive(true);
     }
 
-    public void teleportBathroom()
+    public void setRestaurantActive()
     {
-        Debug.Log("Teleport to bathroom");
+        Restaurant.SetActive(true);
+
+        Kitchen.SetActive(false);
+        Gym.SetActive(false);
+        //Debug.Log("Set restaurant active");
     }
 
-    public void teleportRestaurant()
+    public void setKitchenActive()
     {
-        Debug.Log("Teleport to restaurant");
+        Kitchen.SetActive(true);
+
+        Restaurant.SetActive(false);
+        Gym.SetActive(false);
+        //Debug.Log("Set kitchen active");
     }
 
-    public void beckButton()
+    public void setGymActive()
+    {
+        Gym.SetActive(true);
+
+        Kitchen.SetActive(false);
+        Restaurant.SetActive(false);
+        //Debug.Log("Set gym active");
+    }
+
+    public void backButton()
     {
         TeleportUI.SetActive(false);
         //prevMenuUI.SetActive(true);
