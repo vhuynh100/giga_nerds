@@ -49,6 +49,7 @@ public class CountdownTimer : MonoBehaviour
         isTimerOn = false;
         timerText.text = "Set Timer";
         Flag.SetActive(false);
+        FlagImage.sprite = englishFlag;
         promptNextLang.SetActive(false);
         onSecondLanguage = false;
     }
