@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7820910672202136491}
   - component: {fileID: 6891699837782449447}
   - component: {fileID: 4479688814855606131}
+  - component: {fileID: 8274141474756737522}
   m_Layer: 0
   m_Name: '[BuildingBlock] HandGrab'
   m_TagString: Untagged
@@ -149,6 +150,52 @@ MonoBehaviour:
   _pointable: {fileID: 8884488294593565589}
   _rigidbody: {fileID: 8026919632113768431}
   _scaleMassWithSize: 1
+--- !u!114 &8274141474756737522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5140535110244466481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ce6415fc29fc0e45916042cbe881b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _positionConstraints:
+    ConstraintsAreRelative: 0
+    XAxis:
+      ConstrainAxis: 0
+      AxisRange:
+        Min: 0
+        Max: 0
+    YAxis:
+      ConstrainAxis: 0
+      AxisRange:
+        Min: 0
+        Max: 0
+    ZAxis:
+      ConstrainAxis: 0
+      AxisRange:
+        Min: 0
+        Max: 0
+  _rotationConstraints:
+    XAxis:
+      ConstrainAxis: 0
+      AxisRange:
+        Min: 0
+        Max: 0
+    YAxis:
+      ConstrainAxis: 0
+      AxisRange:
+        Min: 0
+        Max: 0
+    ZAxis:
+      ConstrainAxis: 0
+      AxisRange:
+        Min: 0
+        Max: 0
+  ItemNameCanvas: {fileID: 0}
 --- !u!1 &8088741352712914523
 GameObject:
   m_ObjectHideFlags: 0
@@ -271,8 +318,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 4.097218, y: 6.044756, z: 1.6604826}
+  m_Center: {x: 1.3361248, y: 0.09270452, z: -0.068371624}
 --- !u!54 &8026919632113768431
 Rigidbody:
   m_ObjectHideFlags: 0
