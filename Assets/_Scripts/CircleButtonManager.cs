@@ -9,9 +9,10 @@ using UnityEngine.UI;
 public class ButtonManager : MonoBehaviour
 {
     // Canvas
-    [SerializeField] private GameObject translationMenu; 
+    [SerializeField] private GameObject translationMenu;
     [SerializeField] private GameObject settingsMenu;
     [SerializeField] private GameObject timerMenu;
+    [SerializeField] private GameObject teleportMenu;
 
     // Circle UI Buttons
     //[SerializeField] private Button lingoLinkButton;
@@ -47,11 +48,11 @@ public class ButtonManager : MonoBehaviour
         // Quit the application
         Application.Quit();
 
-        #if UNITY_EDITOR
-                UnityEditor.EditorApplication.isPlaying = false;
-        #else
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
             System.Diagnostics.Process.GetCurrentProcess().Kill();
-        #endif
+#endif
     }
 
     private void ToggleMicrophone()
@@ -64,17 +65,26 @@ public class ButtonManager : MonoBehaviour
     // Method for Lingo Link Button
     public void LingoLinkButtonClicked()
     {
-        message.text = "LINGO LINK";
-        
+        if (teleportMenu.activeInHierarchy)
+        {
+            teleportMenu.SetActive(false);
+        }
+        else
+        {
+            teleportMenu.SetActive(true);
+        }
+
+        message.text = "TELEPORT";
+
         // Remove the line comments once we are ready to tie into timerMenu, and settingsMenu
         // timerMenu.SetActive(false);
         // settingsMenu.SetActive(false);
-        translationMenu.SetActive(false);
+        //translationMenu.SetActive(false);
 
-        unmutedIcon.SetActive(true);
-        mutedIcon.SetActive(false);
+        //unmutedIcon.SetActive(true);
+        //mutedIcon.SetActive(false);
     }
-    
+
     public void TranslationMenuButtonClicked()
     {
         if (translationMenu.activeInHierarchy)
