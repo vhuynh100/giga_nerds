@@ -19,6 +19,30 @@ MonoBehaviour:
     m_Key: FindRoom
     m_Metadata:
       m_Items: []
+  - m_Id: 260701877821440
+    m_Key: Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 261061279342592
+    m_Key: Credits
+    m_Metadata:
+      m_Items: []
+  - m_Id: 261410677448704
+    m_Key: Lang Select
+    m_Metadata:
+      m_Items: []
+  - m_Id: 263018714882048
+    m_Key: Exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 263159442169856
+    m_Key: Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 263687320494080
+    m_Key: Welcome to
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
