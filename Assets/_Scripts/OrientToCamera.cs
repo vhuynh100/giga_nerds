@@ -6,7 +6,9 @@ public class OrientToCamera : MonoBehaviour
 {
     private Transform mainCam;
     public GameObject target;
-    [SerializeField] float hoverHeight = 0.0911f;
+    [SerializeField] float xOffset = -0.075f;
+    [SerializeField] float yOffset = 0.25f;
+    [SerializeField] float zOffset = -0.025f;
 
     private void OnEnable()
     {
@@ -20,6 +22,6 @@ public class OrientToCamera : MonoBehaviour
         transform.RotateAround(transform.position, transform.up, 180f);
 
         Vector3 targetPosition = target.transform.position;
-        transform.position = new Vector3(targetPosition.x, targetPosition.y + hoverHeight, targetPosition.z);
+        transform.position = new Vector3(targetPosition.x + xOffset, targetPosition.y + yOffset, targetPosition.z + zOffset);
     }
 }
