@@ -4,37 +4,50 @@ using UnityEngine;
 
 public class CircleMenuToggle : MonoBehaviour
 {
-    [SerializeField] private GameObject circleMenu;
-    [SerializeField] private OVRHand myHand;
-    private bool isMenuVisible = true;
+    public GameObject circleMenu;
+    public OVRHand hand;
+    public OVRSkeleton skeleton;
 
     void Start()
     {
+        skeleton = GetComponentInChildren<OVRSkeleton>() ?? skeleton;
+
         if (circleMenu != null)
         {
             circleMenu.SetActive(false);
-            isMenuVisible = false;
         }
     }
 
     void Update()
     {
-        CheckForPinch();
+        if (hand.IsTracked && skeleton != null)
+        {
+            OVRBone wristBone = skeleton.Bones[(int)OVRSkeleton.BoneId.Hand_WristRoot];
+
+            if (wristBone.Transform.forward.y > 0.7f)
+            {
+                ActivateMenu();
+            }
+            else
+            {
+                DeactivateMenu();
+            }
+        }
     }
 
-    void CheckForPinch()
+    private void ActivateMenu()
     {
-        float pinchStrength = myHand.GetFingerPinchStrength(OVRHand.HandFinger.Middle);
-        if (pinchStrength > 0.7f && !isMenuVisible)
+        if (!circleMenu.activeSelf)
         {
             circleMenu.SetActive(true);
-            isMenuVisible = true;
-        }
-        else if (pinchStrength < 0.7f && isMenuVisible)
-        {
-            circleMenu.SetActive(false);
-            isMenuVisible = false;
         }
     }
 
+    private void DeactivateMenu()
+    {
+        if (circleMenu.activeSelf)
+        {
+            circleMenu.SetActive(false);
+        }
+    }
 }
