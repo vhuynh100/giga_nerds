@@ -45,7 +45,7 @@ public class CircleMenuToggle : MonoBehaviour
         }
     }
 
-    public void toggleMenu()
+    public void ToggleMenu()
     {
         if (!circleMenu.activeSelf)
         {
