@@ -1605,6 +1605,7 @@ GameObject:
   - component: {fileID: 6023108697500352782}
   - component: {fileID: 414239554885279831}
   - component: {fileID: 7153044010827177504}
+  - component: {fileID: 6268602696975506144}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1768,6 +1769,70 @@ MonoBehaviour:
   references:
     version: 2
     RefIds: []
+--- !u!114 &6268602696975506144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2697202134852782692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69beb381e244f92449b8c4cf954630e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TrackedObjects:
+  - rid: 4517904720921886734
+  references:
+    version: 2
+    RefIds:
+    - rid: 4517904720921886734
+      type: {class: TrackedUGuiGraphic, ns: UnityEngine.Localization.PropertyVariants.TrackedObjects,
+        asm: Unity.Localization}
+      data:
+        m_Target: {fileID: 414239554885279831}
+        m_TrackedProperties:
+          items:
+          - rid: 4517904720921886735
+          - rid: 4517904720921886736
+          - rid: 4517904720921886737
+        m_UpdateType: 0
+    - rid: 4517904720921886735
+      type: {class: FloatTrackedProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties,
+        asm: Unity.Localization}
+      data:
+        m_PropertyPath: m_fontSize
+        m_VariantData:
+        - localeIdentifier:
+            m_Code: en
+          value: 24
+        - localeIdentifier:
+            m_Code: es
+          value: 18.45
+    - rid: 4517904720921886736
+      type: {class: BoolTrackedProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties,
+        asm: Unity.Localization}
+      data:
+        m_PropertyPath: m_enableAutoSizing
+        m_VariantData:
+        - localeIdentifier:
+            m_Code: en
+          value: 0
+        - localeIdentifier:
+            m_Code: es
+          value: 1
+    - rid: 4517904720921886737
+      type: {class: FloatTrackedProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties,
+        asm: Unity.Localization}
+      data:
+        m_PropertyPath: m_fontSizeMin
+        m_VariantData:
+        - localeIdentifier:
+            m_Code: en
+          value: 18
+        - localeIdentifier:
+            m_Code: es
+          value: 18
 --- !u!1 &2738005729037914198
 GameObject:
   m_ObjectHideFlags: 0
