@@ -4792,6 +4792,36 @@ PrefabInstance:
       propertyPath: _oneGrabTransformer
       value: 
       objectReference: {fileID: 2094686864}
+    - target: {fileID: 6258160900296501971, guid: 3aad16a7f3b317c4d92fb9511563fb69,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 3.9560425
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258160900296501971, guid: 3aad16a7f3b317c4d92fb9511563fb69,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 5.7188506
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258160900296501971, guid: 3aad16a7f3b317c4d92fb9511563fb69,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 1.6339837
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258160900296501971, guid: 3aad16a7f3b317c4d92fb9511563fb69,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -2.1729112
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258160900296501971, guid: 3aad16a7f3b317c4d92fb9511563fb69,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.20903596
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258160900296501971, guid: 3aad16a7f3b317c4d92fb9511563fb69,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -0.572996
+      objectReference: {fileID: 0}
     - target: {fileID: 6622730899566284724, guid: 3aad16a7f3b317c4d92fb9511563fb69,
         type: 3}
       propertyPath: _oneGrabTransformer
@@ -4820,7 +4850,7 @@ PrefabInstance:
     - target: {fileID: 7991149230813539702, guid: 3aad16a7f3b317c4d92fb9511563fb69,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8412446721042474305, guid: 3aad16a7f3b317c4d92fb9511563fb69,
         type: 3}
