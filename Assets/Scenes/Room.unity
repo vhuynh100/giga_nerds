@@ -171,6 +171,11 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 2070070132}
+    - target: {fileID: 4516740497560783367, guid: d6cab4dc88e536e45910755956cfcb68,
+        type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4656779728533725909, guid: d6cab4dc88e536e45910755956cfcb68,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1304,6 +1309,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f54012181eacade4ea242c65f804720f, type: 3}
+--- !u!4 &1057606110 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5659389095246377949, guid: 3aad16a7f3b317c4d92fb9511563fb69,
+    type: 3}
+  m_PrefabInstance: {fileID: 2070070130}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1070332186
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1317,6 +1328,11 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 2070070136}
+    - target: {fileID: 4040921215805071896, guid: d6cab4dc88e536e45910755956cfcb68,
+        type: 3}
+      propertyPath: zOffset
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4516740497560783367, guid: d6cab4dc88e536e45910755956cfcb68,
         type: 3}
       propertyPath: m_PresetInfoIsWorld
@@ -2713,6 +2729,59 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1460759088}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1462185355
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1462185356}
+  - component: {fileID: 1462185357}
+  m_Layer: 0
+  m_Name: Laptop Keyboard Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1462185356
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462185355}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.42261827, z: 0, w: 0.9063079}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1057606110}
+  m_LocalEulerAnglesHint: {x: 0, y: 50, z: 0}
+--- !u!65 &1462185357
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462185355}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10.537803, y: 1, z: 7.7115884}
+  m_Center: {x: -0.58799183, y: 0, z: 3.3557894}
 --- !u!1 &1470146405
 GameObject:
   m_ObjectHideFlags: 0
@@ -2932,6 +3001,21 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 2094686863}
+    - target: {fileID: 4040921215805071896, guid: d6cab4dc88e536e45910755956cfcb68,
+        type: 3}
+      propertyPath: yOffset
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040921215805071896, guid: d6cab4dc88e536e45910755956cfcb68,
+        type: 3}
+      propertyPath: zOffset
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4516740497560783367, guid: d6cab4dc88e536e45910755956cfcb68,
+        type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4656779728533725909, guid: d6cab4dc88e536e45910755956cfcb68,
         type: 3}
       propertyPath: m_Pivot.x
@@ -3300,6 +3384,11 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 2070070133}
+    - target: {fileID: 4040921215805071896, guid: d6cab4dc88e536e45910755956cfcb68,
+        type: 3}
+      propertyPath: zOffset
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4516740497560783367, guid: d6cab4dc88e536e45910755956cfcb68,
         type: 3}
       propertyPath: m_PresetInfoIsWorld
@@ -3731,6 +3820,59 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e79ff5253f60e444ea06ca867c170aeb, type: 3}
+--- !u!1 &1734515786
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1734515787}
+  - component: {fileID: 1734515788}
+  m_Layer: 0
+  m_Name: Laptop Screen Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1734515787
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734515786}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.11829695, y: 0.41900265, z: 0.05516277, w: 0.8985542}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1057606110}
+  m_LocalEulerAnglesHint: {x: -15, y: 50, z: 0}
+--- !u!65 &1734515788
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734515786}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10.742519, y: 8.211798, z: 1}
+  m_Center: {x: -0.42112118, y: 3.6059198, z: 0.00000093078086}
 --- !u!1001 &1764358478
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3744,6 +3886,11 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 2070070135}
+    - target: {fileID: 4040921215805071896, guid: d6cab4dc88e536e45910755956cfcb68,
+        type: 3}
+      propertyPath: zOffset
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4516740497560783367, guid: d6cab4dc88e536e45910755956cfcb68,
         type: 3}
       propertyPath: m_PresetInfoIsWorld
@@ -3894,6 +4041,16 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 2070070134}
+    - target: {fileID: 4040921215805071896, guid: d6cab4dc88e536e45910755956cfcb68,
+        type: 3}
+      propertyPath: zOffset
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4516740497560783367, guid: d6cab4dc88e536e45910755956cfcb68,
+        type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4656779728533725909, guid: d6cab4dc88e536e45910755956cfcb68,
         type: 3}
       propertyPath: m_Pivot.x
@@ -4812,6 +4969,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3260136102719590126, guid: 3aad16a7f3b317c4d92fb9511563fb69,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3690768691463168443, guid: 3aad16a7f3b317c4d92fb9511563fb69,
         type: 3}
       propertyPath: m_Name
@@ -4950,7 +5112,7 @@ PrefabInstance:
     - target: {fileID: 7206874466204461388, guid: 3aad16a7f3b317c4d92fb9511563fb69,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7206874466204461388, guid: 3aad16a7f3b317c4d92fb9511563fb69,
         type: 3}
@@ -5014,6 +5176,14 @@ PrefabInstance:
         type: 3}
       insertIndex: 22
       addedObject: {fileID: 100297177}
+    - targetCorrespondingSourceObject: {fileID: 5659389095246377949, guid: 3aad16a7f3b317c4d92fb9511563fb69,
+        type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 1462185356}
+    - targetCorrespondingSourceObject: {fileID: 5659389095246377949, guid: 3aad16a7f3b317c4d92fb9511563fb69,
+        type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 1734515787}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1881129053882013645, guid: 3aad16a7f3b317c4d92fb9511563fb69,
         type: 3}
