@@ -10,6 +10,7 @@ using UnityEngine.UI;
 public class ButtonManager : MonoBehaviour
 {
     // Canvas
+    [SerializeField] private GameObject mainMenu;
     [SerializeField] private GameObject translationMenu;
     [SerializeField] private GameObject settingsMenu;
     [SerializeField] private GameObject timerMenu;
@@ -45,10 +46,7 @@ public class ButtonManager : MonoBehaviour
         //microphoneButton.onClick.AddListener(ToggleMicrophone);
     }
 
-    private void Awake()
-    {
-        voice = GetComponent<RealtimeAvatarVoice>();
-    }
+    
 
     private void ExitSession()
     {
@@ -78,8 +76,8 @@ public class ButtonManager : MonoBehaviour
         message.text = "LINGO LINK";
 
         // Remove the line comments once we are ready to tie into timerMenu, and settingsMenu
-        // timerMenu.SetActive(false);
-        // settingsMenu.SetActive(false);
+        timerMenu.SetActive(false);
+        settingsMenu.SetActive(false);
         translationMenu.SetActive(false);
 
         unmutedIcon.SetActive(true);
@@ -144,5 +142,7 @@ public class ButtonManager : MonoBehaviour
     {
         room.Disconnect();
         room.Connect("0");
+        mainMenu.SetActive(true);
+        this.gameObject.SetActive(false);
     }
 }

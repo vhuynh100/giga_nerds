@@ -12,7 +12,7 @@ public class MainMenu : MonoBehaviour
     public GameObject language;
     public GameObject mainMenu;
     public GameObject credits;
-    //public MatchMaking mm;
+    public GameObject settingsMenu;
 
     //Object to instantiate for each language;
 
@@ -57,6 +57,18 @@ public class MainMenu : MonoBehaviour
     public void leaveCredits()
     {
         credits.SetActive(false);
+        mainMenu.SetActive(true);
+    }
+
+    public void enterSettings()
+    {
+        settingsMenu.SetActive(true);
+        mainMenu.SetActive(false);
+    }
+
+    public void exitSettings()
+    {
+        settingsMenu.SetActive(false);
         mainMenu.SetActive(true);
     }
 
