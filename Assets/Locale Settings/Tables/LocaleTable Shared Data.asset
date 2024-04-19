@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: LocaleTable Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: LocaleTable
+  m_TableCollectionNameGuidString: dc07131e54e31ab44967f4dc48f6c7bb
+  m_Entries:
+  - m_Id: 35765808652288
+    m_Key: Apple
+    m_Metadata:
+      m_Items: []
+  - m_Id: 404017197998080
+    m_Key: Couch
+    m_Metadata:
+      m_Items: []
+  - m_Id: 404927189999616
+    m_Key: Lamp
+    m_Metadata:
+      m_Items: []
+  - m_Id: 641346554683392
+    m_Key: Black Book
+    m_Metadata:
+      m_Items: []
+  - m_Id: 641714055405568
+    m_Key: Blue Book
+    m_Metadata:
+      m_Items: []
+  - m_Id: 641801007521792
+    m_Key: Green Book
+    m_Metadata:
+      m_Items: []
+  - m_Id: 641912836055040
+    m_Key: Red Book
+    m_Metadata:
+      m_Items: []
+  - m_Id: 642070277644288
+    m_Key: Coffee Table
+    m_Metadata:
+      m_Items: []
+  - m_Id: 642114905038848
+    m_Key: Desk Lamp
+    m_Metadata:
+      m_Items: []
+  - m_Id: 642252817948672
+    m_Key: Door
+    m_Metadata:
+      m_Items: []
+  - m_Id: 642336683057152
+    m_Key: Drawer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 642473002131456
+    m_Key: Laptop
+    m_Metadata:
+      m_Items: []
+  - m_Id: 642565843050496
+    m_Key: Office Chair
+    m_Metadata:
+      m_Items: []
+  - m_Id: 642661859057664
+    m_Key: Pin Board
+    m_Metadata:
+      m_Items: []
+  - m_Id: 642908102451200
+    m_Key: Potted Plant
+    m_Metadata:
+      m_Items: []
+  - m_Id: 643082312867840
+    m_Key: Rug
+    m_Metadata:
+      m_Items: []
+  - m_Id: 643169172709376
+    m_Key: Side Drawer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 643456155377664
+    m_Key: TV Stand
+    m_Metadata:
+      m_Items: []
+  - m_Id: 643868556124160
+    m_Key: Table
+    m_Metadata:
+      m_Items: []
+  - m_Id: 643965150945280
+    m_Key: Tall Shelf
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 4517904658296995842
+  references:
+    version: 2
+    RefIds:
+    - rid: 4517904658296995842
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables,
+        asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1713311251869

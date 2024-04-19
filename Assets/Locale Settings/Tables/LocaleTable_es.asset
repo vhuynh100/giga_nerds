@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: LocaleTable_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: dc07131e54e31ab44967f4dc48f6c7bb, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 641714055405568
+    m_Localized: libro azul
+    m_Metadata:
+      m_Items: []
+  - m_Id: 641346554683392
+    m_Localized: libro negro
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35765808652288
+    m_Localized: manzana
+    m_Metadata:
+      m_Items: []
+  - m_Id: 404017197998080
+    m_Localized: "sof\xE1"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 404927189999616
+    m_Localized: "l\xE1mpara"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 641801007521792
+    m_Localized: libro verde
+    m_Metadata:
+      m_Items: []
+  - m_Id: 641912836055040
+    m_Localized: libro rojo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 642070277644288
+    m_Localized: mesa de centro
+    m_Metadata:
+      m_Items: []
+  - m_Id: 642114905038848
+    m_Localized: "l\xE1mpara de escritorio\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 642252817948672
+    m_Localized: puerta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 642336683057152
+    m_Localized: "caj\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 642473002131456
+    m_Localized: "computadora port\xE1til\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 642565843050496
+    m_Localized: "silla de oficina\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 642661859057664
+    m_Localized: "tablero de anuncios\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 642908102451200
+    m_Localized: "Planta en maceta\r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 643082312867840
+    m_Localized: alfombra
+    m_Metadata:
+      m_Items: []
+  - m_Id: 643169172709376
+    m_Localized: "\rcaj\xF3n lateral"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 643456155377664
+    m_Localized: soporte TV
+    m_Metadata:
+      m_Items: []
+  - m_Id: 643868556124160
+    m_Localized: mesa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 643965150945280
+    m_Localized: "estante alto\r"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
