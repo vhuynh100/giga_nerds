@@ -4,18 +4,20 @@ using UnityEngine;
 
 public class CircleMenuToggle : MonoBehaviour
 {
-    public GameObject circleMenuToggleButton;
+    public GameObject button;
     public GameObject circleMenu;
     public OVRHand hand;
     public OVRSkeleton skeleton;
+
+    private bool isWristCheckedPreviously = false;
 
     void Start()
     {
         skeleton = GetComponentInChildren<OVRSkeleton>() ?? skeleton;
 
-        if (circleMenuToggleButton != null)
+        if (button != null)
         {
-            circleMenuToggleButton.SetActive(false);
+            button.SetActive(false);
         }
 
         if (circleMenu != null)
@@ -29,31 +31,17 @@ public class CircleMenuToggle : MonoBehaviour
         if (hand.IsTracked && skeleton != null)
         {
             OVRBone wristBone = skeleton.Bones[(int)OVRSkeleton.BoneId.Hand_WristRoot];
+            bool checkingWrist = wristBone.Transform.forward.y > 0.7f;
 
-            if (wristBone.Transform.forward.y > 0.5f)
+            if (checkingWrist && !isWristCheckedPreviously)
             {
-                ActivateButton();
+                button.SetActive(!button.activeSelf);
+                isWristCheckedPreviously = true;
             }
-            else
+            else if (!checkingWrist && isWristCheckedPreviously)
             {
-                DeactivateButton();
+                isWristCheckedPreviously = false;
             }
-        }
-    }
-
-    public void ActivateButton()
-    {
-        if (!circleMenuToggleButton.activeSelf)
-        {
-            circleMenuToggleButton.SetActive(true);
-        }
-    }
-
-    public void DeactivateButton()
-    {
-        if (circleMenuToggleButton.activeSelf)
-        {
-            circleMenuToggleButton.SetActive(false);
         }
     }
 
