@@ -103,7 +103,15 @@ public class TeleportRoom : MonoBehaviour
 
     public void backButton()
     {
-        TeleportUI.SetActive(false);
+
+        _sceneryChanger.SetSceneryName("lobby");
+        Lobby.SetActive(true);
+        Gym.SetActive(false);
+        Room.SetActive(false);
+        Kitchen.SetActive(false);
+        Restaurant.SetActive(false);
+
+        //TeleportUI.SetActive(false);
         //prevMenuUI.SetActive(true);
     }
     
