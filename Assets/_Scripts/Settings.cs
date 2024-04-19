@@ -27,7 +27,7 @@ public class Settings : MonoBehaviour
     {
         mPhones = Microphone.devices.Length;
 
-        if(mPhones > 1)
+        if (mPhones > 1)
         {
             options.Clear();
 
@@ -45,7 +45,7 @@ public class Settings : MonoBehaviour
         else
         {
             microphones.gameObject.SetActive(false);
-        } 
+        }
     }
 
 
@@ -59,6 +59,9 @@ public class Settings : MonoBehaviour
     {
         mVolume = microphoneVolume.value;
         aVolume = microphoneVolume.value;
+
+        PlayerPrefs.SetFloat("volume", aVolume);
+        PlayerPrefs.SetFloat("mic", mVolume);
     }
 
     public void returnToMain()

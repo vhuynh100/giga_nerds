@@ -19,6 +19,8 @@
 /[Aa]ssets/Editor Default Resources/Firebase/
 /[Aa]ssets/GeneratedLocalRepo/
 /[Aa]ssets/GeneratedLocalRepo.meta
+/[Aa]ssets/Plugins/Android
+
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data

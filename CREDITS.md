@@ -6,8 +6,8 @@ This project utilizes assets from various creators on Sketchfab. Below is a list
 
 | Asset Name | Creator | License | Sketchfab URL |
 |------------|---------|---------|---------------|
-| Example Model 1 | Creator's Name | [License Type](License URL) | [View on Sketchfab](Asset URL) |
-| Example Model 2 | Creator's Name | [License Type](License URL) | [View on Sketchfab](Asset URL) |
+| "Restaurant practice &  learn" | hojucheng(小龍) | [Creative Commons Attribution](http://creativecommons.org/licenses/by/4.0/) | [View on Sketchfab](https://skfb.ly/6RNPA) |
+| "Low Poly Isometric Rooms" | Brynn | [Creative Commons Attribution](http://creativecommons.org/licenses/by/4.0/) | [View on Sketchfab](https://skfb.ly/6RnZ9) |
 | ... | ... | ... | ... |
 
 ## Textures
