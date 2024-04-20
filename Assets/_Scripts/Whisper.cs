@@ -14,11 +14,19 @@ namespace Samples.Whisper
         [SerializeField] private Text message;
         [SerializeField] private Dropdown dropdown;
 
+        [SerializeField] private GameObject translateUI;
+
         [SerializeField] private Color activeButtonColor = new Color(0.5f, 0.5f, 0.5f); // Define the color for active buttons
 
         [SerializeField] private string _translationString = default;
         [SerializeField] private string _previousTranslationString = default;
         [SerializeField] private bool _requested = default;
+        [SerializeField] private MatchMaking matchMakingController;
+
+
+        private string translationLog = "";
+
+
 
         private RequestSync _requestSync;
         private int starting = 0;
@@ -34,7 +42,7 @@ namespace Samples.Whisper
         private bool isRecording;
         private float time;
         private OpenAIApi openai = new OpenAIApi();
-        private string targetLanguage = "es"; // Default target language is Spanish
+        private string targetLanguage = ""; // Default target language is Spanish
         private bool madeRequest = false;
         private bool recievedRequest = false;
 
@@ -56,15 +64,17 @@ namespace Samples.Whisper
             recordButton.onClick.AddListener(MakeRequest);  // was initially AddListener(StartRecording)
             dropdown.onValueChanged.AddListener(ChangeMicrophone);
 
-            spanishButton.onClick.AddListener(() => SetTargetLanguage("es"));
-            frenchButton.onClick.AddListener(() => SetTargetLanguage("fr"));
-            germanButton.onClick.AddListener(() => SetTargetLanguage("de"));
+            //spanishButton.onClick.AddListener(() => SetTargetLanguage("es"));
+            //frenchButton.onClick.AddListener(() => SetTargetLanguage("fr"));
+            //germanButton.onClick.AddListener(() => SetTargetLanguage("de"));
                 
             //SetTargetLanguage("de");                                                                                                  // these 2 lines can be uncommented for use of testing on meta simulator
-            //PlayerPrefs.SetInt("user-mic-device-index", 1);
+            PlayerPrefs.SetInt("user-mic-device-index", 1);
 
             var index = PlayerPrefs.GetInt("user-mic-device-index");
             dropdown.SetValueWithoutNotify(index);
+
+            
 
             
 #endif
@@ -77,7 +87,7 @@ namespace Samples.Whisper
 
         private void ChangeMicrophone(int index)
         {
-            PlayerPrefs.SetInt("user-mic-device-index", index);//initually it was set to index instead of 1
+            PlayerPrefs.SetInt("user-mic-device-index", 1);//initually it was set to index instead of 1
         }
 
         private void SetTargetLanguage(string language)
@@ -106,6 +116,15 @@ namespace Samples.Whisper
             }
         }
 
+
+        private string AddTranslationToLog(string existingTranslationLog, string newTranslation)
+        {
+            print("=== existingTranslationString" + existingTranslationLog);
+            print("=== newTranslation" + newTranslation);
+             return newTranslation +"\n\n"+ existingTranslationLog;
+        }
+      
+
         private void MakeRequest()
         {
             recievedRequest = false;
@@ -117,6 +136,8 @@ namespace Samples.Whisper
 
         private void StartRecording()
         {
+
+            translateUI.SetActive(true);
             isRecording = true;
             recordButton.enabled = false;
 
@@ -129,7 +150,7 @@ namespace Samples.Whisper
 
         private async void EndRecording()
         {
-            message.text = "Waiting on OpenAI...";
+            //message.text = "Waiting on OpenAI...";
 
 #if !UNITY_WEBGL
             Microphone.End(null);
@@ -151,7 +172,7 @@ namespace Samples.Whisper
             // Display API text to UI
             _translationString = $"{targetLanguage.ToUpper()}: {res.Text}";
             _requestSync.SetTranslation(_translationString);
-            message.text = "Translation sucessfully sent";
+            //message.text = "Translation sucessfully sent";
             recievedRequest = true;
             recordButton.enabled = true;
         }
@@ -183,56 +204,85 @@ namespace Samples.Whisper
             //starting = starting + 1;
             //if( starting == 100)
             //{
-               // print("-------------------------------------------------------- request automatically sent");
-                //MakeRequest();
+            // print("-------------------------------------------------------- request automatically sent");
+            //MakeRequest();
 
             //}
-
-            if (!isRecording && _requestSync.GetRequested() == true && madeRequest == false)  // translation request was recieved, starts recording
+            print("===== User Language = " + matchMakingController.GetUserLanguage());
+            if (targetLanguage == "")
             {
-                print("============================================================================================================= Recording was requested");
-                StartRecording();
+                matchMakingController.GetUserLanguage();
             }
 
 
-            if(madeRequest == true && recievedRequest == true && _translationString != _requestSync.GetTranslation()) // translation requested and recieved, displays new translation and sets shared request status to false.
+
+            if (targetLanguage == "en" || targetLanguage == "es")
             {
-                if (!EmptyTranslation(_requestSync.GetTranslation()))
+                print("==== player language set");
+                if (!isRecording && _requestSync.GetRequested() == true && madeRequest == false)  // translation request was recieved, starts recording
                 {
-                    message.text = _requestSync.GetTranslation();
+                    print("============================================================================================================= Recording was requested");
+                    StartRecording();
                 }
-                else
+
+
+                if (madeRequest == true && recievedRequest == true && _translationString != _requestSync.GetTranslation()) // translation requested and recieved, displays new translation and sets shared request status to false.
                 {
-                    message.text = "No translation recorded";
+                    if (!EmptyTranslation(_requestSync.GetTranslation()))
+                    {
+                        translationLog = AddTranslationToLog(translationLog, _requestSync.GetTranslation());
+                        print("======== requestSync: " + _requestSync.GetTranslation());
+                        print("======= translationLog: " + translationLog);
+                        message.text = translationLog;
+                    }
+                    else
+                    {
+
+                        translationLog = AddTranslationToLog(translationLog, "No translation recorded.");
+                        message.text = translationLog;
+                    }
+
+                    _requestSync.SetRequested(false);
+                    recievedRequest = false;
+                    madeRequest = false;
                 }
-                
-                _requestSync.SetRequested(false);
-                recievedRequest = false;
-                madeRequest = false;
-            }
 
-            if (madeRequest == false && _translationString != _requestSync.GetTranslation()) // someone requested a translation and it was generated.
-            {                                                       
-                _requestSync.SetTranslation(_translationString);
-                _requestSync.SetRequested(false);
-            }
+                if (madeRequest == false && _translationString != _requestSync.GetTranslation()) // someone requested a translation and it was generated.
+                {
+                    _requestSync.SetTranslation(_translationString);
+                    _requestSync.SetRequested(false);
+                }
 
-            if (madeRequest == true && _requestSync.GetTranslation() != _translationString)  // you requested a translation and it was recieved.
+                if (madeRequest == true && _requestSync.GetTranslation() != _translationString)  // you requested a translation and it was recieved.
+                {
+                    if (!EmptyTranslation(_requestSync.GetTranslation()))
+                    {
+                        translationLog = AddTranslationToLog(translationLog, _requestSync.GetTranslation());
+                        print("======== requestSync: " + _requestSync.GetTranslation());
+                        print("======= translationLog: " + translationLog);
+                        message.text = translationLog;
+                    }
+                    else
+                    {
+                        translationLog = AddTranslationToLog(translationLog, "No translation was recorded");
+                        print("======== requestSync: " + _requestSync.GetTranslation());
+                        print("======= translationLog: " + translationLog);
+                        message.text = translationLog;
+                    }
+                    _translationString = _requestSync.GetTranslation();
+                    _previousTranslationString = _translationString;
+                    _requestSync.SetRequested(false);
+                    madeRequest = false;
+                }
+            } else if (matchMakingController.GetUserLanguage() == "en")
             {
-                if (!EmptyTranslation(_requestSync.GetTranslation()))
-                {
-                    message.text = _requestSync.GetTranslation();
-                }
-                else
-                {
-                    message.text = "No translation recorded";
-                }
-                _translationString = _requestSync.GetTranslation();
-                _previousTranslationString = _translationString;
-                _requestSync.SetRequested(false);
-                madeRequest = false;
+                print("====== player language set to english");
+                targetLanguage = "es";
+            } else if (matchMakingController.GetUserLanguage() == "es")
+            {
+                print("==== player language set to spanish");
+                targetLanguage = "en";
             }
-
 
             if (isRecording)
             {
