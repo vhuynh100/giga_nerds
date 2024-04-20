@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8937117073106093541}
   - component: {fileID: 2324626285009317127}
   - component: {fileID: 8494366774154547367}
+  - component: {fileID: 8846111302912997222}
   m_Layer: 0
   m_Name: '[BuildingBlock] HandGrab'
   m_TagString: Untagged
@@ -149,6 +150,52 @@ MonoBehaviour:
   _pointable: {fileID: 6381124494529615248}
   _rigidbody: {fileID: 5919787259825350124}
   _scaleMassWithSize: 1
+--- !u!114 &8846111302912997222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2680716495964374520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ce6415fc29fc0e45916042cbe881b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _positionConstraints:
+    ConstraintsAreRelative: 0
+    XAxis:
+      ConstrainAxis: 0
+      AxisRange:
+        Min: 0
+        Max: 0
+    YAxis:
+      ConstrainAxis: 0
+      AxisRange:
+        Min: 0
+        Max: 0
+    ZAxis:
+      ConstrainAxis: 0
+      AxisRange:
+        Min: 0
+        Max: 0
+  _rotationConstraints:
+    XAxis:
+      ConstrainAxis: 0
+      AxisRange:
+        Min: 0
+        Max: 0
+    YAxis:
+      ConstrainAxis: 0
+      AxisRange:
+        Min: 0
+        Max: 0
+    ZAxis:
+      ConstrainAxis: 0
+      AxisRange:
+        Min: 0
+        Max: 0
+  ItemNameCanvas: {fileID: 0}
 --- !u!1 &9098553465343165714
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,6 +210,7 @@ GameObject:
   - component: {fileID: 4170894529952876733}
   - component: {fileID: 5919787259825350124}
   - component: {fileID: 5287725419932884017}
+  - component: {fileID: 7447735870569173927}
   m_Layer: 0
   m_Name: Potted Plant
   m_TagString: Untagged
@@ -296,11 +344,32 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1550514412580984892, guid: 4908cf41c4a83e0489e77f03882e07b6, type: 3}
+--- !u!65 &7447735870569173927
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9098553465343165714}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.7586073, y: 2.5450616, z: 1.7415508}
+  m_Center: {x: 0.0007711102, y: 1.3365924, z: 0.01582744}
 --- !u!1001 &4643683652835560625
 PrefabInstance:
   m_ObjectHideFlags: 0
