@@ -28,8 +28,6 @@ public class TeleportRoom : MonoBehaviour
         restaurantButton.onClick.AddListener(() => setRestaurantActive());
         kitchenButton.onClick.AddListener(() => setKitchenActive());
         gymButton.onClick.AddListener(() => setGymActive());
-
-        Kitchen.SetActive(true);
     }
     private void Awake()  // DO NOT SET _requestSync INITIAL VARIABLE VALUES IN THIS Awake! only set initial variable values in RequestSync.cs
     {

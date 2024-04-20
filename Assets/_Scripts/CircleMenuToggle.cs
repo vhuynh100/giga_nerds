@@ -4,37 +4,56 @@ using UnityEngine;
 
 public class CircleMenuToggle : MonoBehaviour
 {
-    [SerializeField] private GameObject circleMenu;
-    [SerializeField] private OVRHand myHand;
-    private bool isMenuVisible = true;
+    public GameObject button;
+    public GameObject circleMenu;
+    public OVRHand hand;
+    public OVRSkeleton skeleton;
+
+    private bool isWristCheckedPreviously = false;
 
     void Start()
     {
+        skeleton = GetComponentInChildren<OVRSkeleton>() ?? skeleton;
+
+        if (button != null)
+        {
+            button.SetActive(false);
+        }
+
         if (circleMenu != null)
         {
             circleMenu.SetActive(false);
-            isMenuVisible = false;
         }
     }
 
     void Update()
     {
-        CheckForPinch();
+        if (hand.IsTracked && skeleton != null)
+        {
+            OVRBone wristBone = skeleton.Bones[(int)OVRSkeleton.BoneId.Hand_WristRoot];
+            bool checkingWrist = wristBone.Transform.forward.y > 0.7f;
+
+            if (checkingWrist && !isWristCheckedPreviously)
+            {
+                button.SetActive(!button.activeSelf);
+                isWristCheckedPreviously = true;
+            }
+            else if (!checkingWrist && isWristCheckedPreviously)
+            {
+                isWristCheckedPreviously = false;
+            }
+        }
     }
 
-    void CheckForPinch()
+    public void ToggleMenu()
     {
-        float pinchStrength = myHand.GetFingerPinchStrength(OVRHand.HandFinger.Middle);
-        if (pinchStrength > 0.7f && !isMenuVisible)
+        if (!circleMenu.activeSelf)
         {
             circleMenu.SetActive(true);
-            isMenuVisible = true;
         }
-        else if (pinchStrength < 0.7f && isMenuVisible)
+        else
         {
             circleMenu.SetActive(false);
-            isMenuVisible = false;
         }
     }
-
 }
