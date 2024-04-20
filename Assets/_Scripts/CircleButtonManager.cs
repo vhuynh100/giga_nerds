@@ -133,7 +133,7 @@ public class ButtonManager : MonoBehaviour
     public void goLobby()
     {
         room.Disconnect();
-        room.Connect("0");
+        room.Connect("Test Room");
         mainMenu.SetActive(true);
         FindObjectOfType<ButtonManager>().GameObject().SetActive(false);
     }
