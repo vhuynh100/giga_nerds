@@ -10,11 +10,14 @@ using UnityEngine.UI;
 public class ButtonManager : MonoBehaviour
 {
     // Canvas
+
     [SerializeField] private GameObject mainMenu;
     [SerializeField] private GameObject translationMenu;
     [SerializeField] private GameObject settingsMenu;
     [SerializeField] private GameObject timerMenu;
     [SerializeField] private Realtime room;
+    [SerializeField] private GameObject teleportMenu;
+
 
     // Circle UI Buttons
     //[SerializeField] private Button lingoLinkButton;
@@ -80,6 +83,7 @@ public class ButtonManager : MonoBehaviour
     // Method for Lingo Link Button
     public void LingoLinkButtonClicked()
     {
+
         message.text = "LINGO LINK";
 
         // Remove the line comments once we are ready to tie into timerMenu, and settingsMenu
@@ -88,6 +92,26 @@ public class ButtonManager : MonoBehaviour
         translationMenu.SetActive(false);
 
         
+
+        if (teleportMenu.activeInHierarchy)
+        {
+            teleportMenu.SetActive(false);
+        }
+        else
+        {
+            teleportMenu.SetActive(true);
+        }
+
+        message.text = "TELEPORT";
+
+        // Remove the line comments once we are ready to tie into timerMenu, and settingsMenu
+        // timerMenu.SetActive(false);
+        // settingsMenu.SetActive(false);
+        //translationMenu.SetActive(false);
+
+        //unmutedIcon.SetActive(true);
+        //mutedIcon.SetActive(false);
+
     }
 
     public void TranslationMenuButtonClicked()
