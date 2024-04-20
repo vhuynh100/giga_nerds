@@ -51,7 +51,7 @@ public class MatchMakingController : MonoBehaviour
             match.CheckMatches();
         }
 
-        if (wait > 400 && wait % 400 == 0 && requestedQueue)
+        if (wait > 400 && wait % 200 == 0 && requestedQueue)
         {
             if (language == "en")
             {
