@@ -64,10 +64,6 @@ public class Settings : MonoBehaviour
         PlayerPrefs.SetFloat("mic", mVolume);
     }
 
-    public void returnToMain()
-    {
-        settingsMenu.SetActive(false);
-        // add link to main menu gameobject
-    }
+    
 
 }
