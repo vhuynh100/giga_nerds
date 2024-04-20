@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: PreSessionMenuTable_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: c43190c0abe743c4591b4e84f5241188, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 18489663488
+    m_Localized: Session Summary
+    m_Metadata:
+      m_Items: []
+  - m_Id: 240510951424
+    m_Localized: 'Select Goal for this Session:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1072023330816
+    m_Localized: PRONUNCIATION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1148716179456
+    m_Localized: VOCABULARY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1275904253952
+    m_Localized: FLUENCY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1362428551168
+    m_Localized: GRAMMAR ACCURACY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1471648227328
+    m_Localized: Continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1588618977280
+    m_Localized: Please select a goal before continuing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1598785970176
+    m_Localized: Rules & Etiquette
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1770014236672
+    m_Localized: 'Remember, this is an educational setting.
+
+
+      Be Patient and
+      Supportive of one another.
+
+
+      Try to speak in one of the two session languages.
+
+
+      Have
+      Fun and Learn Together!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1931079704576
+    m_Localized: Join Room
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2023438278656
+    m_Localized: Exit Session For Testing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2089351766016
+    m_Localized: 'Duration: --:--'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2299943575552
+    m_Localized: 'Words Spoken: ----'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2368633692160
+    m_Localized: GOAL SELECTED
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2418214559744
+    m_Localized: Return to Menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18001056358400
+    m_Localized: Session Goal
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

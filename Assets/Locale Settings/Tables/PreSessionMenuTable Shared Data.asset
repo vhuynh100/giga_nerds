@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: PreSessionMenuTable Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: PreSessionMenuTable
+  m_TableCollectionNameGuidString: c43190c0abe743c4591b4e84f5241188
+  m_Entries:
+  - m_Id: 18489663488
+    m_Key: Session Summary
+    m_Metadata:
+      m_Items: []
+  - m_Id: 240510951424
+    m_Key: Goal Selection
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1072023330816
+    m_Key: Pronunciation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1148716179456
+    m_Key: Vocabulary
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1275904253952
+    m_Key: Fluency
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1362428551168
+    m_Key: Grammar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1471648227328
+    m_Key: Continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1588618977280
+    m_Key: Select Alert
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1598785970176
+    m_Key: Rules & Etiquette
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1770014236672
+    m_Key: Consideration
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1931079704576
+    m_Key: Join Room
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2023438278656
+    m_Key: Exit Session For Testing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2089351766016
+    m_Key: Duration
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2299943575552
+    m_Key: Words Spoken
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2368633692160
+    m_Key: GOAL SELECTED
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2418214559744
+    m_Key: Return
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18001056358400
+    m_Key: Session Goal
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 4517904720921886733
+  references:
+    version: 2
+    RefIds:
+    - rid: 4517904720921886733
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables,
+        asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1713554026864

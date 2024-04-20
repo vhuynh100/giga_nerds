@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: LocaleTable_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: dc07131e54e31ab44967f4dc48f6c7bb, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 641714055405568
+    m_Localized: blue book
+    m_Metadata:
+      m_Items: []
+  - m_Id: 641346554683392
+    m_Localized: black book
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35765808652288
+    m_Localized: apple
+    m_Metadata:
+      m_Items: []
+  - m_Id: 404017197998080
+    m_Localized: couch
+    m_Metadata:
+      m_Items: []
+  - m_Id: 404927189999616
+    m_Localized: lamp
+    m_Metadata:
+      m_Items: []
+  - m_Id: 641801007521792
+    m_Localized: green book
+    m_Metadata:
+      m_Items: []
+  - m_Id: 642070277644288
+    m_Localized: coffee table
+    m_Metadata:
+      m_Items: []
+  - m_Id: 642114905038848
+    m_Localized: desk lamp
+    m_Metadata:
+      m_Items: []
+  - m_Id: 642252817948672
+    m_Localized: door
+    m_Metadata:
+      m_Items: []
+  - m_Id: 642336683057152
+    m_Localized: drawer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 642473002131456
+    m_Localized: laptop
+    m_Metadata:
+      m_Items: []
+  - m_Id: 642565843050496
+    m_Localized: office chair
+    m_Metadata:
+      m_Items: []
+  - m_Id: 642661859057664
+    m_Localized: pin board
+    m_Metadata:
+      m_Items: []
+  - m_Id: 642908102451200
+    m_Localized: potted plant
+    m_Metadata:
+      m_Items: []
+  - m_Id: 643082312867840
+    m_Localized: rug
+    m_Metadata:
+      m_Items: []
+  - m_Id: 643169172709376
+    m_Localized: side drawer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 643456155377664
+    m_Localized: TV stand
+    m_Metadata:
+      m_Items: []
+  - m_Id: 643868556124160
+    m_Localized: table
+    m_Metadata:
+      m_Items: []
+  - m_Id: 641912836055040
+    m_Localized: red book
+    m_Metadata:
+      m_Items: []
+  - m_Id: 643965150945280
+    m_Localized: tall shelf
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

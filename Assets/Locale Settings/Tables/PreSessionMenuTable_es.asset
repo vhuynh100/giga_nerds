@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: PreSessionMenuTable_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: c43190c0abe743c4591b4e84f5241188, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 18489663488
+    m_Localized: "Resumen de la sesi\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 240510951424
+    m_Localized: "Seleccione el objetivo de esta sesi\xF3n:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1072023330816
+    m_Localized: PRONUNCIADO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1148716179456
+    m_Localized: VOCABULARIO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1275904253952
+    m_Localized: FLUENCIA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1362428551168
+    m_Localized: "PRECISI\xD3N GRAMATICAL"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1471648227328
+    m_Localized: "Contin\xFAe en"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1588618977280
+    m_Localized: Seleccione un objetivo antes de continuar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1598785970176
+    m_Localized: Normas y etiqueta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1770014236672
+    m_Localized: "Recuerde que se trata de un entorno educativo.\n\nSea paciente
+      y comprensivo con los dem\xE1s.\n\nIntenta hablar en una de las dos lenguas
+      de la sesi\xF3n.\n\nDivi\xE9rtanse y aprendan juntos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1931079704576
+    m_Localized: Unirse a la sala
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2023438278656
+    m_Localized: "Salir de la sesi\xF3n para realizar pruebas"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2089351766016
+    m_Localized: "Duraci\xF3n: --:--"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2299943575552
+    m_Localized: 'Palabras pronunciadas: ----'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2368633692160
+    m_Localized: OBJETIVO SELECCIONADO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2418214559744
+    m_Localized: "Volver al men\xFA"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18001056358400
+    m_Localized: "Objetivo de la sesi\xF3n"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
