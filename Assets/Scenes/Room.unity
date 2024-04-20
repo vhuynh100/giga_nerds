@@ -1026,10 +1026,12 @@ MonoBehaviour:
   progressBar: {fileID: 1635954713}
   message: {fileID: 1635954712}
   dropdown: {fileID: 1635954714}
+  translateUI: {fileID: 1635954711}
   activeButtonColor: {r: 0.98039216, g: 0.6392157, b: 0, a: 1}
   _translationString: 
   _previousTranslationString: 
   _requested: 0
+  matchMakingController: {fileID: 1419245286}
 --- !u!4 &884137462
 Transform:
   m_ObjectHideFlags: 0
@@ -2563,7 +2565,7 @@ PrefabInstance:
     - target: {fileID: 6004550246646135050, guid: 963435871795fa14fbc954db3ba399c4,
         type: 3}
       propertyPath: m_Pivot.x
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6004550246646135050, guid: 963435871795fa14fbc954db3ba399c4,
         type: 3}
@@ -2638,7 +2640,7 @@ PrefabInstance:
     - target: {fileID: 6004550246646135050, guid: 963435871795fa14fbc954db3ba399c4,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.26999998
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6004550246646135050, guid: 963435871795fa14fbc954db3ba399c4,
         type: 3}
@@ -3060,7 +3062,7 @@ PrefabInstance:
     - target: {fileID: 4990948735840065831, guid: e5be9f6567f6a5242b3b3dcbcd5e02e5,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5273408517535997940, guid: e5be9f6567f6a5242b3b3dcbcd5e02e5,
         type: 3}
