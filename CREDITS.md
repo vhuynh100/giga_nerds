@@ -11,6 +11,7 @@ This project utilizes assets from various creators on Sketchfab. Below is a list
 | "Bakery Assets" | Shi0n | [Creative Commons Attribution](http://creativecommons.org/licenses/by/4.0/) | [View on Sketchfab](https://skfb.ly/6XGqx) |
 | "Low-Poly Takeaway Coffee Cup" | PickledCactusAlan | [Creative Commons Attribution](http://creativecommons.org/licenses/by/4.0/) | [View on Sketchfab](https://skfb.ly/oxqpp) |
 | "☕coffee cups low poly☕" | gulvtaepper | [Creative Commons Attribution](http://creativecommons.org/licenses/by/4.0/) | [View on Sketchfab](https://skfb.ly/oISw6) |
+| "Hotdog Low Poly Food G06" | OHOW | [Creative Commons Attribution](http://creativecommons.org/licenses/by/4.0/) | [View on Sketchfab](https://skfb.ly/6SnxM) |
 | ... | ... | ... | ... |
 
 ## Textures
