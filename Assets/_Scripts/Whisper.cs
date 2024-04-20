@@ -173,6 +173,7 @@ namespace Samples.Whisper
             _translationString = $"{targetLanguage.ToUpper()}: {res.Text}";
             _requestSync.SetTranslation(_translationString);
             //message.text = "Translation sucessfully sent";
+            
             recievedRequest = true;
             recordButton.enabled = true;
         }
@@ -190,7 +191,15 @@ namespace Samples.Whisper
         }
 
 
-
+        private async void SendTranslatedText(string translatedText)
+        {
+            ChatGPT chatGPTScript = FindObjectOfType<ChatGPT>();
+            if (chatGPTScript != null)
+            {
+                chatGPTScript.ReceiveTranslatedText(translatedText);
+                
+            }
+        }
 
 
 
@@ -234,6 +243,7 @@ namespace Samples.Whisper
                         print("======== requestSync: " + _requestSync.GetTranslation());
                         print("======= translationLog: " + translationLog);
                         message.text = translationLog;
+                        SendTranslatedText(message.text);
                     }
                     else
                     {
