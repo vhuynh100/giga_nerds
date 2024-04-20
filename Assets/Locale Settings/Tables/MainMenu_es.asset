@@ -47,6 +47,22 @@ MonoBehaviour:
     m_Localized: Bienvenido a
     m_Metadata:
       m_Items: []
+  - m_Id: 438717702594560
+    m_Localized: Seleccionar idioma
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438813655687168
+    m_Localized: "Ingl\xE9s"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438875450368000
+    m_Localized: "Espa\xF1ol"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 439041075044352
+    m_Localized: Volver
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

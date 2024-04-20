@@ -43,6 +43,22 @@ MonoBehaviour:
     m_Key: Welcome to
     m_Metadata:
       m_Items: []
+  - m_Id: 438717702594560
+    m_Key: Language Select
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438813655687168
+    m_Key: English
+    m_Metadata:
+      m_Items: []
+  - m_Id: 438875450368000
+    m_Key: Spanish
+    m_Metadata:
+      m_Items: []
+  - m_Id: 439041075044352
+    m_Key: Back
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

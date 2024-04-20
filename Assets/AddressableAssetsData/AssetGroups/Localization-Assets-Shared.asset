@@ -47,6 +47,21 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3e854f8b226fee24f94a344f4a972cb2
+    m_Address: Assets/Locale Settings/Tables/SuggestionsTable Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dc93ad70b39bf3a46a41476476b5fba2
+    m_Address: Assets/Locale Settings/Tables/TranslateUITable Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9bdd7dee54c64724e8f7eeaf8e40a72a
+    m_Address: Assets/Locale Settings/Tables/TimerTable Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7ac66746cd4f41f4891db19c8b891bfa, type: 2}
   m_SchemaSet:

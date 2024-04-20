@@ -55,6 +55,24 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-es
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a95b85ee8871cae4882b8788d1dbb05d
+    m_Address: SuggestionsTable_es
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f86238f25fca57949a3ad99990a9993b
+    m_Address: TranslateUITable_es
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b14581793d4c90a4cba4802fbb4e3557
+    m_Address: TimerTable_es
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7ac66746cd4f41f4891db19c8b891bfa, type: 2}
   m_SchemaSet:
