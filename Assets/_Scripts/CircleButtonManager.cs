@@ -4,7 +4,7 @@ using Normal.Realtime;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.ProBuilder.Shapes;
+using UnityEngine.Sprites;
 using UnityEngine.UI;
 
 public class ButtonManager : MonoBehaviour
@@ -29,11 +29,12 @@ public class ButtonManager : MonoBehaviour
     [SerializeField] private TMP_Text message;
 
     // Icons
-    [SerializeField] private GameObject unmutedIcon;
-    [SerializeField] private GameObject mutedIcon;
+    [SerializeField] private GameObject micIcon;
+    [SerializeField] private Sprite mutedIcon;
+    [SerializeField] private Sprite unmutedIcon;
     private RealtimeAvatarVoice voice;
 
-    private bool microphoneMuted = false;
+    public bool microphoneMuted = false;
 
     private void Start()
     {
@@ -60,14 +61,20 @@ public class ButtonManager : MonoBehaviour
 #endif
     }
 
-    private void ToggleMicrophone()
+     public void ToggleMicrophone()
     {
-        // Update icon visibility based on microphone state
-        unmutedIcon.SetActive(false);
+        
+        microphoneMuted = !microphoneMuted;
 
-
-
-        mutedIcon.SetActive(true);
+        if (microphoneMuted)
+        {
+            micIcon.GetComponent<Image>().sprite = mutedIcon;
+        }
+        else
+        {
+            micIcon.GetComponent<Image>().sprite=unmutedIcon;
+        }
+        
     }
 
     // Method for Lingo Link Button
@@ -80,8 +87,7 @@ public class ButtonManager : MonoBehaviour
         settingsMenu.SetActive(false);
         translationMenu.SetActive(false);
 
-        unmutedIcon.SetActive(true);
-        mutedIcon.SetActive(false);
+        
     }
 
     public void TranslationMenuButtonClicked()
@@ -122,27 +128,13 @@ public class ButtonManager : MonoBehaviour
         }
     }
 
-    public void muteMic()
-    {
-        if (microphoneMuted)
-        {
-            microphoneMuted = true;
-            voice.mute = true;
-            mutedIcon.SetActive(true);
-            unmutedIcon.SetActive(false);
-            return;
-        }
-        voice.mute = !true;
-        microphoneMuted = !true;
-        mutedIcon.SetActive(!true);
-        unmutedIcon.SetActive(!false);
-    }
+ 
 
     public void goLobby()
     {
         room.Disconnect();
         room.Connect("0");
         mainMenu.SetActive(true);
-        this.gameObject.SetActive(false);
+        FindObjectOfType<ButtonManager>().GameObject().SetActive(false);
     }
 }
