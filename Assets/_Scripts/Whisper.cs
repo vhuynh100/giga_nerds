@@ -23,6 +23,8 @@ namespace Samples.Whisper
         [SerializeField] private bool _requested = default;
         [SerializeField] private MatchMaking matchMakingController;
 
+        [SerializeField] private ChatGPT chatgpt;
+
 
         private string translationLog = "";
 
@@ -191,14 +193,11 @@ namespace Samples.Whisper
         }
 
 
-        private async void SendTranslatedText(string translatedText)
+        private void SendTranslatedText(string translatedText)
         {
-            ChatGPT chatGPTScript = FindObjectOfType<ChatGPT>();
-            if (chatGPTScript != null)
-            {
-                chatGPTScript.ReceiveTranslatedText(translatedText);
-                
-            }
+            //ChatGPT chatGPTScript = FindObjectOfType<ChatGPT>();
+            chatgpt.ReceiveTranslatedText(translatedText);
+
         }
 
 
@@ -271,6 +270,7 @@ namespace Samples.Whisper
                         print("======== requestSync: " + _requestSync.GetTranslation());
                         print("======= translationLog: " + translationLog);
                         message.text = translationLog;
+                        SendTranslatedText(message.text);
                     }
                     else
                     {
@@ -278,6 +278,7 @@ namespace Samples.Whisper
                         print("======== requestSync: " + _requestSync.GetTranslation());
                         print("======= translationLog: " + translationLog);
                         message.text = translationLog;
+                        SendTranslatedText(message.text);
                     }
                     _translationString = _requestSync.GetTranslation();
                     _previousTranslationString = _translationString;

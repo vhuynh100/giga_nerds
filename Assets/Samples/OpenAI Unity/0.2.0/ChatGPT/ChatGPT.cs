@@ -1,14 +1,20 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using TMPro;
 
 namespace OpenAI
 {
     public class ChatGPT : MonoBehaviour
     {
-         private Text Message;
-        [SerializeField] private RectTransform received1;
-        [SerializeField] private RectTransform received2;
+         //private Text Message;
+
+        private string message;
+        //[SerializeField] private RectTransform received1;
+        //[SerializeField] private RectTransform received2;
+
+        [SerializeField] private TMP_Text suggestionDisplay1;
+        [SerializeField] private TMP_Text suggestionDisplay2;
 
         private OpenAIApi openai = new OpenAIApi();
         private List<ChatMessage> messages = new List<ChatMessage>();
@@ -17,13 +23,17 @@ namespace OpenAI
         private void Start()
         {
             // Initialize the Message variable if it's not already initialized
-            if (Message == null)
-                Message = GetComponentInChildren<Text>();
+            //if (Message == null)
+                //Message = GetComponentInChildren<Text>();
         }
 
        private async void SendReply()
         {
-            var translatedText = Message.text;
+            print("====== sending reply");
+            //var translatedText = Message.text;
+            var translatedText = message;
+
+
             
             // Create a new ChatMessage instance
             var newMessage = new ChatMessage() { Role = "user", Content = translatedText };
@@ -44,16 +54,25 @@ namespace OpenAI
             if (completionResponse.Choices != null && completionResponse.Choices.Count > 0)
             {
                 var suggestion1 = completionResponse.Choices[0].Message.Content.Trim();
-                var suggestion2 = completionResponse.Choices[1].Message.Content.Trim();
+                //var suggestion2 = completionResponse.Choices[1].Message.Content.Trim();
+                print("======== suggestion 1: " + suggestion1);
 
-                received1.GetComponentInChildren<Text>().text = suggestion1;
-                received2.GetComponentInChildren<Text>().text = suggestion2;
+                //received1.GetComponentInChildren<Text>().text = suggestion1;
+                //received2.GetComponentInChildren<Text>().text = suggestion2;
+
+                suggestionDisplay1.text = suggestion1;
+                //suggestionDisplay2.text = suggestion2;
+
+
             }
             else
             {
                 Debug.LogWarning("No text was generated from this prompt.");
-                received1.GetComponentInChildren<Text>().text = "No text was generated from this prompt.";
-                received2.GetComponentInChildren<Text>().text = "No text was generated from this prompt.";
+                //received1.GetComponentInChildren<Text>().text = "No text was generated from this prompt.";
+                //received2.GetComponentInChildren<Text>().text = "No text was generated from this prompt.";
+
+                suggestionDisplay1.text = "No text was generated from this prompt.";
+                suggestionDisplay2.text = "No text was generated from this prompt.";
             }
         }
 
@@ -61,7 +80,10 @@ namespace OpenAI
         public void ReceiveTranslatedText(string translatedText)
         {
             // Set the Message variable with the translated text
-            Message.text = translatedText;
+
+            print("=== recieveing translated text: " + translatedText);
+            message = translatedText;
+            //Message.text = translatedText;
             // Call SendReply to process the translated text and generate suggestions
             SendReply();
         }

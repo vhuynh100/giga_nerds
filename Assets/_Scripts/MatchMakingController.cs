@@ -124,7 +124,6 @@ public class MatchMakingController : MonoBehaviour
         realtime = null;
         realtime = FindObjectOfType<Realtime>();
         string lobbyString = lobbyID.ToString();
-        //print("=== moving to lobbyID: " + lobbyString);
         realtime.Connect(lobbyString);
         
     }
