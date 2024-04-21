@@ -18,8 +18,16 @@ public class CountdownTimer : MonoBehaviour
     private bool toggleOptions = false;
     private float lastTime = 0f;
 
+    [SerializeField] private TimerStart timerStart;
+    private int playerNum = 0;
+
     void Update()
     {
+        if(timerStart.GetPlayer1Ready() == true && timerStart.GetPlayer2Ready() == true && !isTimerOn)
+        {
+            SetTimer(timerStart.GetTimerDuration());
+        }
+
         if (TimerCounting > 0 && isTimerOn)
         {
             TimerCounting -= Time.deltaTime;
@@ -39,7 +47,6 @@ public class CountdownTimer : MonoBehaviour
             else if (onSecondLanguage)
             {
                 Start();
-
             }
         }
     }
@@ -65,7 +72,8 @@ public class CountdownTimer : MonoBehaviour
     public void SetTimer(float minutes)
     {
         lastTime = minutes;
-        isTimerOn = true;
+        print("======= set timer to " +  minutes);
+        //isTimerOn = true;
         Flag.SetActive(true);  
         TimerCounting = minutes * 60; // Convert minutes to seconds
         if (onSecondLanguage)
@@ -74,6 +82,20 @@ public class CountdownTimer : MonoBehaviour
         }
         UpdateTimerText();
     }
+
+    public void SetTimerDuration(float minutes)
+    {
+        lastTime = minutes;
+        isTimerOn = true;
+        Flag.SetActive(true);
+        TimerCounting = minutes * 60; // Convert minutes to seconds
+        if (onSecondLanguage)
+        {
+            FlagImage.sprite = spanishFlag;
+        }
+        UpdateTimerText();
+    }
+
     public void showOptions()
     {
         toggleOptions = !toggleOptions;
@@ -88,8 +110,26 @@ public class CountdownTimer : MonoBehaviour
         if(seconds >= 0 && minutes >= 0)
         {
             timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
-
         }
+    }
+
+    private void SetPlayerReady()
+    {
+        if(timerStart.GetPlayer1Ready() == false)
+        {
+            timerStart.SetPlayer1Ready(true);
+            playerNum = 1;
+        }
+        else
+        {
+            timerStart.SetPlayer2Ready(true);
+            playerNum = 2;
+        }
+    }
+
+    private void SetTimerDuration()
+    {
+
     }
 
 }
