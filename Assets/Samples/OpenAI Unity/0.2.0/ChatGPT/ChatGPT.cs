@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using TMPro;
+using System.Linq;
 
 namespace OpenAI
 {
@@ -22,25 +23,18 @@ namespace OpenAI
 
         private void Start()
         {
-            // Initialize the Message variable if it's not already initialized
-            //if (Message == null)
-                //Message = GetComponentInChildren<Text>();
+           
         }
 
        private async void SendReply()
         {
-            print("====== sending reply");
-            //var translatedText = Message.text;
             var translatedText = message;
-
-
-            
             // Create a new ChatMessage instance
             var newMessage = new ChatMessage() { Role = "user", Content = translatedText };
 
             // Check if it's the first message and append the prompt if so
             if (messages.Count == 0)
-                newMessage.Content = prompt + "\n" + translatedText; 
+                newMessage.Content = prompt + "\n" + translatedText;
 
             // Add the new message to the messages list
             messages.Add(newMessage);
@@ -53,24 +47,37 @@ namespace OpenAI
 
             if (completionResponse.Choices != null && completionResponse.Choices.Count > 0)
             {
-                var suggestion1 = completionResponse.Choices[0].Message.Content.Trim();
-                //var suggestion2 = completionResponse.Choices[1].Message.Content.Trim();
-                print("======== suggestion 1: " + suggestion1);
+                var suggestionsText = completionResponse.Choices[0].Message.Content.Trim();
 
-                //received1.GetComponentInChildren<Text>().text = suggestion1;
-                //received2.GetComponentInChildren<Text>().text = suggestion2;
+                // Define delimiters as characters instead of strings
+                char[] delimiters = { '1', '2', '.' };
 
-                suggestionDisplay1.text = suggestion1;
-                //suggestionDisplay2.text = suggestion2;
+                // Split the suggestions based on the delimiters
+                string[] suggestions = suggestionsText.Split(delimiters);
 
+                // Filter out empty entries
+                suggestions = suggestions.Where(s => !string.IsNullOrEmpty(s.Trim())).ToArray();
 
+                if (suggestions.Length >= 2)
+                {
+                    suggestionDisplay1.text = suggestions[0].Trim(); // Index 0 corresponds to the first suggestion after "1."
+                    suggestionDisplay2.text = suggestions[1].Trim(); // Index 1 corresponds to the second suggestion after "2."
+                }
+                else if (suggestions.Length == 1)
+                {
+                    suggestionDisplay1.text = suggestions[0].Trim(); // Only one suggestion available
+                    suggestionDisplay2.text = "No second suggestion available.";
+                }
+                else
+                {
+                    Debug.LogWarning("No suggestions were found.");
+                    suggestionDisplay1.text = "No suggestions were found.";
+                    suggestionDisplay2.text = "No suggestions were found.";
+                }
             }
             else
             {
                 Debug.LogWarning("No text was generated from this prompt.");
-                //received1.GetComponentInChildren<Text>().text = "No text was generated from this prompt.";
-                //received2.GetComponentInChildren<Text>().text = "No text was generated from this prompt.";
-
                 suggestionDisplay1.text = "No text was generated from this prompt.";
                 suggestionDisplay2.text = "No text was generated from this prompt.";
             }
@@ -80,10 +87,7 @@ namespace OpenAI
         public void ReceiveTranslatedText(string translatedText)
         {
             // Set the Message variable with the translated text
-
-            print("=== recieveing translated text: " + translatedText);
             message = translatedText;
-            //Message.text = translatedText;
             // Call SendReply to process the translated text and generate suggestions
             SendReply();
         }
