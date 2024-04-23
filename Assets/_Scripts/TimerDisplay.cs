@@ -19,16 +19,44 @@ public class CountdownTimer : MonoBehaviour
     private float lastTime = 0f;
 
     [SerializeField] private TimerStart timerStart;
+    [SerializeField] private GameObject readyButton;
     private int playerNum = 0;
+    private float timerDuration = 0;
+    private float prevTimerDuration = 0;
 
     void Update()
     {
+        print("==== playerNum: " + playerNum);
         if(timerStart.GetPlayer1Ready() == true && timerStart.GetPlayer2Ready() == true && !isTimerOn)
         {
-            SetTimer(timerStart.GetTimerDuration());
+            SetTimerDuration(timerStart.GetTimerDuration());
         }
 
-        if (TimerCounting > 0 && isTimerOn)
+
+        print("======= local timer duration: " + timerDuration);
+        print("======= shared timer duration: " + timerStart.GetTimerDuration());
+
+
+
+        if (timerStart.GetTimerDuration() != prevTimerDuration)
+        {
+            prevTimerDuration = timerStart.GetTimerDuration();
+            SetTimer(timerStart.GetTimerDuration());
+            if(playerNum == 1)
+            {
+                timerStart.SetPlayer1Ready(false);
+                playerNum = 0;
+                isTimerOn = false;
+
+            } else if (playerNum == 2)
+            {
+                timerStart.SetPlayer2Ready(false);
+                playerNum = 0;
+                isTimerOn = false;
+            }
+        }
+
+        if (timerStart.GetPlayer1Ready() == true && timerStart.GetPlayer2Ready() == true && TimerCounting > 0 && isTimerOn)
         {
             TimerCounting -= Time.deltaTime;
             UpdateTimerText();
@@ -73,6 +101,8 @@ public class CountdownTimer : MonoBehaviour
     {
         lastTime = minutes;
         print("======= set timer to " +  minutes);
+        timerDuration = minutes;
+        timerStart.SetTimerDuration(minutes);
         //isTimerOn = true;
         Flag.SetActive(true);  
         TimerCounting = minutes * 60; // Convert minutes to seconds
@@ -86,6 +116,7 @@ public class CountdownTimer : MonoBehaviour
     public void SetTimerDuration(float minutes)
     {
         lastTime = minutes;
+        timerStart.SetTimerDuration(minutes);
         isTimerOn = true;
         Flag.SetActive(true);
         TimerCounting = minutes * 60; // Convert minutes to seconds
@@ -113,23 +144,31 @@ public class CountdownTimer : MonoBehaviour
         }
     }
 
-    private void SetPlayerReady()
+    public void SetPlayerReady()
     {
-        if(timerStart.GetPlayer1Ready() == false)
+        if(playerNum == 0 && timerStart.GetPlayer1Ready() == false)
         {
             timerStart.SetPlayer1Ready(true);
             playerNum = 1;
         }
-        else
+        else if (playerNum == 0 && timerStart.GetPlayer2Ready() == false)
         {
             timerStart.SetPlayer2Ready(true);
             playerNum = 2;
         }
     }
 
-    private void SetTimerDuration()
+    public void SetPlayerUnReady()
     {
-
+        if (playerNum == 1)
+        {
+            timerStart.SetPlayer1Ready(false);
+        } else if ( playerNum == 2)
+        {
+            timerStart.SetPlayer2Ready(false);
+        }
     }
+
+    
 
 }

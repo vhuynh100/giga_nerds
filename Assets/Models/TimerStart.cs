@@ -7,14 +7,14 @@ public class TimerStart : RealtimeComponent<TimerStartModel>
 {
     private bool _player1Ready;
     private bool _player2Ready;
-    private int _timerDuration;
+    private float _timerDuration;
 
     private void Awake()
     {
         _player1Ready = false;
         _player2Ready = false;
         _timerDuration = 0;
-        _timerDuration = GetTimerDuration();
+        //_timerDuration = GetTimerDuration();
     }
 
     protected override void OnRealtimeModelReplaced(TimerStartModel previousModel, TimerStartModel currentModel)
@@ -51,7 +51,7 @@ public class TimerStart : RealtimeComponent<TimerStartModel>
         UpdatePlayer2Ready();
     }
 
-    private void TimerDurationDidChange(TimerStartModel model, int timerDuration)
+    private void TimerDurationDidChange(TimerStartModel model, float timerDuration)
     {
         UpdateTimerDuration();
     }
@@ -90,14 +90,16 @@ public class TimerStart : RealtimeComponent<TimerStartModel>
         return model.player2Ready;
     }
 
-    public void SetTimerDuration(int duration)
+
+    public void SetTimerDuration(float duration)
     {
         model.timerDuration = duration;
     }
 
-    public int GetTimerDuration()
+    public float GetTimerDuration()
     {
         return model.timerDuration;
     }
+
 
 }
