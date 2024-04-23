@@ -5,7 +5,6 @@ using TMPro;
 using UnityEngine.UI;
 
 //TODO:
-// connect timer to Duration: XX:XX
 // connect session exit button to exitSession()
 
 
@@ -87,5 +86,6 @@ public class PreSession : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
     }
 }

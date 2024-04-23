@@ -1966,6 +1966,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 165759322658334429}
+        m_TargetAssemblyTypeName: SessionStopwatch, Assembly-CSharp
+        m_MethodName: EndTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3487756905722507683
 GameObject:
   m_ObjectHideFlags: 0
@@ -2151,6 +2163,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8093620174551368922}
   - component: {fileID: 7948476011161995898}
+  - component: {fileID: 165759322658334429}
   m_Layer: 0
   m_Name: PreSessionMenu
   m_TagString: Untagged
@@ -2191,6 +2204,19 @@ MonoBehaviour:
   EndMenu: {fileID: 5811625730986113700}
   selectGoalAlert: {fileID: 4968943343637494705}
   goalText: {fileID: 2666555390048597343}
+--- !u!114 &165759322658334429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4648472483097069188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7334476b6dffdab4e9ad7c5602659d9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerText: {fileID: 8326770771628885204}
 --- !u!1 &4703287664725213301
 GameObject:
   m_ObjectHideFlags: 0
@@ -2394,7 +2420,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 82c50807047f950499384331f17f6c2d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 81ebafeeac2cfad40a216f8237bd3176, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2900,7 +2926,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 82c50807047f950499384331f17f6c2d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 81ebafeeac2cfad40a216f8237bd3176, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3209,6 +3235,18 @@ MonoBehaviour:
       - m_Target: {fileID: 7948476011161995898}
         m_TargetAssemblyTypeName: PreSession, Assembly-CSharp
         m_MethodName: joinRoom
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 165759322658334429}
+        m_TargetAssemblyTypeName: SessionStopwatch, Assembly-CSharp
+        m_MethodName: StartTimer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4613,7 +4651,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 82c50807047f950499384331f17f6c2d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 81ebafeeac2cfad40a216f8237bd3176, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
