@@ -171,7 +171,13 @@ public class MatchMaking : RealtimeComponent<MatchMakingModel>
                     EnglishSpeakerModel duplicate = new EnglishSpeakerModel();
                     duplicate.englishSpeakerID = playerID;
                     duplicate.lobbyID = model.unpairedEnglishSpeakers[playerID].lobbyID;
-                    model.pairedEnglishSpeakers.Add(playerID, duplicate);
+                    if (!model.pairedEnglishSpeakers.ContainsKey(playerID))
+                    {
+                        model.pairedEnglishSpeakers.Add(playerID, duplicate);
+                    } else if (model.pairedEnglishSpeakers.ContainsKey(playerID))
+                    {
+                        model.pairedEnglishSpeakers[playerID].lobbyID = duplicate.lobbyID;
+                    }
                     model.unpairedEnglishSpeakers.Remove(playerID);
                     return model.pairedEnglishSpeakers[playerID].lobbyID;
                 }
@@ -193,7 +199,15 @@ public class MatchMaking : RealtimeComponent<MatchMakingModel>
                     SpanishSpeakerModel duplicate = new SpanishSpeakerModel();
                     duplicate.spanishSpeakerID = playerID;
                     duplicate.lobbyID = model.unpairedSpanishSpeakers[playerID].lobbyID;
-                    model.pairedSpanishSpeakers.Add(playerID, duplicate);
+
+                    if (!model.pairedSpanishSpeakers.ContainsKey(playerID))
+                    {
+                        model.pairedSpanishSpeakers.Add(playerID, duplicate);
+                    }
+                    else if (model.pairedSpanishSpeakers.ContainsKey(playerID))
+                    {
+                        model.pairedSpanishSpeakers[playerID].lobbyID = duplicate.lobbyID;
+                    }
                     model.unpairedSpanishSpeakers.Remove(playerID);
                     return model.pairedSpanishSpeakers[playerID].lobbyID;
                 }
