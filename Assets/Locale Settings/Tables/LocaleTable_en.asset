@@ -98,6 +98,102 @@ MonoBehaviour:
     m_Localized: tall shelf
     m_Metadata:
       m_Items: []
+  - m_Id: 2546971274502144
+    m_Localized: plate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2547003071520768
+    m_Localized: tray
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2547019139899392
+    m_Localized: bread
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2547031756365824
+    m_Localized: hotdog
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2547047891853312
+    m_Localized: baguette
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2547066195795968
+    m_Localized: strawberry cake
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2547087179898880
+    m_Localized: cupcake
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2547104871473152
+    m_Localized: latte coffee cup
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2547140657274880
+    m_Localized: cappuccino coffee cup
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2547180465414144
+    m_Localized: black espresso coffee cup
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2547248006291456
+    m_Localized: black coffee cup
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2547272190648320
+    m_Localized: donut
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2547303228497920
+    m_Localized: takeaway cup
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2547350397640704
+    m_Localized: croissant
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2547381095751680
+    m_Localized: chocolate cake
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2630995028336640
+    m_Localized: cup
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2631099994988544
+    m_Localized: menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2631106198364160
+    m_Localized: layered cake
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2631225945743360
+    m_Localized: jar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2631234284019712
+    m_Localized: lid
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2631245277290496
+    m_Localized: cheesecake
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2631301489352704
+    m_Localized: tiramisu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2631327603089408
+    m_Localized: plain donut
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2631329276616704
+    m_Localized: cookie
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
