@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 7358e191-33b7-43ca-b066-b2f00531ac66
-  instanceId: 578f9ea4-5ff4-4ecb-9baf-729695db6335
+  instanceId: bcaa20c9-f559-4a4d-8a11-cc232561b85f
   version: 1
 --- !u!65 &6718647164184972625
 BoxCollider:
@@ -178,7 +178,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -232,7 +232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: f8766c17-aaf8-4b55-9431-de8deea83842
-  instanceId: a8bac5f9-a87d-45d8-9990-7e7adc4ce68e
+  instanceId: 556d32d6-bb99-4241-ac9e-cdfc89a2fcfe
   version: 1
 --- !u!114 &5768182564399474742
 MonoBehaviour:

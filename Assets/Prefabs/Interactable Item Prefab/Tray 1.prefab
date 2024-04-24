@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: f8766c17-aaf8-4b55-9431-de8deea83842
-  instanceId: de7f8c0d-0907-48d4-9927-e2489487b415
+  instanceId: cb82839d-8e61-4a26-8834-8c1a305e22ea
   version: 1
 --- !u!114 &913665412425752416
 MonoBehaviour:
@@ -283,7 +283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 7358e191-33b7-43ca-b066-b2f00531ac66
-  instanceId: 8d7df446-b83c-48a8-ab57-180a37165541
+  instanceId: 71ad06d0-497f-4387-a67e-5274ee0308b3
   version: 1
 --- !u!33 &2100841458403129961
 MeshFilter:
@@ -379,7 +379,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
