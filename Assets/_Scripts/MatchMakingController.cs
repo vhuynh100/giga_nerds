@@ -52,28 +52,32 @@ public class MatchMakingController : MonoBehaviour
             playerJoin.SetPlayer1JoinStatus(true);
         }
         
-        if( waitingJoined == true)
+        if(waitingJoined == true)
         {
+            print("==== waiting");
             JoinLobbyWait++;
-            if(JoinLobbyWait == 100)
+            print("==== JoinLobbyWait: " + JoinLobbyWait);
+            if(JoinLobbyWait == 500)
             {
                 JoinLobby();
+                JoinLobbyWait = 0;
+                waitingJoined = false;
             }
         }
 
         print("======= player 1 joined: " + playerJoin.GetPlayer1JoinStatus());
         print("======= player 2 joined: " + playerJoin.GetPlayer2JoinStatus());
 
-        if (BothPlayersJoined == false && playerJoin.GetPlayer1JoinStatus() && playerJoin.GetPlayer2JoinStatus())
+        if (BothPlayersJoined == false & playerJoin.GetPlayer1JoinStatus() & playerJoin.GetPlayer2JoinStatus())
         {
             print("=== both players joined");
             BothPlayersJoined = true;
         }
 
-        if (BothPlayersJoined == true && (playerJoin.GetPlayer1JoinStatus() == false || playerJoin.GetPlayer2JoinStatus() == false))
+        if (BothPlayersJoined == true & (playerJoin.GetPlayer1JoinStatus() == false | playerJoin.GetPlayer2JoinStatus() == false))
         {
             print("=== a player left");
-            BothPlayersJoined = true;
+            BothPlayersJoined = false;
             LeaveLobby();
         }
 
@@ -102,6 +106,7 @@ public class MatchMakingController : MonoBehaviour
                         lobbyRoom.SetActive(false);
                         matchRoom.SetActive(true);
                         waitingJoined = true;
+                        print("===== waitingJoined = " + waitingJoined);
                     }
                 }
             }
@@ -121,6 +126,7 @@ public class MatchMakingController : MonoBehaviour
                         lobbyRoom.SetActive(false);
                         matchRoom.SetActive(true);
                         waitingJoined = true;
+                        print("===== waitingJoined = " + waitingJoined);
                     }
                 }
             }
@@ -147,15 +153,10 @@ public class MatchMakingController : MonoBehaviour
     public void LeaveLobby()
     {
         print("=== leaving lobby");
-        if(playerNum == 1)
-        {
-            playerJoin.SetPlayer1JoinStatus(false);
-        } 
-        else if ( playerNum == 2)
-        {
-            playerJoin.SetPlayer2JoinStatus(false);
-        }
+        playerJoin.SetPlayer1JoinStatus(false);
         playerNum = 0;
+        int wait = 0;
+
         MoveNormcoreRoom(0);
         lobbyRoom.SetActive(true);
         matchRoom.SetActive(false);
@@ -164,15 +165,10 @@ public class MatchMakingController : MonoBehaviour
 
     public void JoinLobby()
     {
-        wait = 0;
-        while(wait != 100)
-        {
-            wait++;
-        }
         if(playerJoin.GetPlayer1JoinStatus() == false)
         {
-            //playerJoin.SetPlayer1JoinStatus(true);
-            //playerNum = 1;
+            playerJoin.SetPlayer1JoinStatus(true);
+            playerNum = 1;
         } else if (playerJoin.GetPlayer2JoinStatus() == false)
         {
             playerJoin.SetPlayer2JoinStatus(true);
@@ -186,18 +182,19 @@ public class MatchMakingController : MonoBehaviour
     {
 
         int wait = 0;
-        while (wait != 100)
+        while (wait != 300)
         {
             wait++;
         }
-        
-        realtime.Disconnect();
-        realtime = null;
-        realtime = FindObjectOfType<Realtime>();
-        string lobbyString = lobbyID.ToString();
-        print("=== moving to lobbyID: " + lobbyString);
-        realtime.Connect(lobbyString);
-        
+        if(wait == 300)
+        {
+            realtime.Disconnect();
+            realtime = null;
+            realtime = FindObjectOfType<Realtime>();
+            string lobbyString = lobbyID.ToString();
+            print("=== moving to lobbyID: " + lobbyString);
+            realtime.Connect(lobbyString);
+        }
     }
 
     public void SetPlayerLanguageEnglish()
