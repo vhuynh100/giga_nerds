@@ -95,6 +95,70 @@ MonoBehaviour:
     m_Key: Tall Shelf
     m_Metadata:
       m_Items: []
+  - m_Id: 2546971274502144
+    m_Key: Plate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2547003071520768
+    m_Key: Tray
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2547019139899392
+    m_Key: Bread
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2547031756365824
+    m_Key: Hotdog
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2547047891853312
+    m_Key: Baguette
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2547066195795968
+    m_Key: Strawberry Cake
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2547087179898880
+    m_Key: Cupcake
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2547104871473152
+    m_Key: Latte Coffee Cup
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2547140657274880
+    m_Key: Cappuccino Coffee Cup
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2547180465414144
+    m_Key: 'Black Espresso Coffee Cup
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2547248006291456
+    m_Key: Black Coffee Cup
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2547272190648320
+    m_Key: Donut
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2547303228497920
+    m_Key: Takeaway Cup
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2547350397640704
+    m_Key: Croissant
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2547381095751680
+    m_Key: 'Chocolate Cake
+
+'
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
