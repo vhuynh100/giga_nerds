@@ -53,17 +53,17 @@ public class PlayerFeedback : RealtimeComponent<PlayerFeedbackModel>
 
     private void Player2GoalDidChange(PlayerFeedbackModel model, string player1Goal)
     {
-        UpdatePlayer1Goal();
+        UpdatePlayer2Goal();
     }
 
     private void Player1FeedbackDidChange(PlayerFeedbackModel model, string player1Goal)
     {
-        UpdatePlayer1Goal();
+        UpdatePlayer1Feedback();
     }
 
     private void Player2FeedbackDidChange(PlayerFeedbackModel model, string player1Goal)
     {
-        UpdatePlayer1Goal();
+        UpdatePlayer2Feedback();
     }
 
     private void UpdatePlayer1Goal()
