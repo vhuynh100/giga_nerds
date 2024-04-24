@@ -80,6 +80,7 @@ MonoBehaviour:
   matchRoom: {fileID: 0}
   lobbyRoom: {fileID: 0}
   playerJoin: {fileID: 0}
+  mainMenu: {fileID: 0}
   language: 
   playerID: 0
   requestedQueue: 0
