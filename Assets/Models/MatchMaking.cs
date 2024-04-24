@@ -218,6 +218,30 @@ public class MatchMaking : RealtimeComponent<MatchMakingModel>
     }
 
 
+    public void RemoveEnglishPlayer(uint playerID)
+    {
+        if (model.unpairedEnglishSpeakers.ContainsKey(playerID))
+        {
+            model.unpairedEnglishSpeakers.Remove(playerID);
+        }
+        if (model.pairedEnglishSpeakers.ContainsKey(playerID))
+        {
+            model.unpairedEnglishSpeakers.Remove(playerID);
+        }
+    }
+
+    public void RemoveSpanishPlayer(uint playerID)
+    {
+        if (model.unpairedSpanishSpeakers.ContainsKey(playerID))
+        {
+            model.unpairedSpanishSpeakers.Remove(playerID);
+        }
+        if (model.pairedSpanishSpeakers.ContainsKey(playerID))
+        {
+            model.unpairedSpanishSpeakers.Remove(playerID);
+        }
+    }
+
 
 
     public int GetSpanishSpeakers()
@@ -276,8 +300,10 @@ public class MatchMaking : RealtimeComponent<MatchMakingModel>
     }
 
 
+
     public void AddNewSpanishSpeaker(int playerId)
     {
+        RemoveSpanishPlayer((uint)playerId); // refresh queue
         SpanishSpeakerModel newSpanishSpeakerModel = new SpanishSpeakerModel();
         newSpanishSpeakerModel.spanishSpeakerID = (uint)playerId;
         newSpanishSpeakerModel.lobbyID = 0;
@@ -289,6 +315,7 @@ public class MatchMaking : RealtimeComponent<MatchMakingModel>
 
     public void AddNewEnglishSpeaker(int playerId)
     {
+        RemoveSpanishPlayer((uint)playerId); // refresh queue
         EnglishSpeakerModel newEnglishSpeakerModel = new EnglishSpeakerModel();
         newEnglishSpeakerModel.englishSpeakerID = (uint)playerId;
         newEnglishSpeakerModel.lobbyID = 0;
