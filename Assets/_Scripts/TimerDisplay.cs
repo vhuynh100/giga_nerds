@@ -18,9 +18,45 @@ public class CountdownTimer : MonoBehaviour
     private bool toggleOptions = false;
     private float lastTime = 0f;
 
+    [SerializeField] private TimerStart timerStart;
+    [SerializeField] private GameObject readyButton;
+    private int playerNum = 0;
+    private float timerDuration = 0;
+    private float prevTimerDuration = 0;
+
     void Update()
     {
-        if (TimerCounting > 0 && isTimerOn)
+        print("==== playerNum: " + playerNum);
+        if(timerStart.GetPlayer1Ready() == true && timerStart.GetPlayer2Ready() == true && !isTimerOn)
+        {
+            SetTimerDuration(timerStart.GetTimerDuration());
+        }
+
+
+        print("======= local timer duration: " + timerDuration);
+        print("======= shared timer duration: " + timerStart.GetTimerDuration());
+
+
+
+        if (timerStart.GetTimerDuration() != prevTimerDuration)
+        {
+            prevTimerDuration = timerStart.GetTimerDuration();
+            SetTimer(timerStart.GetTimerDuration());
+            if(playerNum == 1)
+            {
+                timerStart.SetPlayer1Ready(false);
+                playerNum = 0;
+                isTimerOn = false;
+
+            } else if (playerNum == 2)
+            {
+                timerStart.SetPlayer2Ready(false);
+                playerNum = 0;
+                isTimerOn = false;
+            }
+        }
+
+        if (timerStart.GetPlayer1Ready() == true && timerStart.GetPlayer2Ready() == true && TimerCounting > 0 && isTimerOn)
         {
             TimerCounting -= Time.deltaTime;
             UpdateTimerText();
@@ -39,7 +75,6 @@ public class CountdownTimer : MonoBehaviour
             else if (onSecondLanguage)
             {
                 Start();
-
             }
         }
     }
@@ -65,7 +100,10 @@ public class CountdownTimer : MonoBehaviour
     public void SetTimer(float minutes)
     {
         lastTime = minutes;
-        isTimerOn = true;
+        print("======= set timer to " +  minutes);
+        timerDuration = minutes;
+        timerStart.SetTimerDuration(minutes);
+        //isTimerOn = true;
         Flag.SetActive(true);  
         TimerCounting = minutes * 60; // Convert minutes to seconds
         if (onSecondLanguage)
@@ -74,6 +112,21 @@ public class CountdownTimer : MonoBehaviour
         }
         UpdateTimerText();
     }
+
+    public void SetTimerDuration(float minutes)
+    {
+        lastTime = minutes;
+        timerStart.SetTimerDuration(minutes);
+        isTimerOn = true;
+        Flag.SetActive(true);
+        TimerCounting = minutes * 60; // Convert minutes to seconds
+        if (onSecondLanguage)
+        {
+            FlagImage.sprite = spanishFlag;
+        }
+        UpdateTimerText();
+    }
+
     public void showOptions()
     {
         toggleOptions = !toggleOptions;
@@ -88,8 +141,34 @@ public class CountdownTimer : MonoBehaviour
         if(seconds >= 0 && minutes >= 0)
         {
             timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
-
         }
     }
+
+    public void SetPlayerReady()
+    {
+        if(playerNum == 0 && timerStart.GetPlayer1Ready() == false)
+        {
+            timerStart.SetPlayer1Ready(true);
+            playerNum = 1;
+        }
+        else if (playerNum == 0 && timerStart.GetPlayer2Ready() == false)
+        {
+            timerStart.SetPlayer2Ready(true);
+            playerNum = 2;
+        }
+    }
+
+    public void SetPlayerUnReady()
+    {
+        if (playerNum == 1)
+        {
+            timerStart.SetPlayer1Ready(false);
+        } else if ( playerNum == 2)
+        {
+            timerStart.SetPlayer2Ready(false);
+        }
+    }
+
+    
 
 }
