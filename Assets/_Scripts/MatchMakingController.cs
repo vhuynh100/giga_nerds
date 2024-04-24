@@ -11,6 +11,7 @@ public class MatchMakingController : MonoBehaviour
     [SerializeField] GameObject matchRoom;
     [SerializeField] GameObject lobbyRoom;
     [SerializeField] PlayerJoin playerJoin;
+    [SerializeField] GameObject mainMenu;
 
     public string language;
     public uint playerID;
@@ -160,6 +161,7 @@ public class MatchMakingController : MonoBehaviour
         MoveNormcoreRoom(0);
         lobbyRoom.SetActive(true);
         matchRoom.SetActive(false);
+        mainMenu.SetActive(true);
     }
 
 
@@ -174,10 +176,8 @@ public class MatchMakingController : MonoBehaviour
             playerJoin.SetPlayer2JoinStatus(true);
             playerNum = 2;
         }
-
-
-
     }
+
     private void MoveNormcoreRoom(int lobbyID)
     {
 

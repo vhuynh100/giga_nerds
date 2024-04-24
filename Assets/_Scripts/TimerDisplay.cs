@@ -20,6 +20,7 @@ public class CountdownTimer : MonoBehaviour
 
     [SerializeField] private TimerStart timerStart;
     [SerializeField] private GameObject readyButton;
+
     private int playerNum = 0;
     private float timerDuration = 0;
     private float prevTimerDuration = 0;
