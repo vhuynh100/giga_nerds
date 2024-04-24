@@ -101,7 +101,7 @@ namespace Samples.Whisper
             frenchButton.GetComponent<Image>().color = Color.white;
             germanButton.GetComponent<Image>().color = Color.white;
 
-            language = "es";
+            //language = "es";
 
             // Set the active button to the darker color
             switch (language)
