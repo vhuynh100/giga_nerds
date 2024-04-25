@@ -15,6 +15,9 @@ GameObject:
   - component: {fileID: 8883333588816618524}
   - component: {fileID: 7667008483967070171}
   - component: {fileID: 3093759557816579201}
+  - component: {fileID: 4968820477501144462}
+  - component: {fileID: 5637859516895676271}
+  - component: {fileID: 5963254897531075401}
   m_Layer: 0
   m_Name: Pan 1 Grabbable
   m_TagString: Untagged
@@ -173,6 +176,62 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.0000005, y: 2.720192, z: 0.24140297}
   m_Center: {x: 0.0000047836274, y: 0.86009586, z: -0.036484115}
+--- !u!114 &4968820477501144462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159594278781609069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -363599832, guid: ebae63e7edba59945a994528ada1f7a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _realtime: {fileID: 0}
+  _sceneViewUUID: 
+  _viewUUID: 
+  _sceneViewPreventOwnershipTakeover: 0
+  _sceneViewDestroyWhenOwnerOrLastClientLeaves: 1
+  _sceneViewDestroyWhenOwnerOrLastClientLeavesMigrated: 1
+  _sceneViewDestroyWhenLastClientLeaves: 1
+  _components:
+  - componentID: 1
+    component: {fileID: 5637859516895676271}
+  _childViews: []
+--- !u!114 &5637859516895676271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159594278781609069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1029778088, guid: ebae63e7edba59945a994528ada1f7a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interpolate: 1
+  _syncPosition: 1
+  _syncRotation: 1
+  _syncScale: 1
+  _syncVelocity: 0
+  _maintainOwnershipWhileSleeping: 0
+--- !u!114 &5963254897531075401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159594278781609069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df209e445bb56e34ca1687cbf9d043c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  realtimeView: {fileID: 4968820477501144462}
+  realtimeTransform: {fileID: 5637859516895676271}
+  wrapper: {fileID: 6051037086824316528}
 --- !u!1 &4996998570845247909
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,6 +402,7 @@ GameObject:
   - component: {fileID: 122041861985652265}
   - component: {fileID: 8601092816772910021}
   - component: {fileID: 8768967504600225452}
+  - component: {fileID: 6051037086824316528}
   m_Layer: 0
   m_Name: '[BuildingBlock] HandGrab'
   m_TagString: Untagged
@@ -524,3 +584,40 @@ MonoBehaviour:
         Min: 0
         Max: 0
   ItemNameCanvas: {fileID: 0}
+--- !u!114 &6051037086824316528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6438803968642935338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1464721f2283eb14e94a33e812b47be4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interactableView: {fileID: 7151383375802843924}
+  _whenHover:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenUnhover:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenSelect:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenUnselect:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenInteractorViewAdded:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenInteractorViewRemoved:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenSelectingInteractorViewAdded:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenSelectingInteractorViewRemoved:
+    m_PersistentCalls:
+      m_Calls: []
