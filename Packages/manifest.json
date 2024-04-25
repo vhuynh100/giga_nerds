@@ -2,7 +2,8 @@
   "dependencies": {
     "com.meta.xr.sdk.all": "62.0.0",
     "com.meta.xr.sdk.avatars": "24.1.1",
-    "com.normalvr.normcore": "2.9.3",
+    "com.normalvr.normcore": "2.9.5",
+    "com.normalvr.normcore.meta.xr": "1.0.0",
     "com.srcnalt.openai-unity": "https://github.com/srcnalt/OpenAI-Unity.git",
     "com.unity.collab-proxy": "2.3.1",
     "com.unity.ide.rider": "3.0.27",
