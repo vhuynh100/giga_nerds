@@ -4397,6 +4397,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7090425176902693244, guid: 42126dea53ddeca45a115ea6d7a23835,
+        type: 3}
+      propertyPath: ItemNameCanvas
+      value: 
+      objectReference: {fileID: 7157694794459410141}
     - target: {fileID: 7162986702713080911, guid: 42126dea53ddeca45a115ea6d7a23835,
         type: 3}
       propertyPath: m_Name
@@ -4405,11 +4410,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 672922179064010465, guid: 42126dea53ddeca45a115ea6d7a23835,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4737448430863865975}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 42126dea53ddeca45a115ea6d7a23835, type: 3}
 --- !u!4 &1353297439090921055 stripped
 Transform:
@@ -4417,58 +4418,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2582968450407868683}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &3066457900870123498 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 672922179064010465, guid: 42126dea53ddeca45a115ea6d7a23835,
-    type: 3}
-  m_PrefabInstance: {fileID: 2582968450407868683}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &4737448430863865975
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3066457900870123498}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ce6415fc29fc0e45916042cbe881b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _positionConstraints:
-    ConstraintsAreRelative: 0
-    XAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-    YAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-    ZAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-  _rotationConstraints:
-    XAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-    YAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-    ZAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-  ItemNameCanvas: {fileID: 7157694794459410141}
 --- !u!1 &3678739887292657126 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1212891553471235309, guid: 42126dea53ddeca45a115ea6d7a23835,
@@ -4533,6 +4482,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4691566957768995706, guid: 47c749d5903143a4fbc9c3b1f5d1c091,
+        type: 3}
+      propertyPath: ItemNameCanvas
+      value: 
+      objectReference: {fileID: 1587500129701004931}
     - target: {fileID: 9046086060002885687, guid: 47c749d5903143a4fbc9c3b1f5d1c091,
         type: 3}
       propertyPath: m_Name
@@ -4541,11 +4495,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 9169853690303930023, guid: 47c749d5903143a4fbc9c3b1f5d1c091,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7206056029301093801}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47c749d5903143a4fbc9c3b1f5d1c091, type: 3}
 --- !u!4 &470962262636166172 stripped
 Transform:
@@ -4559,58 +4509,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2673667637821195987}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &6510828291880163444 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9169853690303930023, guid: 47c749d5903143a4fbc9c3b1f5d1c091,
-    type: 3}
-  m_PrefabInstance: {fileID: 2673667637821195987}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7206056029301093801
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6510828291880163444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ce6415fc29fc0e45916042cbe881b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _positionConstraints:
-    ConstraintsAreRelative: 0
-    XAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-    YAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-    ZAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-  _rotationConstraints:
-    XAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-    YAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-    ZAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-  ItemNameCanvas: {fileID: 1587500129701004931}
 --- !u!1001 &2824799166503674891
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4899,6 +4797,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2818916077720710940}
     m_Modifications:
+    - target: {fileID: 7000594808922336155, guid: c77e3eff7e50ac84abe672b2962c1ed1,
+        type: 3}
+      propertyPath: ItemNameCanvas
+      value: 
+      objectReference: {fileID: 1031053587436427794}
     - target: {fileID: 8944014984714261429, guid: c77e3eff7e50ac84abe672b2962c1ed1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4957,11 +4860,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5609795677646093238, guid: c77e3eff7e50ac84abe672b2962c1ed1,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6322160771459230385}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c77e3eff7e50ac84abe672b2962c1ed1, type: 3}
 --- !u!4 &5369502861570134687 stripped
 Transform:
@@ -4975,58 +4874,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 3934958992102441258}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &8881722062304131740 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5609795677646093238, guid: c77e3eff7e50ac84abe672b2962c1ed1,
-    type: 3}
-  m_PrefabInstance: {fileID: 3934958992102441258}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6322160771459230385
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8881722062304131740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ce6415fc29fc0e45916042cbe881b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _positionConstraints:
-    ConstraintsAreRelative: 0
-    XAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-    YAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-    ZAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-  _rotationConstraints:
-    XAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-    YAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-    ZAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-  ItemNameCanvas: {fileID: 1031053587436427794}
 --- !u!1001 &4104923015391781825
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5673,6 +5520,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4605849695080640857, guid: d7b32ba11e3d19e4488243812aeb2947,
+        type: 3}
+      propertyPath: ItemNameCanvas
+      value: 
+      objectReference: {fileID: 8674951154553816584}
     - target: {fileID: 7222480891708650659, guid: d7b32ba11e3d19e4488243812aeb2947,
         type: 3}
       propertyPath: m_Name
@@ -5681,11 +5533,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1943132543658980374, guid: d7b32ba11e3d19e4488243812aeb2947,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8780533190622896377}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7b32ba11e3d19e4488243812aeb2947, type: 3}
 --- !u!4 &4727542940868820573 stripped
 Transform:
@@ -5693,58 +5541,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5058100450017251744}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &6685205861378221494 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1943132543658980374, guid: d7b32ba11e3d19e4488243812aeb2947,
-    type: 3}
-  m_PrefabInstance: {fileID: 5058100450017251744}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &8780533190622896377
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6685205861378221494}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ce6415fc29fc0e45916042cbe881b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _positionConstraints:
-    ConstraintsAreRelative: 0
-    XAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-    YAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-    ZAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-  _rotationConstraints:
-    XAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-    YAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-    ZAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-  ItemNameCanvas: {fileID: 8674951154553816584}
 --- !u!1 &8082686726162284685 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3898572805287874861, guid: d7b32ba11e3d19e4488243812aeb2947,
@@ -5824,6 +5620,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4907932075077521901, guid: c726ab4681b4d5c418d51aa2d50a4ef7,
+        type: 3}
+      propertyPath: ItemNameCanvas
+      value: 
+      objectReference: {fileID: 8522507544198245704}
     - target: {fileID: 5420872647095716828, guid: c726ab4681b4d5c418d51aa2d50a4ef7,
         type: 3}
       propertyPath: m_Name
@@ -5832,64 +5633,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3309608386771518186, guid: c726ab4681b4d5c418d51aa2d50a4ef7,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 930323679219806114}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c726ab4681b4d5c418d51aa2d50a4ef7, type: 3}
---- !u!1 &7285488324441128101 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3309608386771518186, guid: c726ab4681b4d5c418d51aa2d50a4ef7,
-    type: 3}
-  m_PrefabInstance: {fileID: 5257203028850261583}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &930323679219806114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7285488324441128101}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ce6415fc29fc0e45916042cbe881b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _positionConstraints:
-    ConstraintsAreRelative: 0
-    XAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-    YAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-    ZAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-  _rotationConstraints:
-    XAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-    YAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-    ZAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-  ItemNameCanvas: {fileID: 8522507544198245704}
 --- !u!4 &7749299128958972741 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2557583674089262346, guid: c726ab4681b4d5c418d51aa2d50a4ef7,
@@ -6115,67 +5860,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blender Grabbable
       objectReference: {fileID: 0}
+    - target: {fileID: 8112505342916370732, guid: 677f53de9ee381d4e851801885e1b051,
+        type: 3}
+      propertyPath: ItemNameCanvas
+      value: 
+      objectReference: {fileID: 1130008562878954289}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5840726893086304987, guid: 677f53de9ee381d4e851801885e1b051,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2353232606554407282}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 677f53de9ee381d4e851801885e1b051, type: 3}
---- !u!1 &86511908064922245 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5840726893086304987, guid: 677f53de9ee381d4e851801885e1b051,
-    type: 3}
-  m_PrefabInstance: {fileID: 5781834906660757598}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2353232606554407282
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 86511908064922245}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ce6415fc29fc0e45916042cbe881b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _positionConstraints:
-    ConstraintsAreRelative: 0
-    XAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-    YAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-    ZAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-  _rotationConstraints:
-    XAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-    YAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-    ZAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-  ItemNameCanvas: {fileID: 1130008562878954289}
 --- !u!1 &2347345519931939383 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8119504584676883049, guid: 677f53de9ee381d4e851801885e1b051,
@@ -6565,6 +6259,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4531710236570411900}
     m_Modifications:
+    - target: {fileID: 521739053715716040, guid: c4119cd0d12dfe34a8d90a40c7e24cbf,
+        type: 3}
+      propertyPath: ItemNameCanvas
+      value: 
+      objectReference: {fileID: 6233974819700960757}
     - target: {fileID: 2733413973580292984, guid: c4119cd0d12dfe34a8d90a40c7e24cbf,
         type: 3}
       propertyPath: m_Name
@@ -6623,64 +6322,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6013422916692253699, guid: c4119cd0d12dfe34a8d90a40c7e24cbf,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7321844450603252065}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4119cd0d12dfe34a8d90a40c7e24cbf, type: 3}
---- !u!1 &3589936336264614570 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6013422916692253699, guid: c4119cd0d12dfe34a8d90a40c7e24cbf,
-    type: 3}
-  m_PrefabInstance: {fileID: 7107239157305659049}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7321844450603252065
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3589936336264614570}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ce6415fc29fc0e45916042cbe881b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _positionConstraints:
-    ConstraintsAreRelative: 0
-    XAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-    YAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-    ZAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-  _rotationConstraints:
-    XAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-    YAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-    ZAxis:
-      ConstrainAxis: 0
-      AxisRange:
-        Min: 0
-        Max: 0
-  ItemNameCanvas: {fileID: 6233974819700960757}
 --- !u!4 &4178798554818735751 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6584244507621040174, guid: c4119cd0d12dfe34a8d90a40c7e24cbf,
