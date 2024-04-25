@@ -95,15 +95,155 @@ MonoBehaviour:
     m_Key: Tall Shelf
     m_Metadata:
       m_Items: []
+  - m_Id: 299499642880
+    m_Key: Cup
+    m_Metadata:
+      m_Items: []
+  - m_Id: 306961309696
+    m_Key: Layered Cake
+    m_Metadata:
+      m_Items: []
+  - m_Id: 308517396480
+    m_Key: Jar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 309125570560
+    m_Key: Lid
+    m_Metadata:
+      m_Items: []
+  - m_Id: 309708578816
+    m_Key: Cheesecake
+    m_Metadata:
+      m_Items: []
+  - m_Id: 310287392768
+    m_Key: Tiramisu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 310870401024
+    m_Key: Bread
+    m_Metadata:
+      m_Items: []
+  - m_Id: 311407271936
+    m_Key: Plate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 312514568192
+    m_Key: Tray
+    m_Metadata:
+      m_Items: []
+  - m_Id: 313101770752
+    m_Key: Hotdog
+    m_Metadata:
+      m_Items: []
+  - m_Id: 721463402496
+    m_Key: Baguette
+    m_Metadata:
+      m_Items: []
+  - m_Id: 723132735488
+    m_Key: Strawberry Cake
+    m_Metadata:
+      m_Items: []
+  - m_Id: 723719938048
+    m_Key: Cupcake
+    m_Metadata:
+      m_Items: []
+  - m_Id: 724294557696
+    m_Key: Chocolate Cake
+    m_Metadata:
+      m_Items: []
+  - m_Id: 730103668736
+    m_Key: Cookie
+    m_Metadata:
+      m_Items: []
+  - m_Id: 730648928256
+    m_Key: Latte Coffee Cup
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1810678013952
+    m_Key: Cappuccino Coffee Cup
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1811412017152
+    m_Key: Black Espresso Coffee Cup
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1812208934912
+    m_Key: Black Coffee Cup
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1813970542592
+    m_Key: Donut
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2168305344512
+    m_Key: Takeaway Cup
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2169710436352
+    m_Key: Croissant
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2378402226176
+    m_Key: Book
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2388736991232
+    m_Key: Pan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2419292495872
+    m_Key: Pot
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5735707697152
+    m_Key: Picture Frame
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5737221840896
+    m_Key: Refrigerator
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5737838403584
+    m_Key: Treadmill
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5739058946048
+    m_Key: Dumbell
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6495849799680
+    m_Key: American Football Ball
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6757352071168
+    m_Key: Basketball Ball
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6759365337088
+    m_Key: Soccer Ball
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6761382797312
+    m_Key: Baseball Ball
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6763412840448
+    m_Key: Volleyball Ball
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6765707124736
+    m_Key: Yoga Ball
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
-    rid: 6791714690901475331
+    rid: 4517904855541743620
   references:
     version: 2
     RefIds:
-    - rid: 6791714690901475331
+    - rid: 4517904855541743620
       type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables,
         asm: Unity.Localization}
       data:
-        m_CustomEpoch: 1714054978784
+        m_CustomEpoch: 1714063262350
