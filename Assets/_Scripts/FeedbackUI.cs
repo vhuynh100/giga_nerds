@@ -26,9 +26,6 @@ public class FeedbackUI : MonoBehaviour
     List<string> selectedTags = new List<string>();
     private string selectedGoal;
 
-    public PlayerFeedback _playerFeedback;
-    private int playerNum = 0;
-
     //feedback comment is located in this variable
     public TMP_Text feedbackText;
     public MyFeedbackManager manager;
@@ -40,6 +37,7 @@ public class FeedbackUI : MonoBehaviour
     }
     public void setStars(int selectedStar)
     {
+        //Debug.Log(selectedStar);
         finalStarRating = selectedStar;
         for (int i = 0; i < starImages.Length; i++)
         {
@@ -96,32 +94,8 @@ public class FeedbackUI : MonoBehaviour
         }
 
         FeedbackEntry entry = new FeedbackEntry(DateTime.Now, selectedTags, finalStarRating, selectedGoal, feedbackText.ToString());
-        string csvEntry = entry.ToCsvString();
 
-        //send data to other player
-        if (playerNum == 1)
-        {
-            _playerFeedback.SetPlayer2Feedback(csvEntry);
-            Debug.Log("csv p2:" + _playerFeedback.GetPlayer2Feedback());
-            Debug.Log("player 2:" + _playerFeedback.GetPlayer2Feedback());
-        }
-        else if (playerNum == 2)
-        {
-            _playerFeedback.SetPlayer1Feedback(csvEntry);
-            Debug.Log("csv p1:" +  _playerFeedback.GetPlayer1Feedback());
-            Debug.Log("player 1:" +  _playerFeedback.GetPlayer1Feedback());
-        }
-    }
-
-    private void Start()
-    {
-        if (playerNum == 0 & _playerFeedback.GetPlayer1Feedback() == "")
-        {
-            playerNum = 1;
-        }
-        else if (playerNum == 0 & _playerFeedback.GetPlayer2Feedback() == "")
-        {
-            playerNum = 2;
-        }
+        //send data to player's personal feedback menu
+        manager.AddFeedbackEntry(entry);
     }
 }
