@@ -34102,6 +34102,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cup Canvas (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5363346590385186679, guid: 21ccd18549b21eb41b7d475c7ff37738,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5480678568887817515, guid: 21ccd18549b21eb41b7d475c7ff37738,
         type: 3}
       propertyPath: instanceId
@@ -34815,6 +34820,11 @@ PrefabInstance:
       propertyPath: instanceId
       value: 814b4a6b-1dd0-49e5-921b-fda34b14802e
       objectReference: {fileID: 0}
+    - target: {fileID: 954089830482443050, guid: b4145a0dfc7dd9d4888ca03b36702ca4,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7297617201708641181, guid: b4145a0dfc7dd9d4888ca03b36702ca4,
         type: 3}
       propertyPath: instanceId
@@ -34953,6 +34963,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cup Canvas (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363346590385186679, guid: 21ccd18549b21eb41b7d475c7ff37738,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5480678568887817515, guid: 21ccd18549b21eb41b7d475c7ff37738,
         type: 3}
@@ -35439,6 +35454,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cup Canvas (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363346590385186679, guid: 21ccd18549b21eb41b7d475c7ff37738,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5480678568887817515, guid: 21ccd18549b21eb41b7d475c7ff37738,
         type: 3}
@@ -36342,6 +36362,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cup Canvas (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363346590385186679, guid: 21ccd18549b21eb41b7d475c7ff37738,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5480678568887817515, guid: 21ccd18549b21eb41b7d475c7ff37738,
         type: 3}
@@ -37701,6 +37726,11 @@ PrefabInstance:
       propertyPath: instanceId
       value: 3df9a6c6-a2b2-4509-9fb4-4c270b2bf53d
       objectReference: {fileID: 0}
+    - target: {fileID: 954089830482443050, guid: b4145a0dfc7dd9d4888ca03b36702ca4,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1469782530578122180, guid: b4145a0dfc7dd9d4888ca03b36702ca4,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -38497,6 +38527,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cup Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363346590385186679, guid: 21ccd18549b21eb41b7d475c7ff37738,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363346590385186679, guid: 21ccd18549b21eb41b7d475c7ff37738,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5480678568887817515, guid: 21ccd18549b21eb41b7d475c7ff37738,
         type: 3}
