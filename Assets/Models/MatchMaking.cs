@@ -218,6 +218,30 @@ public class MatchMaking : RealtimeComponent<MatchMakingModel>
     }
 
 
+    public void RemoveEnglishPlayer(uint playerID)
+    {
+        if (model.unpairedEnglishSpeakers.ContainsKey(playerID))
+        {
+            model.unpairedEnglishSpeakers.Remove(playerID);
+        }
+        if (model.pairedEnglishSpeakers.ContainsKey(playerID))
+        {
+            model.unpairedEnglishSpeakers.Remove(playerID);
+        }
+    }
+
+    public void RemoveSpanishPlayer(uint playerID)
+    {
+        if (model.unpairedSpanishSpeakers.ContainsKey(playerID))
+        {
+            model.unpairedSpanishSpeakers.Remove(playerID);
+        }
+        if (model.pairedSpanishSpeakers.ContainsKey(playerID))
+        {
+            model.unpairedSpanishSpeakers.Remove(playerID);
+        }
+    }
+
 
 
     public int GetSpanishSpeakers()
@@ -243,10 +267,16 @@ public class MatchMaking : RealtimeComponent<MatchMakingModel>
 
         newLobby.lobbyID = (uint)newLobbyID;
         print("========================================= created lobby: " + newLobbyID);
- 
+
         //model.lobbies.Add((uint)newLobbyID, newLobby);
-        model.unpairedSpanishSpeakers[spanishID].lobbyID = (uint)newLobbyID;
-        model.unpairedEnglishSpeakers[englishID].lobbyID = (uint)newLobbyID;
+        if (model.unpairedSpanishSpeakers[spanishID].lobbyID == 0)
+        {
+            model.unpairedSpanishSpeakers[spanishID].lobbyID = (uint)newLobbyID;
+        }
+        if (model.unpairedEnglishSpeakers[englishID].lobbyID == 0)
+        {
+            model.unpairedEnglishSpeakers[englishID].lobbyID = (uint)newLobbyID;
+        }
     }
 
     public uint GetSpanishSpeakerLobby(uint playerId)
@@ -276,8 +306,10 @@ public class MatchMaking : RealtimeComponent<MatchMakingModel>
     }
 
 
+
     public void AddNewSpanishSpeaker(int playerId)
     {
+        RemoveSpanishPlayer((uint)playerId); // refresh queue
         SpanishSpeakerModel newSpanishSpeakerModel = new SpanishSpeakerModel();
         newSpanishSpeakerModel.spanishSpeakerID = (uint)playerId;
         newSpanishSpeakerModel.lobbyID = 0;
@@ -289,6 +321,7 @@ public class MatchMaking : RealtimeComponent<MatchMakingModel>
 
     public void AddNewEnglishSpeaker(int playerId)
     {
+        RemoveSpanishPlayer((uint)playerId); // refresh queue
         EnglishSpeakerModel newEnglishSpeakerModel = new EnglishSpeakerModel();
         newEnglishSpeakerModel.englishSpeakerID = (uint)playerId;
         newEnglishSpeakerModel.lobbyID = 0;
