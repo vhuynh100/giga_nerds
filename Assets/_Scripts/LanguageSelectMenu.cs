@@ -15,7 +15,7 @@ public class LanguageSelectMenu : MonoBehaviour
     public GameObject languageSelect;
 
     public MatchMakingController mm;
-    public LocaleSelector ls;
+    //public LocaleSelector ls;
 
     private bool isLangSelected = false;
     public string fluentLanguage; //where the first language selection will be saved
@@ -66,8 +66,8 @@ public class LanguageSelectMenu : MonoBehaviour
             OnLangSelected();
             switch (language)
             {
-                case "English": ls.ChangeLocale(0); mm.SetPlayerLanguageEnglish(); break;
-                case "Spanish": ls.ChangeLocale(1); mm.SetPlayerLanguageSpanish(); break;
+                case "English": /*ls.ChangeLocale(0)*/; mm.SetPlayerLanguageEnglish(); break;
+                case "Spanish": /*ls.ChangeLocale(1);*/ mm.SetPlayerLanguageSpanish(); break;
             }
         }
     }
