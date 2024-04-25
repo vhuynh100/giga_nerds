@@ -98,6 +98,88 @@ MonoBehaviour:
     m_Localized: "estante alto\r"
     m_Metadata:
       m_Items: []
+  - m_Id: 2930447278530560
+    m_Localized: telescopio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2930479050383360
+    m_Localized: computadora
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2930509563944960
+    m_Localized: teclado
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2930540446605312
+    m_Localized: licuadora
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2930632721293312
+    m_Localized: "sart\xE9n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2930756302266368
+    m_Localized: papelera
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2930803588849664
+    m_Localized: olla
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2930997021761536
+    m_Localized: fregadero
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2931010019909632
+    m_Localized: aseo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2931024507035648
+    m_Localized: "papel higi\xE9nico"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2931059189735424
+    m_Localized: "champ\xFA"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2931077544009728
+    m_Localized: acondicionador
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2931092907745280
+    m_Localized: "jab\xF3n l\xEDquido"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2931114533576704
+    m_Localized: tejido
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2931125103222784
+    m_Localized: "jab\xF3n en barra"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2931201909317632
+    m_Localized: '
+
+      pesa'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2931217646346240
+    m_Localized: pelota de yoga
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2931269957705728
+    m_Localized: cinta de correr
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2931300706148352
+    m_Localized: esterilla de yoga
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2931333069398016
+    m_Localized: nota adhesiva
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
