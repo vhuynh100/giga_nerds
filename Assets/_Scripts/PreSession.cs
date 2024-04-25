@@ -15,7 +15,7 @@ public class PreSession : MonoBehaviour
     // Start is called before the first frame update
     public GameObject Menu1;
     public GameObject Menu2;
-    public GameObject EndMenu;
+   // public GameObject EndMenu;
     public GameObject selectGoalAlert;
     public GameObject interactableCanvas;
     public TMP_Text goalText;
@@ -36,7 +36,7 @@ public class PreSession : MonoBehaviour
     {
         //Menu1.SetActive(true);
         Menu2.SetActive(false);
-        EndMenu.SetActive(false);
+        //EndMenu.SetActive(false);
     }
 
     private void Awake()  // DO NOT SET _playerFeedback INITIAL VARIABLE VALUES IN THIS Awake! only set initial variable values in PlayerFeedback.cs
@@ -89,7 +89,7 @@ public class PreSession : MonoBehaviour
             }
             //goalText.text += " goal completed!";
 
-            EndMenu.SetActive(true);
+            //EndMenu.SetActive(true);
             if (playerNum == 1)
             {
                 goalText.text = "Goal selected: " + _playerFeedback.GetPlayer2Goal();
@@ -117,13 +117,13 @@ public class PreSession : MonoBehaviour
     public void exitSession()
     {
         // update session duration and words spoken
-        EndMenu.SetActive(true);
+        //EndMenu.SetActive(true);
         interactableCanvas.SetActive(true);
     }
 
     public void returnMenu()
     {
-        EndMenu.SetActive(false);
+        //EndMenu.SetActive(false);
         interactableCanvas.SetActive(false);
     }
 
