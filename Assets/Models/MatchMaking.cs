@@ -105,6 +105,7 @@ public class MatchMaking : RealtimeComponent<MatchMakingModel>
     {
         if (model.unpairedSpanishSpeakers.ContainsKey(playerID))
         {
+            print("================== player lobby: " + model.unpairedSpanishSpeakers[playerID].lobbyID);
             if (model.unpairedSpanishSpeakers[playerID].lobbyID != 0)
             {
                 print("===================================== spanish match found");
