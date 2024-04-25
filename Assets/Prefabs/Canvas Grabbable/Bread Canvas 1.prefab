@@ -177,13 +177,8 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1861931762665351841, guid: 0e3316e0747e62641980beabdb8a44ef,
         type: 3}
-      propertyPath: m_UseGravity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1861931762665351841, guid: 0e3316e0747e62641980beabdb8a44ef,
-        type: 3}
       propertyPath: m_IsKinematic
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3636234571969468271, guid: 0e3316e0747e62641980beabdb8a44ef,
         type: 3}
