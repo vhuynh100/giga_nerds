@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-
+using System.Security.Cryptography.X509Certificates;
 
 public class LanguageSelectMenu : MonoBehaviour
 {
@@ -11,6 +11,11 @@ public class LanguageSelectMenu : MonoBehaviour
     public GameObject Menu2;
     public GameObject alertLanguage;
     public TMP_Text alertText;
+    public GameObject MainMenu;
+    public GameObject languageSelect;
+
+    public MatchMakingController mm;
+    public LocaleSelector ls;
 
     private bool isLangSelected = false;
     public string fluentLanguage; //where the first language selection will be saved
@@ -25,15 +30,15 @@ public class LanguageSelectMenu : MonoBehaviour
 
     }
 
-    void OnLangSelected() 
-        //if the selection is true then allows to move to next menu
+    void OnLangSelected()
+    //if the selection is true then allows to move to next menu
     {
         isLangSelected = true;
         alertLanguage.SetActive(false);
     }
 
     public void setLanguage(string language)
-        //checks if the language is valid to set variable from first menu (fluent)
+    //checks if the language is valid to set variable from first menu (fluent)
     {
         if (language == "invalid")
         {
@@ -48,30 +53,35 @@ public class LanguageSelectMenu : MonoBehaviour
     }
 
     public void setLearningLang(string language)
-        //checks if the language is valid to set variable from second menu (practice)
+    //checks if the language is valid to set variable from second menu (practice)
     {
         if (language == "invalid" || language == fluentLanguage)
         {
-            isLangSelected=false;
+            isLangSelected = false;
             alertLanguage.SetActive(true);
         }
         else
         {
             practiceLanguage = language;
             OnLangSelected();
+            switch (language)
+            {
+                case "English": ls.ChangeLocale(0); mm.SetPlayerLanguageEnglish(); break;
+                case "Spanish": ls.ChangeLocale(1); mm.SetPlayerLanguageSpanish(); break;
+            }
         }
     }
-    
+
 
     public void nextMenu()
-        //checks if last selection is a valid language to change the menus
+    //checks if last selection is a valid language to change the menus
     {
         if (isLangSelected)
         {
             Menu1.SetActive(false);
             Menu2.SetActive(true);
             alertText.text = "Please select a valid language.\n\nLanguage fluent in: " + fluentLanguage;
-            isLangSelected=false; //to check next menu
+            isLangSelected = false; //to check next menu
             Debug.Log("Language selected: " + fluentLanguage);
         }
         else
@@ -82,11 +92,13 @@ public class LanguageSelectMenu : MonoBehaviour
     }
 
     public void closeMenu()
-        //checks if last selection is a valid language to close the menu
+    //checks if last selection is a valid language to close the menu
     {
         if (isLangSelected)
         {
             Menu2.SetActive(false);
+            languageSelect.SetActive(false);
+            MainMenu.SetActive(true);
             Debug.Log("Second Language selected: " + practiceLanguage);
         }
         else
