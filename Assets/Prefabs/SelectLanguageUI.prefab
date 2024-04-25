@@ -1187,7 +1187,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2671738413253941849}
   - component: {fileID: 438546391481183458}
-  - component: {fileID: 8689172949384752436}
   m_Layer: 0
   m_Name: SelectLanguageUI
   m_TagString: Untagged
@@ -1228,23 +1227,7 @@ MonoBehaviour:
   alertLanguage: {fileID: 3662934143634719788}
   alertText: {fileID: 2211162150884414526}
   fluentLanguage: 
-  practiveLanguage: 
---- !u!114 &8689172949384752436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2749942856017136015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53a7e8563ea34354ca48829c1907aa69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  smoothFactor: 2
-  target: {fileID: 0}
-  offset: {x: 0, y: 15, z: 0.4}
-  euler: {x: 15, y: 0, z: 0}
+  practiceLanguage: 
 --- !u!1 &2759475724653731524
 GameObject:
   m_ObjectHideFlags: 0
