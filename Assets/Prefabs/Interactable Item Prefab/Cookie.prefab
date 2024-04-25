@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: f8766c17-aaf8-4b55-9431-de8deea83842
-  instanceId: a8bac5f9-a87d-45d8-9990-7e7adc4ce68e
+  instanceId: 8f3eb59b-14c4-4651-b1b1-b63e6ac709eb
   version: 1
 --- !u!114 &5768182564399474742
 MonoBehaviour:
@@ -166,7 +166,7 @@ MonoBehaviour:
   _transferOnSecondSelection: 1
   _addNewPointsToFront: 0
   _forwardElement: {fileID: 0}
-  _oneGrabTransformer: {fileID: 0}
+  _oneGrabTransformer: {fileID: 867824186350661343}
   _twoGrabTransformer: {fileID: 0}
   _targetTransform: {fileID: 3869149703937049205}
   _maxGrabPoints: -1

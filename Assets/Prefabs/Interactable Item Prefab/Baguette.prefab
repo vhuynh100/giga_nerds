@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 7358e191-33b7-43ca-b066-b2f00531ac66
-  instanceId: 578f9ea4-5ff4-4ecb-9baf-729695db6335
+  instanceId: 428a28d1-fa94-47c8-a035-5f91826a8b32
   version: 1
 --- !u!65 &6718647164184972625
 BoxCollider:
@@ -197,6 +197,7 @@ GameObject:
   - component: {fileID: 4473310279435144275}
   - component: {fileID: 7181108655294899436}
   - component: {fileID: 867824186350661343}
+  - component: {fileID: 1031522351896737212}
   m_Layer: 0
   m_Name: Baguette [BuildingBlock] HandGrab
   m_TagString: Untagged
@@ -232,7 +233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: f8766c17-aaf8-4b55-9431-de8deea83842
-  instanceId: a8bac5f9-a87d-45d8-9990-7e7adc4ce68e
+  instanceId: 018379d2-e73d-4325-88e7-354982efd606
   version: 1
 --- !u!114 &5768182564399474742
 MonoBehaviour:
@@ -249,7 +250,7 @@ MonoBehaviour:
   _transferOnSecondSelection: 1
   _addNewPointsToFront: 0
   _forwardElement: {fileID: 0}
-  _oneGrabTransformer: {fileID: 0}
+  _oneGrabTransformer: {fileID: 867824186350661343}
   _twoGrabTransformer: {fileID: 0}
   _targetTransform: {fileID: 3869149703937049205}
   _maxGrabPoints: -1
@@ -378,3 +379,46 @@ MonoBehaviour:
         Min: 0
         Max: 0
   ItemNameCanvas: {fileID: 0}
+--- !u!114 &1031522351896737212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8425964484430083824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69beb381e244f92449b8c4cf954630e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TrackedObjects:
+  - rid: 8742425305726058515
+  references:
+    version: 2
+    RefIds:
+    - rid: 8742425305726058515
+      type: {class: TrackedMonoBehaviourObject, ns: UnityEngine.Localization.PropertyVariants.TrackedObjects,
+        asm: Unity.Localization}
+      data:
+        m_Target: {fileID: 5768182564399474742}
+        m_TrackedProperties:
+          items:
+          - rid: 8742425305726058516
+        m_UpdateType: 0
+        m_Changed:
+          m_PersistentCalls:
+            m_Calls: []
+    - rid: 8742425305726058516
+      type: {class: UnityObjectProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties,
+        asm: Unity.Localization}
+      data:
+        m_PropertyPath: _oneGrabTransformer
+        m_TypeString: UnityEngine.Object, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        m_VariantData:
+        - localeIdentifier:
+            m_Code: en
+          value: {fileID: 0}
+        - localeIdentifier:
+            m_Code: es
+          value: {fileID: 0}

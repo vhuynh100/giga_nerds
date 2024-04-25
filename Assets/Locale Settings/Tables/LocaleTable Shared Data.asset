@@ -95,6 +95,86 @@ MonoBehaviour:
     m_Key: Tall Shelf
     m_Metadata:
       m_Items: []
+
+  - m_Id: 2930447278530560
+    m_Key: Telescope
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2930479050383360
+    m_Key: Computer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2930509563944960
+    m_Key: Keyboard
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2930540446605312
+    m_Key: Blender
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2930632721293312
+    m_Key: Pan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2930756302266368
+    m_Key: Trash Can
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2930803588849664
+    m_Key: Pot
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2930997021761536
+    m_Key: Sink
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2931010019909632
+    m_Key: Toilet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2931024507035648
+    m_Key: Toilet Paper
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2931059189735424
+    m_Key: Shampoo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2931077544009728
+    m_Key: Conditioner
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2931092907745280
+    m_Key: Body Wash
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2931114533576704
+    m_Key: Tissue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2931125103222784
+    m_Key: Bar Soap
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2931201909317632
+    m_Key: Dumbell
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2931217646346240
+    m_Key: Yoga Ball
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2931269957705728
+    m_Key: Treadmill
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2931300706148352
+    m_Key: Yoga Mat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2931333069398016
+    m_Key: Sticky Note
+
   - m_Id: 2546971274502144
     m_Key: Plate
     m_Metadata:
@@ -193,6 +273,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 2631329276616704
     m_Key: Cookie
+
     m_Metadata:
       m_Items: []
   m_Metadata:
