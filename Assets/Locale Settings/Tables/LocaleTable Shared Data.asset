@@ -235,6 +235,18 @@ MonoBehaviour:
     m_Key: Yoga Ball
     m_Metadata:
       m_Items: []
+  - m_Id: 21726487502848
+    m_Key: Cutting Board
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21749682003968
+    m_Key: Milk Carton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21830334275584
+    m_Key: Stack of Plates
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
