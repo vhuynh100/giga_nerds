@@ -98,6 +98,85 @@ MonoBehaviour:
     m_Localized: tall shelf
     m_Metadata:
       m_Items: []
+  - m_Id: 2930447278530560
+    m_Localized: telescope
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2930479050383360
+    m_Localized: computer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2930509563944960
+    m_Localized: keyboard
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2930540446605312
+    m_Localized: blender
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2930632721293312
+    m_Localized: pan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2930756302266368
+    m_Localized: trash can
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2930803588849664
+    m_Localized: pot
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2930997021761536
+    m_Localized: sink
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2931010019909632
+    m_Localized: toilet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2931024507035648
+    m_Localized: toilet paper
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2931059189735424
+    m_Localized: shampoo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2931077544009728
+    m_Localized: conditioner
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2931092907745280
+    m_Localized: body wash
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2931114533576704
+    m_Localized: tissue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2931125103222784
+    m_Localized: bar soap
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2931201909317632
+    m_Localized: dumbell
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2931217646346240
+    m_Localized: yoga ball
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2931269957705728
+    m_Localized: treadmill
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2931300706148352
+    m_Localized: yoga mat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2931333069398016
+    m_Localized: sticky note
+
   - m_Id: 2546971274502144
     m_Localized: plate
     m_Metadata:
@@ -192,6 +271,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 2631329276616704
     m_Localized: cookie
+
     m_Metadata:
       m_Items: []
   references:

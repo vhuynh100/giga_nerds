@@ -67,7 +67,7 @@ MonoBehaviour:
   _transferOnSecondSelection: 1
   _addNewPointsToFront: 0
   _forwardElement: {fileID: 0}
-  _oneGrabTransformer: {fileID: 0}
+  _oneGrabTransformer: {fileID: 8846111302912997222}
   _twoGrabTransformer: {fileID: 0}
   _targetTransform: {fileID: 1349962470816053958}
   _maxGrabPoints: -1
