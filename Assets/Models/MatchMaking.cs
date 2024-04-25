@@ -267,10 +267,16 @@ public class MatchMaking : RealtimeComponent<MatchMakingModel>
 
         newLobby.lobbyID = (uint)newLobbyID;
         print("========================================= created lobby: " + newLobbyID);
- 
+
         //model.lobbies.Add((uint)newLobbyID, newLobby);
-        model.unpairedSpanishSpeakers[spanishID].lobbyID = (uint)newLobbyID;
-        model.unpairedEnglishSpeakers[englishID].lobbyID = (uint)newLobbyID;
+        if (model.unpairedSpanishSpeakers[spanishID].lobbyID == 0)
+        {
+            model.unpairedSpanishSpeakers[spanishID].lobbyID = (uint)newLobbyID;
+        }
+        if (model.unpairedEnglishSpeakers[englishID].lobbyID == 0)
+        {
+            model.unpairedEnglishSpeakers[englishID].lobbyID = (uint)newLobbyID;
+        }
     }
 
     public uint GetSpanishSpeakerLobby(uint playerId)
