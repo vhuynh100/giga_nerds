@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028326, g: 0.22571333, b: 0.30692202, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4295,7 +4295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5885adbc00ec9b345ab61b8b53938440, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  language: {fileID: 0}
+  language: {fileID: 1517800658}
   mainMenu: {fileID: 1805733642}
   feedbackMenu: {fileID: 1379471361}
   settingsMenu: {fileID: 890198550}
@@ -12508,6 +12508,16 @@ PrefabInstance:
       propertyPath: m_PresetInfoIsWorld
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 438546391481183458, guid: 3e11915107b19c944838fe51f90d9ee9,
+        type: 3}
+      propertyPath: ls
+      value: 
+      objectReference: {fileID: 57530957}
+    - target: {fileID: 438546391481183458, guid: 3e11915107b19c944838fe51f90d9ee9,
+        type: 3}
+      propertyPath: mm
+      value: 
+      objectReference: {fileID: 1419245287}
     - target: {fileID: 2671738413253941849, guid: 3e11915107b19c944838fe51f90d9ee9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12562,6 +12572,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SelectLanguageUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 4052387497312506099, guid: 3e11915107b19c944838fe51f90d9ee9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6137157950325038396, guid: 3e11915107b19c944838fe51f90d9ee9,
         type: 3}
@@ -12655,6 +12670,12 @@ PrefabInstance:
 --- !u!4 &1517800657 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2671738413253941849, guid: 3e11915107b19c944838fe51f90d9ee9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1517800656}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1517800658 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2749942856017136015, guid: 3e11915107b19c944838fe51f90d9ee9,
     type: 3}
   m_PrefabInstance: {fileID: 1517800656}
   m_PrefabAsset: {fileID: 0}
