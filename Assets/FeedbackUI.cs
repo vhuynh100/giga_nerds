@@ -6,20 +6,30 @@ using UnityEngine.UI;
 public class FeedbackUI : MonoBehaviour
 {
     //public ToggleGroup starToggleGroup;
+    public TMP_Text goalText; //set with setGoal(string) function
+
+    //star ratings
     private int finalStarRating=0;
     public Image[] starImages;
     public Sprite YellowStar;
     public Sprite EmptyStar;
-    //selected tags colors
+
+    //selected tags and colors
     public Color unselectedColor = new Color(1.0f, 0.7176471f, 0.01176471f);
     public Color selectedColor = new Color(0.1294118f, 0.6196079f, 0.7372549f);
     public Image[] tags;// used to change tag color
     bool pronunciationTag = false;
     bool vocabTag = false;
     bool articulationTag = false;
+
     //feedback comment is located in this variable
     public TMP_Text feedbackText;
 
+
+    public void setGoal(string goal)
+    {
+        goalText.text = goal;
+    }
     public void setStars(int selectedStar)
     {
         //Debug.Log(selectedStar);
