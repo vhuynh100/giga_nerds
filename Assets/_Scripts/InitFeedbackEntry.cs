@@ -21,7 +21,7 @@ public class InitFeedbackEntry : MonoBehaviour
     {
         dateText.text = entry.feedbackDate;
         goalText.text = entry.sessionGoal;
-        commentText.text = entry.comment;
+        commentText.text = ""; // TODO: hardcoded for now. replace with entry.comment
         tagStrings = entry.feedbackTags;
         starRating = entry.starRating;
 
