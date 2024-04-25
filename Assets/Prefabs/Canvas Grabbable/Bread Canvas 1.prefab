@@ -46,6 +46,21 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1573185476531826409}
+    - target: {fileID: 4040921215805071896, guid: d6cab4dc88e536e45910755956cfcb68,
+        type: 3}
+      propertyPath: xOffset
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040921215805071896, guid: d6cab4dc88e536e45910755956cfcb68,
+        type: 3}
+      propertyPath: yOffset
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040921215805071896, guid: d6cab4dc88e536e45910755956cfcb68,
+        type: 3}
+      propertyPath: zOffset
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4656779728533725909, guid: d6cab4dc88e536e45910755956cfcb68,
         type: 3}
       propertyPath: m_Pivot.x
@@ -99,7 +114,7 @@ PrefabInstance:
     - target: {fileID: 4656779728533725909, guid: d6cab4dc88e536e45910755956cfcb68,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.217
+      value: 10.523
       objectReference: {fileID: 0}
     - target: {fileID: 4656779728533725909, guid: d6cab4dc88e536e45910755956cfcb68,
         type: 3}
@@ -124,12 +139,12 @@ PrefabInstance:
     - target: {fileID: 4656779728533725909, guid: d6cab4dc88e536e45910755956cfcb68,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 0.9085001
       objectReference: {fileID: 0}
     - target: {fileID: 4656779728533725909, guid: d6cab4dc88e536e45910755956cfcb68,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.37927246
+      value: 1.5183
       objectReference: {fileID: 0}
     - target: {fileID: 4656779728533725909, guid: d6cab4dc88e536e45910755956cfcb68,
         type: 3}
@@ -172,6 +187,12 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 3371257732274735036}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8185627636761404863 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6868039995757617667, guid: d6cab4dc88e536e45910755956cfcb68,
+    type: 3}
+  m_PrefabInstance: {fileID: 3371257732274735036}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5260401046200436736
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -185,6 +206,11 @@ PrefabInstance:
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2924827107385767411, guid: 0e3316e0747e62641980beabdb8a44ef,
+        type: 3}
+      propertyPath: _oneGrabTransformer
+      value: 
+      objectReference: {fileID: 1369983255238309817}
     - target: {fileID: 3636234571969468271, guid: 0e3316e0747e62641980beabdb8a44ef,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -243,7 +269,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1229597709456457458, guid: 0e3316e0747e62641980beabdb8a44ef,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1369983255238309817}
   m_SourcePrefab: {fileID: 100100000, guid: 0e3316e0747e62641980beabdb8a44ef, type: 3}
 --- !u!1 &1573185476531826409 stripped
 GameObject:
@@ -251,6 +281,58 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5260401046200436736}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6345812098225272562 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1229597709456457458, guid: 0e3316e0747e62641980beabdb8a44ef,
+    type: 3}
+  m_PrefabInstance: {fileID: 5260401046200436736}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1369983255238309817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6345812098225272562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ce6415fc29fc0e45916042cbe881b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _positionConstraints:
+    ConstraintsAreRelative: 0
+    XAxis:
+      ConstrainAxis: 0
+      AxisRange:
+        Min: 0
+        Max: 0
+    YAxis:
+      ConstrainAxis: 0
+      AxisRange:
+        Min: 0
+        Max: 0
+    ZAxis:
+      ConstrainAxis: 0
+      AxisRange:
+        Min: 0
+        Max: 0
+  _rotationConstraints:
+    XAxis:
+      ConstrainAxis: 0
+      AxisRange:
+        Min: 0
+        Max: 0
+    YAxis:
+      ConstrainAxis: 0
+      AxisRange:
+        Min: 0
+        Max: 0
+    ZAxis:
+      ConstrainAxis: 0
+      AxisRange:
+        Min: 0
+        Max: 0
+  ItemNameCanvas: {fileID: 8185627636761404863}
 --- !u!4 &8896354131713908591 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3636234571969468271, guid: 0e3316e0747e62641980beabdb8a44ef,

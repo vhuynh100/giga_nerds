@@ -162,6 +162,11 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 0.04244511
       objectReference: {fileID: 0}
+    - target: {fileID: 7976297030315069007, guid: 8c1a9ceba29637e41854da98b0b5e8aa,
+        type: 3}
+      propertyPath: _oneGrabTransformer
+      value: 
+      objectReference: {fileID: 7067042251350630207}
     - target: {fileID: 8471517960723480138, guid: 8c1a9ceba29637e41854da98b0b5e8aa,
         type: 3}
       propertyPath: instanceId
@@ -170,8 +175,64 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5734721917853323766, guid: 8c1a9ceba29637e41854da98b0b5e8aa,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7067042251350630207}
   m_SourcePrefab: {fileID: 100100000, guid: 8c1a9ceba29637e41854da98b0b5e8aa, type: 3}
+--- !u!1 &6063824632786867415 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5734721917853323766, guid: 8c1a9ceba29637e41854da98b0b5e8aa,
+    type: 3}
+  m_PrefabInstance: {fileID: 1995898734655636769}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7067042251350630207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6063824632786867415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ce6415fc29fc0e45916042cbe881b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _positionConstraints:
+    ConstraintsAreRelative: 0
+    XAxis:
+      ConstrainAxis: 0
+      AxisRange:
+        Min: 0
+        Max: 0
+    YAxis:
+      ConstrainAxis: 0
+      AxisRange:
+        Min: 0
+        Max: 0
+    ZAxis:
+      ConstrainAxis: 0
+      AxisRange:
+        Min: 0
+        Max: 0
+  _rotationConstraints:
+    XAxis:
+      ConstrainAxis: 0
+      AxisRange:
+        Min: 0
+        Max: 0
+    YAxis:
+      ConstrainAxis: 0
+      AxisRange:
+        Min: 0
+        Max: 0
+    ZAxis:
+      ConstrainAxis: 0
+      AxisRange:
+        Min: 0
+        Max: 0
+  ItemNameCanvas: {fileID: 4017019639744726752}
 --- !u!4 &6317116152367823102 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5483199585462074847, guid: 8c1a9ceba29637e41854da98b0b5e8aa,
@@ -197,6 +258,21 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 7442739857702482124}
+    - target: {fileID: 4040921215805071896, guid: d6cab4dc88e536e45910755956cfcb68,
+        type: 3}
+      propertyPath: xOffset
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040921215805071896, guid: d6cab4dc88e536e45910755956cfcb68,
+        type: 3}
+      propertyPath: yOffset
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040921215805071896, guid: d6cab4dc88e536e45910755956cfcb68,
+        type: 3}
+      propertyPath: zOffset
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4656779728533725909, guid: d6cab4dc88e536e45910755956cfcb68,
         type: 3}
       propertyPath: m_Pivot.x
@@ -250,7 +326,7 @@ PrefabInstance:
     - target: {fileID: 4656779728533725909, guid: d6cab4dc88e536e45910755956cfcb68,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.217
+      value: 6.927
       objectReference: {fileID: 0}
     - target: {fileID: 4656779728533725909, guid: d6cab4dc88e536e45910755956cfcb68,
         type: 3}
@@ -275,12 +351,12 @@ PrefabInstance:
     - target: {fileID: 4656779728533725909, guid: d6cab4dc88e536e45910755956cfcb68,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -0.5806
       objectReference: {fileID: 0}
     - target: {fileID: 4656779728533725909, guid: d6cab4dc88e536e45910755956cfcb68,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.37927246
+      value: 1.4454
       objectReference: {fileID: 0}
     - target: {fileID: 4656779728533725909, guid: d6cab4dc88e536e45910755956cfcb68,
         type: 3}
@@ -320,6 +396,12 @@ PrefabInstance:
 --- !u!224 &2904623388484978230 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4656779728533725909, guid: d6cab4dc88e536e45910755956cfcb68,
+    type: 3}
+  m_PrefabInstance: {fileID: 7561402936212743395}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4017019639744726752 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6868039995757617667, guid: d6cab4dc88e536e45910755956cfcb68,
     type: 3}
   m_PrefabInstance: {fileID: 7561402936212743395}
   m_PrefabAsset: {fileID: 0}

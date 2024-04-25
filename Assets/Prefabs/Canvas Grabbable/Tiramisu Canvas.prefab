@@ -46,6 +46,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tiramisu
       objectReference: {fileID: 0}
+    - target: {fileID: 4918477675142423235, guid: 91aa1dbdfb90b1a469d533b091219631,
+        type: 3}
+      propertyPath: _oneGrabTransformer
+      value: 
+      objectReference: {fileID: 1295395317645884729}
     - target: {fileID: 6725455431607763138, guid: 91aa1dbdfb90b1a469d533b091219631,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -109,8 +114,64 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2350886496478857359, guid: 91aa1dbdfb90b1a469d533b091219631,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1295395317645884729}
   m_SourcePrefab: {fileID: 100100000, guid: 91aa1dbdfb90b1a469d533b091219631, type: 3}
+--- !u!1 &3247501832899290086 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2350886496478857359, guid: 91aa1dbdfb90b1a469d533b091219631,
+    type: 3}
+  m_PrefabInstance: {fileID: 986701073954040681}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1295395317645884729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3247501832899290086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ce6415fc29fc0e45916042cbe881b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _positionConstraints:
+    ConstraintsAreRelative: 0
+    XAxis:
+      ConstrainAxis: 0
+      AxisRange:
+        Min: 0
+        Max: 0
+    YAxis:
+      ConstrainAxis: 0
+      AxisRange:
+        Min: 0
+        Max: 0
+    ZAxis:
+      ConstrainAxis: 0
+      AxisRange:
+        Min: 0
+        Max: 0
+  _rotationConstraints:
+    XAxis:
+      ConstrainAxis: 0
+      AxisRange:
+        Min: 0
+        Max: 0
+    YAxis:
+      ConstrainAxis: 0
+      AxisRange:
+        Min: 0
+        Max: 0
+    ZAxis:
+      ConstrainAxis: 0
+      AxisRange:
+        Min: 0
+        Max: 0
+  ItemNameCanvas: {fileID: 3301866305077576221}
 --- !u!1 &3945349920789565368 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4283422146274911441, guid: 91aa1dbdfb90b1a469d533b091219631,
@@ -136,6 +197,21 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 3945349920789565368}
+    - target: {fileID: 4040921215805071896, guid: d6cab4dc88e536e45910755956cfcb68,
+        type: 3}
+      propertyPath: xOffset
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040921215805071896, guid: d6cab4dc88e536e45910755956cfcb68,
+        type: 3}
+      propertyPath: yOffset
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040921215805071896, guid: d6cab4dc88e536e45910755956cfcb68,
+        type: 3}
+      propertyPath: zOffset
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4656779728533725909, guid: d6cab4dc88e536e45910755956cfcb68,
         type: 3}
       propertyPath: m_Pivot.x
@@ -189,7 +265,7 @@ PrefabInstance:
     - target: {fileID: 4656779728533725909, guid: d6cab4dc88e536e45910755956cfcb68,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.217
+      value: 10.2589
       objectReference: {fileID: 0}
     - target: {fileID: 4656779728533725909, guid: d6cab4dc88e536e45910755956cfcb68,
         type: 3}
@@ -214,12 +290,12 @@ PrefabInstance:
     - target: {fileID: 4656779728533725909, guid: d6cab4dc88e536e45910755956cfcb68,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -3.299
       objectReference: {fileID: 0}
     - target: {fileID: 4656779728533725909, guid: d6cab4dc88e536e45910755956cfcb68,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.37927246
+      value: 1.8426
       objectReference: {fileID: 0}
     - target: {fileID: 4656779728533725909, guid: d6cab4dc88e536e45910755956cfcb68,
         type: 3}
@@ -256,6 +332,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6cab4dc88e536e45910755956cfcb68, type: 3}
+--- !u!1 &3301866305077576221 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6868039995757617667, guid: d6cab4dc88e536e45910755956cfcb68,
+    type: 3}
+  m_PrefabInstance: {fileID: 8251359871047688222}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &3612604230613582539 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4656779728533725909, guid: d6cab4dc88e536e45910755956cfcb68,
