@@ -14,6 +14,8 @@ public class LanguageSelectMenu : MonoBehaviour
     public GameObject MainMenu;
     public GameObject languageSelect;
 
+    public GameObject intCanvas;
+
     public MatchMakingController mm;
     //public LocaleSelector ls;
 
@@ -27,6 +29,8 @@ public class LanguageSelectMenu : MonoBehaviour
         Menu1.SetActive(true);
         alertLanguage.SetActive(false);
         Menu2.SetActive(false);
+        intCanvas.SetActive(true);
+
 
     }
 
