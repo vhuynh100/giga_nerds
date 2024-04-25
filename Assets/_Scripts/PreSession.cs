@@ -22,25 +22,29 @@ public class PreSession : MonoBehaviour
     private bool goalSelected = false;
     private int playerGoal;
 
-    public string _player1Goal = default;
-    public string _player2Goal = default;
-    public string _player1Feedback = default;
-    public string _player2Feedback = default;
-
+    public string _player1Goal = "";
+    public string _player2Goal = "";
     private int playerNum = 0;
+    public PlayerFeedback _playerFeedback;
 
-    private PlayerFeedback _playerFeedback;
+    public GameObject PartnerFeedbackMenu;
 
     void Start()
     {
         Menu1.SetActive(true);
         Menu2.SetActive(false);
         EndMenu.SetActive(false);
-    }
 
-    private void Awake()  // DO NOT SET _playerFeedback INITIAL VARIABLE VALUES IN THIS Awake! only set initial variable values in PlayerFeedback.cs
-    {
-        _playerFeedback = GetComponent<PlayerFeedback>();
+        if (playerNum == 0 & _playerFeedback.GetPlayer1Goal() == "")
+        {
+            playerNum = 1;
+        }
+        else if (playerNum == 0 & _playerFeedback.GetPlayer2Goal() == "")
+        {
+            playerNum = 2;
+        }
+
+        Debug.Log("*** playernum:" + playerNum);
     }
 
     public void OnGoalSelected()
@@ -82,23 +86,26 @@ public class PreSession : MonoBehaviour
                 //goalText.text = "Grammar Accuracy";
                 SetPlayerGoal("Grammar Accuracy");
             }
-            //goalText.text += " goal completed!";
 
-            EndMenu.SetActive(true);
+            //EndMenu.SetActive(true);
             if (playerNum == 1)
             {
-                goalText.text = "Goal selected: " + _playerFeedback.GetPlayer2Goal();
+                goalText.text = _playerFeedback.GetPlayer2Goal();
             }
             else if (playerNum == 2)
             {
-                goalText.text = "Goal selected: " + _playerFeedback.GetPlayer1Goal();
+                goalText.text = _playerFeedback.GetPlayer1Goal();
             }
+
         }
         else
         {
             Debug.Log("Goal not selected");
             selectGoalAlert.SetActive(true);
         }
+
+        Menu1.SetActive(false);
+        PartnerFeedbackMenu.SetActive(true);
     }
 
     public void joinRoom()
@@ -121,20 +128,40 @@ public class PreSession : MonoBehaviour
 
     public void SetPlayerGoal(string goal)
     {
-        if (playerNum == 0 & _playerFeedback.GetPlayer1Goal() == "")
+        if (playerNum == 1)
         {
-            playerNum = 1;
             _playerFeedback.SetPlayer1Goal(goal);
+            _player1Goal = goal;
+            Debug.Log("*** set player 1 goal: " + _playerFeedback.GetPlayer1Goal());
         }
-        else if (playerNum == 0 & _playerFeedback.GetPlayer2Goal() == "")
+        else if (playerNum == 2)
         {
-            playerNum = 2;
             _playerFeedback.SetPlayer2Goal(goal);
+            _player2Goal = goal;
+            Debug.Log("*** set player 2 goal: " + _playerFeedback.GetPlayer2Goal());
         }
     }
 
     void Update()
     {
         // TODO: Check if realtime player goals are empty and update UI when they're populated
+        if (playerNum == 1)
+        {
+            if (_playerFeedback.GetPlayer2Goal() != _player2Goal)
+            {
+                _player2Goal = _playerFeedback.GetPlayer2Goal();
+                goalText.text = _playerFeedback.GetPlayer2Goal();
+                Debug.Log("*** player 2 goal:" + _playerFeedback.GetPlayer2Goal());
+            }
+        }
+        else if (playerNum == 2)
+        {
+            if (_playerFeedback.GetPlayer1Goal() != _player1Goal)
+            {
+                _player1Goal = _playerFeedback.GetPlayer1Goal();
+                goalText.text = _playerFeedback.GetPlayer1Goal();
+                Debug.Log("*** player 1 goal:" + _playerFeedback.GetPlayer1Goal());
+            }
+        }
     }
 }

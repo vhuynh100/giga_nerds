@@ -175,7 +175,7 @@ public class MyFeedbackManager : MonoBehaviour
             }
         }
 
-        //Debug.Log("*** player 1 feedback:" + _playerFeedback.GetPlayer1Feedback());
+        Debug.Log("*** player 1 feedback:" + _playerFeedback.GetPlayer1Feedback());
         Debug.Log("*** player 2 feedback:" + _playerFeedback.GetPlayer2Feedback());
     }
 }

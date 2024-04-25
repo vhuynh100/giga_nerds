@@ -40,7 +40,6 @@ public class FeedbackUI : MonoBehaviour
     }
     public void setStars(int selectedStar)
     {
-        //Debug.Log(selectedStar);
         finalStarRating = selectedStar;
         for (int i = 0; i < starImages.Length; i++)
         {
@@ -113,11 +112,6 @@ public class FeedbackUI : MonoBehaviour
             Debug.Log("player 1:" +  _playerFeedback.GetPlayer1Feedback());
         }
     }
-
-    //private void Awake()  // DO NOT SET _playerFeedback INITIAL VARIABLE VALUES IN THIS Awake! only set initial variable values in PlayerFeedback.cs
-    //{
-    //    _playerFeedback = GetComponent<PlayerFeedback>();
-    //}
 
     private void Start()
     {
