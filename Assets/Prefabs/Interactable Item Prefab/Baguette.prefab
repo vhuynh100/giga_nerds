@@ -95,6 +95,9 @@ GameObject:
   - component: {fileID: 7342127764555239717}
   - component: {fileID: 6718647164184972625}
   - component: {fileID: 1917430644769517945}
+  - component: {fileID: 8697936699150465558}
+  - component: {fileID: 8730037643836913608}
+  - component: {fileID: 4120906642555815282}
   m_Layer: 0
   m_Name: Baguette
   m_TagString: Untagged
@@ -132,7 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 7358e191-33b7-43ca-b066-b2f00531ac66
-  instanceId: 578f9ea4-5ff4-4ecb-9baf-729695db6335
+  instanceId: 428a28d1-fa94-47c8-a035-5f91826a8b32
   version: 1
 --- !u!65 &6718647164184972625
 BoxCollider:
@@ -182,6 +185,62 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8697936699150465558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3914977366731909710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -363599832, guid: ebae63e7edba59945a994528ada1f7a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _realtime: {fileID: 0}
+  _sceneViewUUID: 
+  _viewUUID: 
+  _sceneViewPreventOwnershipTakeover: 0
+  _sceneViewDestroyWhenOwnerOrLastClientLeaves: 1
+  _sceneViewDestroyWhenOwnerOrLastClientLeavesMigrated: 1
+  _sceneViewDestroyWhenLastClientLeaves: 1
+  _components:
+  - componentID: 1
+    component: {fileID: 8730037643836913608}
+  _childViews: []
+--- !u!114 &8730037643836913608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3914977366731909710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1029778088, guid: ebae63e7edba59945a994528ada1f7a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interpolate: 1
+  _syncPosition: 1
+  _syncRotation: 1
+  _syncScale: 1
+  _syncVelocity: 0
+  _maintainOwnershipWhileSleeping: 0
+--- !u!114 &4120906642555815282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3914977366731909710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df209e445bb56e34ca1687cbf9d043c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  realtimeView: {fileID: 8697936699150465558}
+  realtimeTransform: {fileID: 8730037643836913608}
+  wrapper: {fileID: 7353986381523486693}
 --- !u!1 &8425964484430083824
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,6 +256,8 @@ GameObject:
   - component: {fileID: 4473310279435144275}
   - component: {fileID: 7181108655294899436}
   - component: {fileID: 867824186350661343}
+  - component: {fileID: 1031522351896737212}
+  - component: {fileID: 7353986381523486693}
   m_Layer: 0
   m_Name: Baguette [BuildingBlock] HandGrab
   m_TagString: Untagged
@@ -232,7 +293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: f8766c17-aaf8-4b55-9431-de8deea83842
-  instanceId: a8bac5f9-a87d-45d8-9990-7e7adc4ce68e
+  instanceId: 018379d2-e73d-4325-88e7-354982efd606
   version: 1
 --- !u!114 &5768182564399474742
 MonoBehaviour:
@@ -249,7 +310,7 @@ MonoBehaviour:
   _transferOnSecondSelection: 1
   _addNewPointsToFront: 0
   _forwardElement: {fileID: 0}
-  _oneGrabTransformer: {fileID: 0}
+  _oneGrabTransformer: {fileID: 867824186350661343}
   _twoGrabTransformer: {fileID: 0}
   _targetTransform: {fileID: 3869149703937049205}
   _maxGrabPoints: -1
@@ -378,3 +439,83 @@ MonoBehaviour:
         Min: 0
         Max: 0
   ItemNameCanvas: {fileID: 0}
+--- !u!114 &1031522351896737212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8425964484430083824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69beb381e244f92449b8c4cf954630e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TrackedObjects:
+  - rid: 8742425305726058515
+  references:
+    version: 2
+    RefIds:
+    - rid: 8742425305726058515
+      type: {class: TrackedMonoBehaviourObject, ns: UnityEngine.Localization.PropertyVariants.TrackedObjects,
+        asm: Unity.Localization}
+      data:
+        m_Target: {fileID: 5768182564399474742}
+        m_TrackedProperties:
+          items:
+          - rid: 8742425305726058516
+        m_UpdateType: 0
+        m_Changed:
+          m_PersistentCalls:
+            m_Calls: []
+    - rid: 8742425305726058516
+      type: {class: UnityObjectProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties,
+        asm: Unity.Localization}
+      data:
+        m_PropertyPath: _oneGrabTransformer
+        m_TypeString: UnityEngine.Object, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        m_VariantData:
+        - localeIdentifier:
+            m_Code: en
+          value: {fileID: 0}
+        - localeIdentifier:
+            m_Code: es
+          value: {fileID: 0}
+--- !u!114 &7353986381523486693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8425964484430083824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1464721f2283eb14e94a33e812b47be4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interactableView: {fileID: 4780530174543695513}
+  _whenHover:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenUnhover:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenSelect:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenUnselect:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenInteractorViewAdded:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenInteractorViewRemoved:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenSelectingInteractorViewAdded:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenSelectingInteractorViewRemoved:
+    m_PersistentCalls:
+      m_Calls: []

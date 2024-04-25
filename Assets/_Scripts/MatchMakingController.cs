@@ -11,6 +11,7 @@ public class MatchMakingController : MonoBehaviour
     [SerializeField] GameObject matchRoom;
     [SerializeField] GameObject lobbyRoom;
     [SerializeField] PlayerJoin playerJoin;
+    [SerializeField] GameObject mainMenu;
 
     public string language;
     public uint playerID;
@@ -90,7 +91,7 @@ public class MatchMakingController : MonoBehaviour
             match.CheckMatches();
         }
 
-        if (wait > 400 && wait % 200 == 0 && requestedQueue)
+        if (wait > 400 && wait % 400 == 0 && requestedQueue)
         {
             if (language == "en")
             {
@@ -160,6 +161,7 @@ public class MatchMakingController : MonoBehaviour
         MoveNormcoreRoom(0);
         lobbyRoom.SetActive(true);
         matchRoom.SetActive(false);
+        mainMenu.SetActive(true);
     }
 
 
@@ -174,10 +176,8 @@ public class MatchMakingController : MonoBehaviour
             playerJoin.SetPlayer2JoinStatus(true);
             playerNum = 2;
         }
-
-
-
     }
+
     private void MoveNormcoreRoom(int lobbyID)
     {
 

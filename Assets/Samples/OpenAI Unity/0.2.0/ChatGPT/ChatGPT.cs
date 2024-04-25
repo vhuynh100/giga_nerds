@@ -16,6 +16,7 @@ namespace OpenAI
 
         [SerializeField] private TMP_Text suggestionDisplay1;
         [SerializeField] private TMP_Text suggestionDisplay2;
+        [SerializeField] private Button GetSuggestions;
 
         private OpenAIApi openai = new OpenAIApi();
         private List<ChatMessage> messages = new List<ChatMessage>();
@@ -23,7 +24,7 @@ namespace OpenAI
 
         private void Start()
         {
-           
+            GetSuggestions.onClick.AddListener(SendReply);
         }
 
        private async void SendReply()
@@ -89,7 +90,7 @@ namespace OpenAI
             // Set the Message variable with the translated text
             message = translatedText;
             // Call SendReply to process the translated text and generate suggestions
-            SendReply();
+            
         }
     }
 }

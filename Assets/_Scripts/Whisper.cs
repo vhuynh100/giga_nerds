@@ -101,7 +101,7 @@ namespace Samples.Whisper
             frenchButton.GetComponent<Image>().color = Color.white;
             germanButton.GetComponent<Image>().color = Color.white;
 
-            language = "es";
+            //language = "es";
 
             // Set the active button to the darker color
             switch (language)
@@ -205,18 +205,14 @@ namespace Samples.Whisper
         private void Update()
         {
 
-            //print("====================================================================================================================================== Made Request: " + madeRequest);
-            //print("======================================================================================================================================= Request Sync Request: " + _requestSync.GetRequested());
-            //print("====================================================================================================================================== Request Sync translation: " + _requestSync.GetTranslation());
-            //print("======================================================================================================================================== translationString: " + _translationString);
-            //starting = starting + 1;
-            //if( starting == 100)
-            //{
-            // print("-------------------------------------------------------- request automatically sent");
-            //MakeRequest();
+            print("====================================================================================================================================== Made Request: " + madeRequest);
+            print("======================================================================================================================================= Request Sync Request: " + _requestSync.GetRequested());
+            print("====================================================================================================================================== Request Sync translation: " + _requestSync.GetTranslation());
+            print("======================================================================================================================================== translationString: " + _translationString);
+            
 
-            //}
-            //print("===== User Language = " + matchMakingController.GetUserLanguage());
+            print("===== User Language = " + matchMakingController.GetUserLanguage());
+
             if (targetLanguage == "")
             {
                 matchMakingController.GetUserLanguage();
