@@ -34,9 +34,9 @@ public class InitFeedbackEntry : MonoBehaviour
 
         foreach (string tag in tagStrings)
         {
-            if (tag == "Excellent Pronunciation") tags[0].SetActive(true);
-            else if (tag == "Great Vocabulary") tags[1].SetActive(true);
-            else if (tag == "Clear Articulation") tags[2].SetActive(true);
+            if (tag == "Pronunciation") tags[0].SetActive(true);
+            else if (tag == "Vocabulary") tags[1].SetActive(true);
+            else if (tag == "Articulation") tags[2].SetActive(true);
         }
     }
 
