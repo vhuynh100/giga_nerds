@@ -427,7 +427,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _localPlayer.root
       value: 
-      objectReference: {fileID: 2040112550}
+      objectReference: {fileID: 1801556629}
     - target: {fileID: 114568985850100520, guid: 7b6bfdf4df303fa41864533ddfea8e75,
         type: 3}
       propertyPath: _localPlayer.leftHand
@@ -1298,6 +1298,12 @@ Transform:
   - {fileID: 596240200}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1801556629 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2483171112402263010, guid: f54012181eacade4ea242c65f804720f,
+    type: 3}
+  m_PrefabInstance: {fileID: 2040112549}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2040112549
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1366,12 +1372,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f54012181eacade4ea242c65f804720f, type: 3}
---- !u!4 &2040112550 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2514675399181695721, guid: f54012181eacade4ea242c65f804720f,
-    type: 3}
-  m_PrefabInstance: {fileID: 2040112549}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2040112551 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2483171112402218544, guid: f54012181eacade4ea242c65f804720f,
@@ -1618,6 +1618,6 @@ SceneRoots:
   - {fileID: 53428758}
   - {fileID: 7886101587271779162}
   - {fileID: 1439342047}
+  - {fileID: 474238720}
   - {fileID: 2040112549}
   - {fileID: 714691435}
-  - {fileID: 474238720}
