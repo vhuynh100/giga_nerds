@@ -11,7 +11,7 @@ public class MainMenu : MonoBehaviour
 
     public GameObject language;
     public GameObject mainMenu;
-    public GameObject credits;
+    public GameObject feedbackMenu;
     public GameObject settingsMenu;
     public GameObject sessionMenu;
 
@@ -55,15 +55,15 @@ public class MainMenu : MonoBehaviour
         sessionMenu.SetActive(true);
         mainMenu.SetActive(false);
     }
-    public void enterCredits()
+    public void enterFeedback()
     {
-        credits.SetActive(true);
+        feedbackMenu.SetActive(true);
         mainMenu.SetActive(false);
     }
 
-    public void leaveCredits()
+    public void leaveFeedback()
     {
-        credits.SetActive(false);
+        feedbackMenu.SetActive(false);
         mainMenu.SetActive(true);
     }
 

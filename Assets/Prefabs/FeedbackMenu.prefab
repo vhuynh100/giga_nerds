@@ -815,6 +815,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8868122680965958658, guid: 718854f17c2a16847a42c2604d494430,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8868122680965958658, guid: 718854f17c2a16847a42c2604d494430,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8868122680965958658, guid: 718854f17c2a16847a42c2604d494430,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8868122680965958658, guid: 718854f17c2a16847a42c2604d494430,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -881,7 +896,11 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 9099903829417314639}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1240030297611884571, guid: 718854f17c2a16847a42c2604d494430,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5651246759551890944}
   m_SourcePrefab: {fileID: 100100000, guid: 718854f17c2a16847a42c2604d494430, type: 3}
 --- !u!224 &1716721281956286184 stripped
 RectTransform:
@@ -895,3 +914,25 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 7564712585946888112}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8777017561266696107 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1240030297611884571, guid: 718854f17c2a16847a42c2604d494430,
+    type: 3}
+  m_PrefabInstance: {fileID: 7564712585946888112}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5651246759551890944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8777017561266696107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53a7e8563ea34354ca48829c1907aa69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smoothFactor: 2
+  target: {fileID: 0}
+  offset: {x: 0, y: 0.1, z: 0.4}
+  euler: {x: 15, y: 0, z: 0}
