@@ -100,6 +100,7 @@ public class ButtonManager : MonoBehaviour
         else
         {
             teleportMenu.SetActive(true);
+            mainMenu.SetActive(false);
         }
 
         message.text = "TELEPORT";
@@ -123,6 +124,7 @@ public class ButtonManager : MonoBehaviour
         else
         {
             translationMenu.SetActive(true);
+            mainMenu.SetActive(false);
         }
 
         message.text = "TRANSLATE";
@@ -137,6 +139,7 @@ public class ButtonManager : MonoBehaviour
         else
         {
             settingsMenu.SetActive(true);
+            mainMenu.SetActive(false);
         }
     }
 
@@ -149,6 +152,7 @@ public class ButtonManager : MonoBehaviour
         else
         {
             timerMenu.SetActive(true);
+            mainMenu.SetActive(false);
         }
     }
 

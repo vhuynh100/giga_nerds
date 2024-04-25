@@ -15,6 +15,7 @@ public class PreSession : MonoBehaviour
     public GameObject Menu2;
     public GameObject EndMenu;
     public GameObject selectGoalAlert;
+    public GameObject interactableCanvas;
     public TMP_Text goalText;
 
     private bool goalSelected = false;
@@ -67,6 +68,7 @@ public class PreSession : MonoBehaviour
     public void joinRoom()
     {
         Menu2.SetActive(false);
+        interactableCanvas.SetActive(false);
         // start timer for session duration
         // Insert scene change code here
     }
@@ -75,11 +77,13 @@ public class PreSession : MonoBehaviour
     {
         // update session duration and words spoken
         EndMenu.SetActive(true);
+        interactableCanvas.SetActive(true);
     }
 
     public void returnMenu()
     {
         EndMenu.SetActive(false);
+        interactableCanvas.SetActive(false);
     }
 
 
