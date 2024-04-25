@@ -1,4 +1,6 @@
+using System;
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -21,14 +23,17 @@ public class FeedbackUI : MonoBehaviour
     bool pronunciationTag = false;
     bool vocabTag = false;
     bool articulationTag = false;
+    List<string> selectedTags = new List<string>();
+    private string selectedGoal;
 
     //feedback comment is located in this variable
     public TMP_Text feedbackText;
-
+    public MyFeedbackManager manager;
 
     public void setGoal(string goal)
     {
         goalText.text = goal;
+        selectedGoal = goal;
     }
     public void setStars(int selectedStar)
     {
@@ -73,12 +78,24 @@ public class FeedbackUI : MonoBehaviour
 
     public void closeMenu()
     {
-        //function here to send data somewhere
-        Debug.Log(finalStarRating);
-        Debug.Log(pronunciationTag ? "Pronunciation: True" : "Pronunciation: False");
-        Debug.Log(vocabTag ? "Vocabulary: True" : "Vocabulary: False");
-        Debug.Log(articulationTag ? "Articulation: True" : "Articulation: False");
-        Debug.Log("Feedback Sent: " + feedbackText.text);
+        if(pronunciationTag)
+        {
+            selectedTags.Add("Pronunciation");
+        }
 
+        if(vocabTag)
+        {
+            selectedTags.Add("Vocabulary");
+        }
+
+        if (articulationTag)
+        {
+            selectedTags.Add("Articulation");
+        }
+
+        FeedbackEntry entry = new FeedbackEntry(DateTime.Now, selectedTags, finalStarRating, selectedGoal, feedbackText.ToString());
+
+        //send data to player's personal feedback menu
+        manager.AddFeedbackEntry(entry);
     }
 }

@@ -216,7 +216,7 @@ namespace Samples.Whisper
             //MakeRequest();
 
             //}
-            print("===== User Language = " + matchMakingController.GetUserLanguage());
+            //print("===== User Language = " + matchMakingController.GetUserLanguage());
             if (targetLanguage == "")
             {
                 matchMakingController.GetUserLanguage();

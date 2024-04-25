@@ -5,12 +5,12 @@ using System.Collections.Generic;
 public class FeedbackEntry
 {
     public string feedbackDate;
-    public string[] feedbackTags;
+    public List<string> feedbackTags;
     public int starRating;
     public string sessionGoal;
     public string comment;
 
-    public FeedbackEntry(DateTime date, string[] tags, int rating, string goal, string comment)
+    public FeedbackEntry(DateTime date, List<string> tags, int rating, string goal, string comment)
     {
         feedbackDate = date.ToString("yyyy-MM-dd");
         feedbackTags = tags;
