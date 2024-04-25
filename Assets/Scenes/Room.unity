@@ -4606,13 +4606,13 @@ PrefabInstance:
     - target: {fileID: 863302900693630561, guid: 72c020e82a3eee64399339ddf03fd766,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 863302900693630561, guid: 72c020e82a3eee64399339ddf03fd766,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 1518163492}
+      objectReference: {fileID: 596979219}
     - target: {fileID: 863302900693630561, guid: 72c020e82a3eee64399339ddf03fd766,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
@@ -4621,12 +4621,17 @@ PrefabInstance:
     - target: {fileID: 863302900693630561, guid: 72c020e82a3eee64399339ddf03fd766,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: goLobby
+      value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 863302900693630561, guid: 72c020e82a3eee64399339ddf03fd766,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: ButtonManager, Assembly-CSharp
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 863302900693630561, guid: 72c020e82a3eee64399339ddf03fd766,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 863302900693630561, guid: 72c020e82a3eee64399339ddf03fd766,
         type: 3}
@@ -5077,6 +5082,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -15.030001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471762527722719381, guid: 72c020e82a3eee64399339ddf03fd766,
+        type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8016542703087983978, guid: 72c020e82a3eee64399339ddf03fd766,
         type: 3}
