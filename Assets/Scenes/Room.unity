@@ -3793,7 +3793,7 @@ PrefabInstance:
         type: 3}
       propertyPath: realtime
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2108487836}
     - target: {fileID: 7184427680269871891, guid: 64d819ee99f28664898171535807c8a1,
         type: 3}
       propertyPath: lobbyRoom
