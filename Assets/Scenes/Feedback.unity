@@ -7491,6 +7491,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2145237693}
   - component: {fileID: 2145237694}
+  - component: {fileID: 2145237696}
+  - component: {fileID: 2145237695}
   m_Layer: 0
   m_Name: FeedbackManager
   m_TagString: Untagged
@@ -7525,9 +7527,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72123a302e8be8a478705d07edcace94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player1Feedback: 
+  _player2Feedback: 
   feedbackEntryPrefab: {fileID: 6215892491739776417, guid: 306ebe18c8a4c0447996532e92226d53,
     type: 3}
   feedbackContentPanel: {fileID: 1292707286}
+--- !u!114 &2145237695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145237692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e693dda88f4aff4ca01fe65c227054f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2145237696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145237692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -363599832, guid: ebae63e7edba59945a994528ada1f7a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _realtime: {fileID: 601268490}
+  _sceneViewUUID: 
+  _viewUUID: ab84a3b8-c053-4f35-871e-5b37a74a0134
+  _sceneViewPreventOwnershipTakeover: 0
+  _sceneViewDestroyWhenOwnerOrLastClientLeaves: 1
+  _sceneViewDestroyWhenOwnerOrLastClientLeavesMigrated: 1
+  _sceneViewDestroyWhenLastClientLeaves: 1
+  _components:
+  - componentID: 1
+    component: {fileID: 2145237695}
+  _childViews: []
 --- !u!1001 &1668408166069121939
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7641,6 +7680,11 @@ PrefabInstance:
       propertyPath: manager
       value: 
       objectReference: {fileID: 2145237694}
+    - target: {fileID: 1556283333731166062, guid: 72c020e82a3eee64399339ddf03fd766,
+        type: 3}
+      propertyPath: _playerFeedback
+      value: 
+      objectReference: {fileID: 2145237695}
     - target: {fileID: 1674494388332186911, guid: 72c020e82a3eee64399339ddf03fd766,
         type: 3}
       propertyPath: m_AnchorMax.y

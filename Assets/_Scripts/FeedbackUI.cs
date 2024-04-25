@@ -11,7 +11,7 @@ public class FeedbackUI : MonoBehaviour
     public TMP_Text goalText; //set with setGoal(string) function
 
     //star ratings
-    private int finalStarRating=0;
+    private int finalStarRating = 0;
     public Image[] starImages;
     public Sprite YellowStar;
     public Sprite EmptyStar;
@@ -25,6 +25,9 @@ public class FeedbackUI : MonoBehaviour
     bool articulationTag = false;
     List<string> selectedTags = new List<string>();
     private string selectedGoal;
+
+    public PlayerFeedback _playerFeedback;
+    private int playerNum = 0;
 
     //feedback comment is located in this variable
     public TMP_Text feedbackText;
@@ -78,12 +81,12 @@ public class FeedbackUI : MonoBehaviour
 
     public void closeMenu()
     {
-        if(pronunciationTag)
+        if (pronunciationTag)
         {
             selectedTags.Add("Pronunciation");
         }
 
-        if(vocabTag)
+        if (vocabTag)
         {
             selectedTags.Add("Vocabulary");
         }
@@ -94,8 +97,37 @@ public class FeedbackUI : MonoBehaviour
         }
 
         FeedbackEntry entry = new FeedbackEntry(DateTime.Now, selectedTags, finalStarRating, selectedGoal, feedbackText.ToString());
+        string csvEntry = entry.ToCsvString();
 
-        //send data to player's personal feedback menu
-        manager.AddFeedbackEntry(entry);
+        //send data to other player
+        if (playerNum == 1)
+        {
+            _playerFeedback.SetPlayer2Feedback(csvEntry);
+            Debug.Log("csv p2:" + _playerFeedback.GetPlayer2Feedback());
+            Debug.Log("player 2:" + _playerFeedback.GetPlayer2Feedback());
+        }
+        else if (playerNum == 2)
+        {
+            _playerFeedback.SetPlayer1Feedback(csvEntry);
+            Debug.Log("csv p1:" +  _playerFeedback.GetPlayer1Feedback());
+            Debug.Log("player 1:" +  _playerFeedback.GetPlayer1Feedback());
+        }
+    }
+
+    //private void Awake()  // DO NOT SET _playerFeedback INITIAL VARIABLE VALUES IN THIS Awake! only set initial variable values in PlayerFeedback.cs
+    //{
+    //    _playerFeedback = GetComponent<PlayerFeedback>();
+    //}
+
+    private void Start()
+    {
+        if (playerNum == 0 & _playerFeedback.GetPlayer1Feedback() == "")
+        {
+            playerNum = 1;
+        }
+        else if (playerNum == 0 & _playerFeedback.GetPlayer2Feedback() == "")
+        {
+            playerNum = 2;
+        }
     }
 }

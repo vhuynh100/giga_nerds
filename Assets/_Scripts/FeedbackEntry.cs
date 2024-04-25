@@ -18,6 +18,12 @@ public class FeedbackEntry
         sessionGoal = goal;
         this.comment = comment;
     }
+    public string ToCsvString()
+    {
+        string escapedComment = "\"" + comment.Replace("\"", "\"\"") + "\"";  // Escape quotes
+        string tagsCombined = string.Join(";", feedbackTags);  // Combine tags with semicolon
+        return $"{feedbackDate},{starRating},{sessionGoal},{escapedComment},{tagsCombined}";
+    }
 }
 
 [System.Serializable]
