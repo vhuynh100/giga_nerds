@@ -11,6 +11,8 @@ public class LanguageSelectMenu : MonoBehaviour
     public GameObject Menu2;
     public GameObject alertLanguage;
     public TMP_Text alertText;
+    public GameObject MainMenu;
+    public GameObject languageSelect;
 
     public MatchMakingController mm;
     public LocaleSelector ls;
@@ -95,6 +97,8 @@ public class LanguageSelectMenu : MonoBehaviour
         if (isLangSelected)
         {
             Menu2.SetActive(false);
+            languageSelect.SetActive(false);
+            MainMenu.SetActive(true);
             Debug.Log("Second Language selected: " + practiceLanguage);
         }
         else

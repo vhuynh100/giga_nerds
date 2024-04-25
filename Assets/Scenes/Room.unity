@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028326, g: 0.22571333, b: 0.30692202, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1195,6 +1195,12 @@ MonoBehaviour:
   target: {fileID: 0}
   offset: {x: 0, y: 0.1, z: 0.4}
   euler: {x: 15, y: 0, z: 0}
+--- !u!223 &93716030 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 6137157950325038396, guid: 3e11915107b19c944838fe51f90d9ee9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1517800656}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &104714826
 GameObject:
   m_ObjectHideFlags: 0
@@ -12518,6 +12524,16 @@ PrefabInstance:
       propertyPath: mm
       value: 
       objectReference: {fileID: 1419245287}
+    - target: {fileID: 438546391481183458, guid: 3e11915107b19c944838fe51f90d9ee9,
+        type: 3}
+      propertyPath: MainMenu
+      value: 
+      objectReference: {fileID: 596979219}
+    - target: {fileID: 438546391481183458, guid: 3e11915107b19c944838fe51f90d9ee9,
+        type: 3}
+      propertyPath: languageSelect
+      value: 
+      objectReference: {fileID: 1517800658}
     - target: {fileID: 2671738413253941849, guid: 3e11915107b19c944838fe51f90d9ee9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12578,6 +12594,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5137649272016288021, guid: 3e11915107b19c944838fe51f90d9ee9,
+        type: 3}
+      propertyPath: _canvas
+      value: 
+      objectReference: {fileID: 93716030}
     - target: {fileID: 6137157950325038396, guid: 3e11915107b19c944838fe51f90d9ee9,
         type: 3}
       propertyPath: m_RenderMode
@@ -12768,7 +12789,7 @@ MonoBehaviour:
   timerMenu: {fileID: 1687110302}
   room: {fileID: 601268490}
   teleportMenu: {fileID: 1887462361}
-  feedback: {fileID: 0}
+  feedback: {fileID: 619679299}
   message: {fileID: 440086602}
   micIcon: {fileID: 733416860}
   mutedIcon: {fileID: 21300000, guid: 4372756fe8ddeec4f948dae426c9ab42, type: 3}
