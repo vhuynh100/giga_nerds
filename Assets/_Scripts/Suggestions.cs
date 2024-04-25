@@ -13,13 +13,17 @@ public class Suggestions : MonoBehaviour
 
     void Start()
     {
-        //getSuggestions();
+        getSuggestions();
     }
 
-    public void getSuggestions()
+    void getSuggestions()
     {
         prompt1.text = "This will be replaced with the chatGPT prompt. This will be replaced with the chatGPT prompt.";
         prompt2.text = "This will be the second prompt from chatGPT.";
+    }
+    public void closePrompt()
+    {
+        SuggestionUI.SetActive(false);
     }
 
     // Update is called once per frame

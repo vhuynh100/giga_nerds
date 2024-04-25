@@ -13,7 +13,6 @@ public class MainMenu : MonoBehaviour
     public GameObject mainMenu;
     public GameObject credits;
     public GameObject settingsMenu;
-    public GameObject sessionMenu;
 
     //Object to instantiate for each language;
 
@@ -48,12 +47,6 @@ public class MainMenu : MonoBehaviour
         language.SetActive(true);
         mainMenu.SetActive(false);
 
-    }
-
-    public void joinRoom()
-    {
-        sessionMenu.SetActive(true);
-        mainMenu.SetActive(false);
     }
     public void enterCredits()
     {
