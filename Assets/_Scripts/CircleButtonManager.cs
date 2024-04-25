@@ -18,6 +18,8 @@ public class ButtonManager : MonoBehaviour
     [SerializeField] private Realtime room;
     [SerializeField] private GameObject teleportMenu;
 
+    [SerializeField] private GameObject feedback;
+
 
     // Circle UI Buttons
     //[SerializeField] private Button lingoLinkButton;
@@ -50,7 +52,7 @@ public class ButtonManager : MonoBehaviour
         //microphoneButton.onClick.AddListener(ToggleMicrophone);
     }
 
-    
+
 
     private void ExitSession()
     {
@@ -64,9 +66,9 @@ public class ButtonManager : MonoBehaviour
 #endif
     }
 
-     public void ToggleMicrophone()
+    public void ToggleMicrophone()
     {
-        
+
         microphoneMuted = !microphoneMuted;
 
         if (microphoneMuted)
@@ -75,9 +77,9 @@ public class ButtonManager : MonoBehaviour
         }
         else
         {
-            micIcon.GetComponent<Image>().sprite=unmutedIcon;
+            micIcon.GetComponent<Image>().sprite = unmutedIcon;
         }
-        
+
     }
 
     // Method for Lingo Link Button
@@ -91,7 +93,7 @@ public class ButtonManager : MonoBehaviour
         settingsMenu.SetActive(false);
         translationMenu.SetActive(false);
 
-        
+
 
         if (teleportMenu.activeInHierarchy)
         {
@@ -151,14 +153,29 @@ public class ButtonManager : MonoBehaviour
         }
         else
         {
+
             timerMenu.SetActive(true);
             mainMenu.SetActive(false);
+            teleportMenu.SetActive(false);
+            settingsMenu.SetActive(false);
+            translationMenu.SetActive(false);
         }
     }
 
- 
+
 
     public void goLobby()
+    {
+        timerMenu.SetActive(false);
+        mainMenu.SetActive(false);
+        teleportMenu.SetActive(false);
+        settingsMenu.SetActive(false);
+        translationMenu.SetActive(false);
+
+        feedback.SetActive(true);
+    }
+
+    public void disconnect()
     {
         room.Disconnect();
         room.Connect("Test Room");
