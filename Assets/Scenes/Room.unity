@@ -3883,7 +3883,7 @@ PrefabInstance:
     - target: {fileID: 4665205476787712414, guid: 21ded101777511741943328def6b9504,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4973373214119428368, guid: 21ded101777511741943328def6b9504,
         type: 3}
@@ -7700,7 +7700,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1076097917
 Transform:
   m_ObjectHideFlags: 0
@@ -11346,7 +11346,7 @@ PrefabInstance:
         type: 3}
       propertyPath: mainMenu
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 596979219}
     - target: {fileID: 3273431204728150096, guid: 64d819ee99f28664898171535807c8a1,
         type: 3}
       propertyPath: matchMakingController
@@ -11361,7 +11361,7 @@ PrefabInstance:
         type: 3}
       propertyPath: mainMenu
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 596979219}
     - target: {fileID: 7184427680269871891, guid: 64d819ee99f28664898171535807c8a1,
         type: 3}
       propertyPath: realtime
