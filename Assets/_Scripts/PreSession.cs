@@ -34,7 +34,7 @@ public class PreSession : MonoBehaviour
 
     void Start()
     {
-        //Menu1.SetActive(true);
+        Menu1.SetActive(true);
         Menu2.SetActive(false);
         EndMenu.SetActive(false);
     }
@@ -65,7 +65,7 @@ public class PreSession : MonoBehaviour
         if (isSelection())
         {
             Menu1.SetActive(false);
-            //Menu2.SetActive(true); TODO: Uncomment
+            Menu2.SetActive(true);
             Debug.Log("Goal selected: " + playerGoal);
             if (playerGoal == 1)
             {
@@ -89,14 +89,14 @@ public class PreSession : MonoBehaviour
             }
             //goalText.text += " goal completed!";
 
-            EndMenu.SetActive(true);
+            //EndMenu.SetActive(true);
             if (playerNum == 1)
             {
-                goalText.text = "Goal selected: " + _playerFeedback.GetPlayer2Goal();
+                //goalText.text = "Goal selected: " + _playerFeedback.GetPlayer2Goal();
             }
             else if (playerNum == 2)
             {
-                goalText.text = "Goal selected: " + _playerFeedback.GetPlayer1Goal();
+                //goalText.text = "Goal selected: " + _playerFeedback.GetPlayer1Goal();
             }
         }
         else
@@ -132,12 +132,14 @@ public class PreSession : MonoBehaviour
         if (playerNum == 0 & _playerFeedback.GetPlayer1Goal() == "")
         {
             playerNum = 1;
-            _playerFeedback.SetPlayer1Goal(goal);
+            Debug.Log(goal);
+            //_playerFeedback.SetPlayer1Goal(goal);
         }
         else if (playerNum == 0 & _playerFeedback.GetPlayer2Goal() == "")
         {
             playerNum = 2;
-            _playerFeedback.SetPlayer2Goal(goal);
+            Debug.Log(goal);
+            //_playerFeedback.SetPlayer2Goal(goal);
         }
     }
 
