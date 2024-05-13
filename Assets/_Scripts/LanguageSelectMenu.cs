@@ -48,7 +48,11 @@ public class LanguageSelectMenu : MonoBehaviour
         {
             fluentLanguage = language;
             OnLangSelected();
-
+            switch (language)
+            {
+                case "English": ls.ChangeLocale(0); mm.SetPlayerLanguageEnglish(); break;
+                case "Spanish": ls.ChangeLocale(1); mm.SetPlayerLanguageSpanish(); break;
+            }
         }
     }
 
@@ -64,11 +68,11 @@ public class LanguageSelectMenu : MonoBehaviour
         {
             practiceLanguage = language;
             OnLangSelected();
-            switch (language)
-            {
-                case "English": ls.ChangeLocale(0); mm.SetPlayerLanguageEnglish(); break;
-                case "Spanish": ls.ChangeLocale(1); mm.SetPlayerLanguageSpanish(); break;
-            }
+            // switch (language)
+            // {
+            //     case "English": ls.ChangeLocale(0); mm.SetPlayerLanguageEnglish(); break;
+            //     case "Spanish": ls.ChangeLocale(1); mm.SetPlayerLanguageSpanish(); break;
+            // }
         }
     }
 
