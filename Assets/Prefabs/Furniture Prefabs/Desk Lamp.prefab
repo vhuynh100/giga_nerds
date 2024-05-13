@@ -365,7 +365,7 @@ GameObject:
   - component: {fileID: 1417899566949975051}
   - component: {fileID: 8042160337852482496}
   - component: {fileID: 3177871373059003193}
-  - component: {fileID: 670535425321634368}
+  - component: {fileID: 1182171626215823652}
   m_Layer: 0
   m_Name: Desk Lamp
   m_TagString: Untagged
@@ -483,8 +483,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &670535425321634368
-MeshCollider:
+--- !u!65 &1182171626215823652
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -501,7 +501,6 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 3613567641014311022, guid: 281a9672f3e3a504ebb931caf4446996, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 5.7968855, y: 13.269716, z: 6.175685}
+  m_Center: {x: 1.8698478, y: 4.4885225, z: -0.6340194}
